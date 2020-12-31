@@ -48,10 +48,6 @@
                 font-size: 84px;
             }
 
-            .start {
-                font-size: 30px;
-            }
-
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -64,14 +60,6 @@
 
             .m-b-md {
                 margin-bottom: 30px;
-            }
-
-            .platform {
-                font-size: 25px;
-            }
-
-            .text {
-                font-size: 15px;
             }
         </style>
     </head>
@@ -93,33 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    TRAVEL×YOU
-                </div>
-
-                <div class="platform">
-                旅とあなたをつなぐプラットフォーム
-                </div>
-                <br>
-                <div class="text">
-                今までのあなたの旅の歴史を記録し、さらにこれからのあなたの旅をより楽しいものにするツールです。<br>
-                旅行で撮った写真を投稿したり、旅行記を作ったり、これから旅行する人のためにTIPSを投稿したり... 楽しみ方は何通りもあります。<br>
-                さぁ、一緒に旅に出かけましょう！
-                </div>
-
-                <br>
-                <br>
-                
-                <div class="start">
-                <a href="{{ url('/register') }}">さぁ、始めよう</a>
-                <div>
-
-                <br>
-
-                <div class="links">
-                    <a href="{{ url('/posts') }}">みんなの投稿</a>
-                    <a href="{{ url('/how-to') }}">使い方</a>
-                    <a href="{{ url('/contact') }}">お問い合わせ</a>
-                    <a href="https://y2world.github.io/home/">YUKI OFFICIAL</a>
+                    使い方
                 </div>
             </div>
         </div>
