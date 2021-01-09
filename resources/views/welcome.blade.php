@@ -100,7 +100,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">MY TRAVELS</a>
                     @else
                         <a href="{{ route('login') }}">ログイン</a>
 
@@ -119,7 +119,9 @@
                 <div class="platform">
                 旅とあなたをつなぐプラットフォーム
                 </div>
+
                 <br>
+    
                 <div class="text">
                 今までのあなたの旅の歴史を記録し、さらにこれからのあなたの旅をより楽しいものにするツールです。<br>
                 旅行で撮った写真を投稿したり、旅行記を作ったり、これから旅行する人のためにTIPSを投稿したり... 楽しみ方は何通りもあります。<br>
@@ -136,9 +138,10 @@
                 <br>
 
                 <div class="links">
-                    <a href="{{ url('/posts') }}">みんなの投稿</a>
+                    <a href="{{ url('/posts') }}">OUR TRAVELS</a>
                     <a href="{{ url('/how-to') }}">使い方</a>
                     <a href="{{ url('/contact') }}">お問い合わせ</a>
+                    <a href="http://54.249.81.67">NIPPO</a>
                     <a href="https://y2world.github.io/home/">YUKI OFFICIAL</a>
                 </div>
             </div>
