@@ -3,6 +3,10 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+        <div class="title">
+                    <h3>あなたの旅をシェアしましょう</h3>
+        </div>
+        <hr>
         <form action="{{ route('posts.store') }}" method="POST">
             {{csrf_field()}}
             @if ($errors->any()) 
@@ -16,10 +20,6 @@
             @endif
             <form action="{{ route('posts.store') }}" method="POST">
             {{csrf_field()}}
-                <div class="title">
-                    <h3>あなたの旅をシェアしましょう</h3>
-                </div>
-                <hr>
                 <div class="form-group">
                     <label>タイトル</label>
                     <input type="text" class="form-control" placeholder="旅のタイトル" name="title">
