@@ -4,17 +4,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>TRAVEL×YOU</title>
+        <title>TRAVEL×YOU - TOP</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
 
         <!-- Styles -->
         <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Nunito', sans-serif;
+                font-family: 'Oswald', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
@@ -46,6 +47,7 @@
 
             .title {
                 font-size: 84px;
+                color: turquoise;
             }
 
             .start {
@@ -91,7 +93,7 @@
             }
 
             .text {
-                font-size: 15px;
+                font-size: 12px;
             }
         </style>
     </head>
@@ -100,7 +102,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">MY TRAVELS</a>
+                        <a href="{{ url('/posts') }}">OUR TRAVELS</a>
                     @else
                         <a href="{{ route('login') }}">ログイン</a>
 
@@ -113,7 +115,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    TRAVEL×YOU
+                    TRAVEL × YOU
                 </div>
 
                 <div class="platform">
@@ -123,22 +125,24 @@
                 <br>
     
                 <div class="text">
-                今までのあなたの旅の歴史を記録し、さらにこれからのあなたの旅をより楽しいものにするツールです。<br>
-                旅行で撮った写真を投稿したり、旅行記を作ったり、これから旅行する人のためにTIPSを投稿したり... 楽しみ方は何通りもあります。<br>
+                今までのあなたの旅の歴史を記録し、<br>
+                さらにこれからのあなたの旅をより楽しいものにするツールです。<br>
+                旅行で撮った写真を投稿したり、旅行記を作ったり、<br>
+                これから旅行する人のためにTIPSを投稿したり... <br>
+                楽しみ方は何通りもあります。<br>
                 さぁ、一緒に旅に出かけましょう！
                 </div>
 
                 <br>
                 <br>
                 
-                <a href="{{ url('/home') }}" class="btn-square-little-rich">さぁ、始めよう！</a>
+                <a href="{{ url('/register') }}" class="btn-square-little-rich">さぁ、始めよう！</a>
 
                 <br>
                 <br>
                 <br>
 
                 <div class="links">
-                    <a href="{{ url('/posts') }}">OUR TRAVELS</a>
                     <a href="{{ url('/how-to') }}">使い方</a>
                     <a href="{{ url('/contact') }}">お問い合わせ</a>
                     <a href="http://54.249.81.67">NIPPO</a>
