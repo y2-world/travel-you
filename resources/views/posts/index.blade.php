@@ -13,6 +13,8 @@
                 <p class="card-date">{{ $post->date1 }} 〜 {{ $post->date2 }}</p>
                 <p class="card-user">by {{ $post->user_id }}</p>
                 <a href="" class="btn btn-primary">詳細</a>
+                <a href="" class="btn btn-primary">旅行記</a>
+                <a href="" class="btn btn-primary">TIPS</a>
             </div>
             <div class="card-footer text-muted">
                 {{ $post->created_at }}
