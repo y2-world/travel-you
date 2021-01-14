@@ -15,7 +15,7 @@ class PostController extends Controller
     }
     
     public function index()
-    {$posts = Post::all();
+    {   $posts = Post::latest()->get();
         return view('posts.index', compact('posts'));
     }
 
@@ -51,8 +51,7 @@ class PostController extends Controller
 
     public function show($id)
     {
-        $post = Post::find($id);
-        return view('posts.show', compact('post'));
+        
     }
 
     /**
@@ -86,6 +85,8 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post -> delete();
+        return redirect()->route('posts.index');
     }
 }

@@ -59,6 +59,8 @@
                                         {{ __('OUR TRAVELS') }}
                                     <a class="dropdown-item" href="{{ url('posts/create') }}">
                                         {{ __('ADD TRAVELS') }}
+                                    <a class="dropdown-item" href="{{ url('posts/create') }}">
+                                        {{ __('PLAN TRAVELS') }}
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
