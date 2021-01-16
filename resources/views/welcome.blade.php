@@ -95,6 +95,21 @@
             .text {
                 font-size: 12px;
             }
+
+            @media screen and (max-width: 640px) {
+                .title {
+                font-size: 50px;
+                color: turquoise;
+                }
+
+                .platform {
+                font-size: 20px;
+                }
+
+            }
+
+
+
         </style>
     </head>
     <body>
@@ -136,7 +151,7 @@
                 <br>
                 <br>
                 
-                <a href="{{ url('/register') }}" class="btn-square-little-rich">さぁ、始めよう！</a>
+                <a href="{{ url('/register') }}" class="btn-square-little-rich">さぁ、旅に出よう！</a>
 
                 <br>
                 <br>
