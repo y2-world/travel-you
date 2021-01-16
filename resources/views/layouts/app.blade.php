@@ -63,9 +63,9 @@
                                         {{ __('TROUBLE×YOU') }}
                                     <a class="dropdown-item" href="{{ url('') }}">
                                         {{ __('Q&A') }}
-                                    <a class="dropdown-item" href="{{ url('') }}">
-                                        {{ __('FAQ') }}
                                     <a class="dropdown-item" href="{{ url('faq') }}">
+                                        {{ __('FAQ') }}
+                                    <a class="dropdown-item" href="{{ url('contact') }}">
                                         {{ __('お問い合わせ') }}
                                     <a class="dropdown-item" href="{{ url('http://54.249.81.67/') }}">
                                         {{ __('NIPPO') }}
