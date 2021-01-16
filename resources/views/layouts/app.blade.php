@@ -57,7 +57,7 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ url('posts') }}">
                                         {{ __('OUR TRAVELS') }}
-                                    <a class="dropdown-item" href="{{ url('posts/users') }}">
+                                    <a class="dropdown-item" href="{{ url('users') }}">
                                         {{ __('MY TRAVELS') }}
                                     <a class="dropdown-item" href="{{ url('') }}">
                                         {{ __('TROUBLE×YOU') }}
@@ -67,11 +67,11 @@
                                         {{ __('FAQ') }}
                                     <a class="dropdown-item" href="{{ url('faq') }}">
                                         {{ __('お問い合わせ') }}
-                                    <a class="dropdown-item" href="{{ url('contact') }}">
+                                    <a class="dropdown-item" href="{{ url('http://54.249.81.67/') }}">
                                         {{ __('NIPPO') }}
-                                    <a class="dropdown-item" href="http://54.249.81.67">
+                                    <a class="dropdown-item" href="https://y2world.github.io/home/">
                                         {{ __('YUKI OFFICIAL') }}
-                                    <a class="dropdown-item" href="https://y2world.github.io/home/"
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('ログアウト') }}
