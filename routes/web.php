@@ -22,8 +22,8 @@ Route::get('/about', function () {
 Route::get('/posts', function () {
     return view('posts');
 });
-Route::get('/how-to', function () {
-    return view('how-to');
+Route::get('/faq', function () {
+    return view('faq');
 });
 Route::get('/contact', function () {
     return view('contact');

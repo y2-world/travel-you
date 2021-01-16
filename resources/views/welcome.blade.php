@@ -143,7 +143,7 @@
                 <br>
 
                 <div class="links">
-                    <a href="{{ url('/how-to') }}">使い方</a>
+                    <a href="{{ url('/faq') }}">FAQ</a>
                     <a href="{{ url('/contact') }}">お問い合わせ</a>
                     <a href="http://54.249.81.67">NIPPO</a>
                     <a href="https://y2world.github.io/home/">YUKI OFFICIAL</a>

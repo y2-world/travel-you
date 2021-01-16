@@ -57,11 +57,21 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ url('posts') }}">
                                         {{ __('OUR TRAVELS') }}
-                                    <a class="dropdown-item" href="{{ url('posts/create') }}">
-                                        {{ __('ADD TRAVELS') }}
-                                    <a class="dropdown-item" href="{{ url('posts/create') }}">
-                                        {{ __('PLAN TRAVELS') }}
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item" href="{{ url('posts/users') }}">
+                                        {{ __('MY TRAVELS') }}
+                                    <a class="dropdown-item" href="{{ url('') }}">
+                                        {{ __('TROUBLE×YOU') }}
+                                    <a class="dropdown-item" href="{{ url('') }}">
+                                        {{ __('Q&A') }}
+                                    <a class="dropdown-item" href="{{ url('') }}">
+                                        {{ __('FAQ') }}
+                                    <a class="dropdown-item" href="{{ url('faq') }}">
+                                        {{ __('お問い合わせ') }}
+                                    <a class="dropdown-item" href="{{ url('contact') }}">
+                                        {{ __('NIPPO') }}
+                                    <a class="dropdown-item" href="http://54.249.81.67">
+                                        {{ __('YUKI OFFICIAL') }}
+                                    <a class="dropdown-item" href="https://y2world.github.io/home/"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('ログアウト') }}
