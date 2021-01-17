@@ -44,6 +44,7 @@ class PostController extends Controller
         $post -> country     = $request -> country;
         $post -> city     = $request -> city;
         $post -> user_id  = Auth::id(); //ログイン中のユーザーidを代入
+        $post -> user_name  = Auth::user()->name;
         $post -> save(); //保存してあげましょう
         
         return redirect()->route('posts.index');

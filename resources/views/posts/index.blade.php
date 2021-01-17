@@ -12,7 +12,7 @@
                 <h5 class="card-title">{{ $post->title }}</h5>
                 <p class="card-date">{{ $post->date1 }} 〜 {{ $post->date2 }}</p>
                 <div>
-                <p class="card-category">by&nbsp;<a href="">{{ $post->user_id }}</p>
+                <p class="card-category">by&nbsp;<a href="">{{ $post->user_name }}</p>
                 </div>
                 <a href="" class="btn btn-primary">詳細</a>
                 <a href="" class="btn btn-primary">旅行記</a>
