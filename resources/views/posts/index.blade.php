@@ -14,7 +14,7 @@
                 <div>
                 <p class="card-category">by&nbsp;<a href="">{{ $post->user_name }}</p>
                 </div>
-                <a href="" class="btn btn-primary">詳細</a>
+                <a href="{{ route('posts.show', $post->id) }}" class="btn btn-primary">詳細</a>
                 <a href="" class="btn btn-primary">旅行記</a>
                 <a href="" class="btn btn-primary">TIPS</a>
             </div>

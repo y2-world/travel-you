@@ -29,12 +29,15 @@
                     <input type="date" placeholder="yyyy-mm-dd" name="date1">
                     〜
                     <input type="date" placeholder="yyyy-mm-dd" name="date2">
+                    <div class="form-group">
+                    <label>国</label>
+                    <input type="text" class="form-control" placeholder="訪れた国を入力" name="country">
                     <br>
-                    <label>国&nbsp;&nbsp;
-                    <input type="text" name="country">
-                    <br>
-                    <label>都市&nbsp;&nbsp;
-                    <input type="text" name="city">
+                    <div class="form-group">
+                    <label>都市</label>
+                    <input type="text" class="form-control" placeholder="訪れた都市を入力" name="city">
+                </div>
+                </div>
                 </div>
                 <button type="submit" class="btn btn-primary">投稿</button>
                 <hr>

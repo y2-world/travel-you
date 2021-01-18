@@ -53,41 +53,47 @@ class PostController extends Controller
 
     public function show($id)
     {
-        
+        $post = Post::find($id);
+        return view('posts.show', compact('post'));
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+
+        if(Auth::id() !== $post->user_id){
+            return with("投稿したユーザーでないと削除できません。"); 
+        }
+
+        return view('posts.edit', compact('post'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($id);
+
+        if(Auth::id() !== $post->user_id){
+            return with("投稿したユーザーでないと削除できません。"); 
+        }
+
+        $post -> title    = $request -> title; //ユーザー入力のtitleを代入
+        $post -> date1     = $request -> date1; //ユーザー入力のbodyを代入
+        $post -> date2     = $request -> date2;
+        $post -> country     = $request -> country;
+        $post -> city     = $request -> city;
+        $post -> save();
+        return view('posts.show', compact('post'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $post = Post::find($id);
+
+        if(Auth::id() !== $post->user_id){
+            return with("投稿したユーザーでないと削除できません。"); 
+        }
+
         $post -> delete();
         return redirect()->route('posts.index');
     }
