@@ -46,7 +46,7 @@
             }
 
             .title {
-                font-size: 30px;
+                font-size: 50px;
                 color: turquoise;
                 float:center;
             }
@@ -90,11 +90,11 @@
             }
 
             .platform {
-                font-size: 16px;
+                font-size: 20px;
             }
 
             .text {
-                font-size: 9px;
+                font-size: 12px;
                 text-align: center;
             }
 
