@@ -46,8 +46,9 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 30px;
                 color: turquoise;
+                float:center;
             }
 
             .start {
@@ -89,16 +90,31 @@
             }
 
             .platform {
-                font-size: 25px;
+                font-size: 16px;
             }
 
             .text {
-                font-size: 12px;
+                font-size: 9px;
+                text-align: center;
             }
 
-            @media screen and (max-width: 640px) {
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            @media screen and (max-width: 480px) {
+                .photo {
+                    width: 100%;
+                }
+
                 .title {
-                font-size: 50px;
+                font-size: 40px;
                 color: turquoise;
                 }
 
@@ -106,8 +122,6 @@
                 font-size: 20px;
                 }
             }
-
-            @media screen and (max-width: 480px) {
                 .links > a {
                 color: #636b6f;
                 padding: 0 10px;
@@ -118,10 +132,6 @@
                 text-transform: uppercase;
                 }
             }
-
-
-
-
 
         </style>
     </head>
@@ -142,17 +152,19 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    TRAVEL × YOU
-                </div>
-
-                <div class="platform">
-                旅とあなたをつなぐプラットフォーム
-                </div>
-
+                
                 <br>
+                <img class="photo" src="https://image.jimcdn.com/app/cms/image/transf/dimension=1820x10000:format=jpg/path/s5a88878547331ed3/image/i70dfb84374674fa8/version/1610957637/image.jpg" width="50%">
+                <br>
+
+                <div class="title">
+                    TRAVEL×YOU
+                </div>
     
+                <div class="platform">
+                <b>旅とあなたをつなぐプラットフォーム</b><br>
                 <div class="text">
+                <br>
                 今までのあなたの旅の歴史を記録し、<br>
                 さらにこれからのあなたの旅をより楽しいものにするツールです。<br>
                 旅行で撮った写真を投稿したり、旅行記を作ったり、<br>
@@ -160,22 +172,14 @@
                 楽しみ方は何通りもあります。<br>
                 さぁ、一緒に旅に出かけましょう！
                 </div>
-
                 <br>
-                <br>
-                
-                <a href="{{ url('/register') }}" class="btn-square-little-rich">さぁ、旅に出よう！</a>
-
-                <br>
-                <br>
-                <br>
-
                 <div class="links">
                     <a href="{{ url('/faq') }}">FAQ</a>
                     <a href="{{ url('/contact') }}">お問い合わせ</a>
                     <a href="http://54.249.81.67">NIPPO</a>
                     <a href="https://y2world.github.io/home/">YUKI OFFICIAL</a>
                 </div>
+
             </div>
         </div>
     </body>

@@ -38,13 +38,14 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
         $post = new Post; //インスタンスを作成
+        $post -> id         = $request -> id;
+        $post -> user_id  = Auth::id(); //ログイン中のユーザーidを代入
+        $post -> user_name  = Auth::user()->name;
         $post -> title    = $request -> title; //ユーザー入力のtitleを代入
         $post -> date1     = $request -> date1; //ユーザー入力のbodyを代入
         $post -> date2     = $request -> date2;
         $post -> country     = $request -> country;
         $post -> city     = $request -> city;
-        $post -> user_id  = Auth::id(); //ログイン中のユーザーidを代入
-        $post -> user_name  = Auth::user()->name;
         $post -> save(); //保存してあげましょう
         
         return redirect()->route('posts.index');
