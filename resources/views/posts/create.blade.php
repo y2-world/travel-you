@@ -32,7 +32,7 @@
                     <br>
                     <br>
                     <div class="form-group">
-                    <label for="exampleInputFile">カバー写真/label>
+                    <label for="exampleInputFile">カバー写真</label>
                     <br>
                     <input type="file" id="exampleInputFile">
                     </div>
