@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
         <div class="title">
-                    <h3>あなたの旅をシェアしましょう</h3>
+                    <h4>あなたの旅をシェアしましょう</h4>
         </div>
         <hr>
         <form action="{{ route('posts.store') }}" method="POST">
@@ -29,6 +29,13 @@
                     <input type="date" placeholder="yyyy-mm-dd" name="date1">
                     〜
                     <input type="date" placeholder="yyyy-mm-dd" name="date2">
+                    <br>
+                    <br>
+                    <div class="form-group">
+                    <label for="exampleInputFile">カバー写真を選択</label>
+                    <br>
+                    <input type="file" id="exampleInputFile">
+                    </div>
                     <div class="form-group">
                     <label>国</label>
                     <input type="text" class="form-control" placeholder="訪れた国を入力" name="country">

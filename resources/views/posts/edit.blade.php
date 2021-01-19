@@ -33,8 +33,18 @@
                     <label>都市</label>
                     <input type="text" class="form-control" value="{{ $post->city }}" name="city">
                 </div>
+                <div class="update">
                 <button type="submit" class="btn btn-primary">更新する</button>
+                </div>
+            </form>    
+                <br> 
+            <div class="delete">     
+            <form action='{{ route('posts.destroy', $post->id) }}' method='post'>
+                {{ csrf_field() }}
+                {{ method_field('DELETE') }}
+                <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("削除しますか？");'>
             </form>
+            </div>
         </div>
     </div>
 </div>

@@ -17,7 +17,7 @@
                 <input type="text" name="email" value=""><br><br>
                 件名
                 <br>
-                <input type="text" class="form-control" name="name"><br>
+                <input type="text" class="form-control" name="title"><br>
                 お問い合わせ内容
                 <textarea class="form-control" rows="6" name="content"></textarea>
                 <br>
