@@ -47,7 +47,7 @@ class PostController extends Controller
         $post -> date2     = $request -> date2;
 
         $file_name = $request->file('image')->getClientOriginalName();
-        $post -> image = $request->file('image')->storeAs('public/image',$file_name);
+        $post -> image = $request->file('image')->storeAs('public/image/',$file_name);
     
         $post -> country     = $request -> country;
         $post -> city     = $request -> city;
