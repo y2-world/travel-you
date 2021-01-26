@@ -27,6 +27,7 @@ class PostController extends Controller
     public function create()
     {
         return view('posts.create');
+        
     }
 
     /**
@@ -36,7 +37,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(PostRequest $request)
-    {
+    { 
         $post = new Post; //インスタンスを作成
         $post -> id         = $request -> id;
         $post -> user_id  = Auth::id(); //ログイン中のユーザーidを代入
@@ -44,6 +45,10 @@ class PostController extends Controller
         $post -> title    = $request -> title; //ユーザー入力のtitleを代入
         $post -> date1     = $request -> date1; //ユーザー入力のbodyを代入
         $post -> date2     = $request -> date2;
+
+        $file_name = $request->file('image')->getClientOriginalName();
+        $post -> image = $request->file('image')->storeAs('public/image',$file_name);
+    
         $post -> country     = $request -> country;
         $post -> city     = $request -> city;
         $post -> save(); //保存してあげましょう
@@ -96,5 +101,14 @@ class PostController extends Controller
 
         $post -> delete();
         return redirect()->route('posts.index');
+    }
+    public function detail(Post $post)
+    {
+        return view('posts/detail', [
+            'title' => $post->title,
+            'content' => $post->content,
+            'user_id' => $post->user_id,
+            'image_url' => str_replace('public/', 'storage/', $post->image_url), //今回追加
+        ]);        
     }
 }

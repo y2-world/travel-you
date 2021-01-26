@@ -7,7 +7,7 @@
                     <h4>あなたの旅をシェアしましょう</h4>
         </div>
         <hr>
-        <form action="{{ route('posts.store') }}" method="POST">
+        <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
             {{csrf_field()}}
             @if ($errors->any()) 
                 <div class="alert alert-danger">
@@ -18,35 +18,30 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('posts.store') }}" method="POST">
-            {{csrf_field()}}
                 <div class="form-group">
                     <label>タイトル</label>
                     <input type="text" class="form-control" placeholder="旅のタイトル" name="title">
-                </div>
+                </div>  
                 <div class="form-group">
                     <label>期間&nbsp;&nbsp;</label>
                     <input type="date" placeholder="yyyy-mm-dd" name="date1">
-                    〜
-                    <input type="date" placeholder="yyyy-mm-dd" name="date2">
-                    <br>
-                    <br>
-                    <div class="form-group">
-                    <label for="exampleInputFile">カバー写真</label>
-                    <br>
-                    <input type="file" id="exampleInputFile">
-                    </div>
-                    <div class="form-group">
+                〜
+                <input type="date" placeholder="yyyy-mm-dd" name="date2">
+                </div>  
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">カバー写真</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
+                </div>
+                <div class="form-group">
                     <label>国</label>
                     <input type="text" class="form-control" placeholder="訪れた国を入力" name="country">
-                    <br>
-                    <div class="form-group">
-                    <label>都市</label>
-                    <input type="text" class="form-control" placeholder="訪れた都市を入力" name="city">
+                </div>     
+                <div class="form-group">
+                <label>都市</label>
+                <input type="text" class="form-control" placeholder="訪れた都市を入力" name="city">
                 </div>
-                </div>
-                </div>
-                <button type="submit" class="btn btn-primary">投稿</button>
+                <br>
+                <button type="submit" class="btn btn-primary" value="upload">投稿</button>
                 <hr>
             </form>
         </div>

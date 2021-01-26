@@ -13,6 +13,7 @@
                 <a href="" class="btn btn-primary">TIPS</a>
             </div>
             <div class="card-body">
+                <img src="{{ url('storage/app/' . $post->image) }}">
                 <p class="card-country">国 : {{ $post->country }}</p>
                 <p class="card-city">都市 : {{ $post->city }}</p>
                 <p>投稿日時：{{ $post->created_at }}</p> 
