@@ -14,7 +14,7 @@
             <br>
             {{ $post->date1 }} 〜 {{ $post->date2 }}
             <br>
-            by&nbsp;<a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</td>
+            by&nbsp;<a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a>
             <br>
             <img src="{{ asset('storage/app/' . $post->image) }}" width="80%">
             </li>

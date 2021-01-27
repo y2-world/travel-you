@@ -21,7 +21,7 @@
 <style>
     html, body {
         font-family: helvetica;
-            }
+    }
     .navbar-brand {
         color: turquoise;
         font-family: Oswald;
