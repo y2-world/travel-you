@@ -1,11 +1,12 @@
 @extends('layouts.app')　
 @section('content')
 <div class="container mt-4">
+        <div class="mb-4">
+        <h2>OUR TRAVELS</h2>
+</div>
+
+<div class="container mt-4">
     <div class="row">   
-        <div class="col-sm">
-        <div class="card-header">
-            <h4>OUR TRAVELS</h4>
-        </div>
         <div class="col-sm-4">
             @foreach ($posts as $post)
             <li class="list-group-item">
@@ -15,7 +16,7 @@
             <br>
             by&nbsp;<a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</td>
             <br>
-            <img src="{{ asset('storage/app/' . $post->image) }}" width="50%">
+            <img src="{{ asset('storage/app/' . $post->image) }}" width="80%">
             </li>
             @endforeach
         </div>

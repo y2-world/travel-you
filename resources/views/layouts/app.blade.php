@@ -12,13 +12,26 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+
+<link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+
+<style>
+    html, body {
+        font-family: helvetica;
+            }
+    .navbar-brand {
+        color: turquoise;
+        font-family: Oswald;
+    }
+    .mb-4 {
+        color: turquoise;
+        font-family: Oswald;
+    }
+</style>
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
