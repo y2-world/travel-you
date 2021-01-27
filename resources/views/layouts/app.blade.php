@@ -55,9 +55,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ url('posts/create') }}">
+                                        {{ __('HOME') }}
                                     <a class="dropdown-item" href="{{ url('posts') }}">
                                         {{ __('OUR TRAVELS') }}
-                                    <a class="dropdown-item" href="{{ url('posts/create') }}">
+                                    <a class="dropdown-item" href="">
                                         {{ __('MY TRAVELS') }}
                                     <a class="dropdown-item" href="{{ url('') }}">
                                         {{ __('TROUBLE×YOU') }}

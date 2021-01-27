@@ -6,7 +6,7 @@
             <div class="card-header">
                 <h4>{{ $post->title }}</h4>
                 <p class="card-date">{{ $post->date1 }}&nbsp;〜&nbsp;{{ $post->date2 }}</p>
-                <p class="card-category">by&nbsp;<a href="">{{ $post->user_name }}</a>
+                <p class="card-category">by&nbsp;<a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a>
                 <br>
                 <br>
                 <a href="" class="btn btn-primary">旅行記</a>
