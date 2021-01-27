@@ -6,7 +6,7 @@
         <div class="title">
                     <h4>あなたの旅をシェアしましょう</h4>
         </div>
-        <a href="" class="btn btn-primary">MY TRAVELS</a>
+        <a href="{{ route('users.show', Auth::user()->id )}}" class="btn btn-primary">MY TRAVELS</a>
         <hr>
         <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
             {{csrf_field()}}

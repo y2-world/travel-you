@@ -59,7 +59,7 @@
                                         {{ __('HOME') }}
                                     <a class="dropdown-item" href="{{ url('posts') }}">
                                         {{ __('OUR TRAVELS') }}
-                                    <a class="dropdown-item" href="">
+                                    <a class="dropdown-item" href="{{ route('users.show', Auth::user()->id )}}">
                                         {{ __('MY TRAVELS') }}
                                     <a class="dropdown-item" href="{{ url('') }}">
                                         {{ __('TROUBLE×YOU') }}
