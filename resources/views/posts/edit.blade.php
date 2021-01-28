@@ -21,9 +21,9 @@
                 </div>
                 <div class="form-group">
                     <label>期間&emsp; </label>
-                    <input type="date" placeholder="yyyy-mm-dd" name="date1" value=""> </textarea>
+                    <input type="date" placeholder="yyyy-mm-dd" name="date1" value="{{ $post->date1 }}"> </textarea>
                     〜
-                    <input type="date" placeholder="yyyy-mm-dd" name="date2" value=""> </textarea>
+                    <input type="date" placeholder="yyyy-mm-dd" name="date2" value="{{ $post->date2 }}"> </textarea>
                 </div>
                 <div class="form-group">
                     <label>国</label>
