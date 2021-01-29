@@ -28,7 +28,7 @@
                     <input type="date" placeholder="yyyy-mm-dd" name="date1">
                 〜
                 <input type="date" placeholder="yyyy-mm-dd" name="date2">
-                </div>  
+                </div> 
                 <div class="form-group">
                     <label for="exampleFormControlFile1">カバー写真</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
@@ -41,7 +41,7 @@
                 <label>都市</label>
                 <input type="text" class="form-control" placeholder="訪れた都市を入力" name="city">
                 </div>
-                <br>
+                <div class="form-group">
                 <button type="submit" class="btn btn-primary" value="upload">投稿</button>
                 <hr>
             </form>

@@ -30,6 +30,9 @@
         color: turquoise;
         font-family: Oswald;
     }
+    .card-header {
+        font-family: Oswald;
+    }
 </style>
 
 <body>

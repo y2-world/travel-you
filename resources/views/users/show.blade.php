@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <div class="container mt-4">
-        <div class="mb-4">
-        <h2>{{ $user_name }}'s TRAVELS</h2>
-    </div>
+<div class="container mt-4">
+    <div class="mb-4">
+    <h2>{{ $user_name }}'s TRAVELS</h2>
+</div>
 
 <div class="row">
     <div class="col-sm-6">
@@ -29,6 +29,7 @@
         </div>
         <li class="list-group-item">
         <h6 class="card-title"><a href="{{ route('posts.show', $post->id) }}">{{ $post->country}}</a></h6>
+        </li>
     </div>
 </div>
 @endsection
