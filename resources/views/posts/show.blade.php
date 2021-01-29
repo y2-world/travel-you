@@ -13,7 +13,7 @@
                 <a href="" class="btn btn-primary">TIPS</a>
             </div>
             <div class="card-body">
-                <img src="{{ asset('storage/app/' . $post->image) }}" width="70%">
+                <img src="{{ asset('/' . $post->image) }}" width="70%">
                 <br>
                 <br>
                 <p class="card-country">国 : {{ $post->country }}</p>

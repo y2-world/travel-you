@@ -16,7 +16,7 @@
             <br>
             by&nbsp;<a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a>
             <br>
-            <img src="{{ asset('storage/app/' . $post->image) }}" width="80%">
+            <img src="{{ asset('/' . $post->image) }}" width="100%">
             </li>
             @endforeach
         </div>
