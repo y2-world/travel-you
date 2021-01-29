@@ -12,7 +12,7 @@
             <a href="" class="btn btn-primary">TIPS</a>
         </div>
         <li class="list-group-item">
-            <img src="{{ asset('/' . $post->image) }}" width="70%">
+            <img src="{{ asset('/' . $post->image) }}" width="100%">
             <br>
             <br>
             <p class="card-country">国 : {{ $post->country }}</p>
