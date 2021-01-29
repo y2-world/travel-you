@@ -9,7 +9,7 @@
 @foreach ($posts as $post)
   <a href="{{ route('posts.show', $post->id) }}"><img class="card-img-top" src="{{ asset('/' . $post->image) }}" alt="Card image cap"></a>
   <div class="card-body">
-    <h5 class="card-title">{{ $post->title }}"</h5>
+    <h5 class="card-title">{{ $post->title }}</h5>
     <p class="card-text"> {{ $post->date1 }} 〜 {{ $post->date2 }}</p>
     by&nbsp;<a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a>
   </div>
