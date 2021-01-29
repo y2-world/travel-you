@@ -5,7 +5,7 @@
         <h2>OUR TRAVELS</h2>
 </div>
 
-<div class="card" style="width: 21rem;">
+<div class="card" style="width: 22rem;">
 @foreach ($posts as $post)
   <a href="{{ route('posts.show', $post->id) }}"><img class="card-img-top" src="{{ asset('/' . $post->image) }}" alt="Card image cap"></a>
   <div class="card-body">
