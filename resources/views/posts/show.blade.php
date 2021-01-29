@@ -19,9 +19,8 @@
                 <p class="card-country">国 : {{ $post->country }}</p>
                 <p class="card-city">都市 : {{ $post->city }}</p>
                 <p>投稿日時：{{ $post->created_at }}</p> 
-                <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-secondary">編集</a>
             </div>
-            <a href="{{ url('/posts') }}" class="btn btn-light">BACK</a>
+            <a href="{{ url('/posts') }}" class="btn btn-secondary">BACK</a>
 
 </div>
             </div>

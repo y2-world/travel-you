@@ -17,6 +17,9 @@
             <h6 class="card-title"><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h6>
             <p class="card-date">{{ $post->date1 }} 〜 {{ $post->date2 }}</p>
             <img src="{{ asset('/' . $post->image) }}" width="50%">
+            <br>
+            <br>
+            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-secondary">編集</a>
         </li>
         @endforeach
     </div>
