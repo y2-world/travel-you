@@ -28,7 +28,7 @@
         <h4>MY COUNTRIES</h4>
         </div>
         <li class="list-group-item">
-        <h6 class="card-title"><a href="{{ route('posts.show', $post->id) }}">{{ $post->country}}</a></h6>
+        <h6 class="card-title"><a href=></a></h6>
         </li>
         <div class="card-header">
         <h4>MY MAP</h4>
