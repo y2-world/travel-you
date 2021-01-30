@@ -12,28 +12,32 @@
         <div class="card-header">
             <h4>MY TRAVELS</h4>
          </div>
-        @foreach ($post as $post)
+        @foreach ($post as $rec)
         <li class="list-group-item">
-            <h6 class="card-title"><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h6>
-            <p class="card-date">{{ $post->date1 }} 〜 {{ $post->date2 }}</p>
-            <a href="{{ route('posts.show', $post->id) }}"><img src="{{ asset('storage/' . $post->image) }}" width="100%"></a>
+            <h6 class="card-title"><a href="{{ route('posts.show', $rec->id) }}">{{ $rec->title }}</a></h6>
+            <p class="card-date">{{ $rec->date1 }} 〜 {{ $rec->date2 }}</p>
+            <a href="{{ route('posts.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}" width="100%"></a>
             <br>
             <br>
-            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-secondary">編集</a>
+            <a href="{{ route('posts.edit', $rec->id) }}" class="btn btn-secondary">編集</a>
         </li>
         @endforeach
     </div>
+    <br>
     <div class="col-sm-6">
         <div class="card-header">
             <h4>MY COUNTRIES</h4>
         </div>
         <li class="list-group-item">
             <ol>
-            <li><a href="{{ route('posts.show', $post->id) }}">{{$post->country}}</a>
+            @foreach ($post as $rec) 
+            <li><a href="{{ route('posts.show', $rec->id) }}">{{$rec->country}}</a>
                 <br>
-                ({{ $post->date1 }} 〜 {{ $post->date2 }})</li> 
-                </ol>
+                ({{ $rec->date1 }} 〜 {{ $rec->date2 }})
             </li>
+            @endforeach
+            </ol>
+        </li>
         <div class="card-header">
             <h4>MY MAP</h4>
             </div>

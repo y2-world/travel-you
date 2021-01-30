@@ -22,8 +22,8 @@
           <small class="text-muted">{{ $post->updated_at }}</small>
         </div>
         @endforeach
-      
   </div>
+  <br>
   <div class="col-sm-4">
     <div class="card-header">
         <h4>TROUBLE×YOU</h4>
@@ -41,7 +41,7 @@
         </div>
     </li>
   </div>
-
+  <br>
   <div class="col-sm-4">
     <div class="card-header">
         <h4>Q & A</h4>
