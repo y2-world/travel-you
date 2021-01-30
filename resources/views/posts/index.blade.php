@@ -49,7 +49,7 @@
           by Mami
           <hr>
           <h5 class="card-title">Yukiさんの回答</h5>
-          <p class="card-text">2月にスペインのバルセロナにに行ったことがありますが、暖かかったです。20℃くらいありました。</h5>
+          <p class="card-text">2月にスペインのバルセロナにに行ったことがありますが、暖かかったです。20℃くらいありました。防寒着は必要なく、上着があれば大丈夫だと思います。</h5>
         </div>  
         <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>
