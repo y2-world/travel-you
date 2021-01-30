@@ -48,7 +48,7 @@ class PostController extends Controller
         $post -> date2     = $request -> date2;
 
         $file_name = $request->file('image')->getClientOriginalName();
-        $post -> image = $request->file('image')->storeAs('public',$file_name);
+        $post -> image = $request->file('image')->store('image','public',$file_name);
     
         $post -> country     = $request -> country;
         $post -> city     = $request -> city;
@@ -101,7 +101,7 @@ class PostController extends Controller
         }
 
         $post -> delete();
-        return redirect()->route('posts.index');
+        return redirect()->route('users.show', Auth::user()->id );
     }
     public function detail(Post $post)
     {

@@ -16,7 +16,7 @@
         <li class="list-group-item">
             <h6 class="card-title"><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h6>
             <p class="card-date">{{ $post->date1 }} 〜 {{ $post->date2 }}</p>
-            <a href="{{ route('posts.show', $post->id) }}"><img src="{{ asset('/' . $post->image) }}" width="100%"></a>
+            <a href="{{ route('posts.show', $post->id) }}"><img src="{{ asset('storage/' . $post->image) }}" width="100%"></a>
             <br>
             <br>
             <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-secondary">編集</a>
@@ -29,6 +29,12 @@
         </div>
         <li class="list-group-item">
         <h6 class="card-title"><a href="{{ route('posts.show', $post->id) }}">{{ $post->country}}</a></h6>
+        </li>
+        <div class="card-header">
+        <h4>MY MAP</h4>
+        </div>
+        <li class="list-group-item">
+       
         </li>
     </div>
 </div>
