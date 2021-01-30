@@ -22,8 +22,9 @@
           <small class="text-muted">{{ $post->updated_at }}</small>
         </div>
         @endforeach
+        <hr>
   </div>
-  <br>
+
   <div class="col-sm-4">
     <div class="card-header">
         <h4>TROUBLE×YOU</h4>
@@ -39,9 +40,10 @@
         <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>
         </div>
+        <hr>
     </li>
   </div>
-  <br>
+
   <div class="col-sm-4">
     <div class="card-header">
         <h4>Q & A</h4>
@@ -58,6 +60,7 @@
         <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>
         </div>
+        <hr>
     </div>
   </div>
 </div>
