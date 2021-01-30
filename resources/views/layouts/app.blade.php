@@ -33,9 +33,25 @@
     .card-header {
         font-family: Oswald;
     }
-
-    
-
+    .card {
+    min-width: 220px;
+    max-width: 360px;
+    margin-bottom: 10px !important;
+    margin: auto;
+    }
+    .gmap {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    }
+    .gmap iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    }    
     
 </style>
 

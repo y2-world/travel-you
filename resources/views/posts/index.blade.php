@@ -5,7 +5,7 @@
         <h2>OUR TRAVELS</h2>
 </div>
 
-  <div class="col-md-4">
+  
     <div class="card" style="width: 22rem;">
         @foreach ($posts as $post)
       <a href="{{ route('posts.show', $post->id) }}"><img class="card-img-top" src="{{ asset('storage/' . $post->image) }}" alt="Card image cap"></a>
@@ -16,7 +16,7 @@
         </div>
         @endforeach
     </div>
-  </div>
+  
 </div>
 @endsection
 
