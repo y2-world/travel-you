@@ -33,12 +33,10 @@
     .card-header {
         font-family: Oswald;
     }
-    .card {
-    min-width: 220px;
-    max-width: 360px;
-    margin-bottom: 10px !important;
-    margin: auto;
-    }
+
+    
+
+    
 </style>
 
 <body>
