@@ -46,7 +46,14 @@
     top: 0;
     height: 100%;
     width: 100%;
-    }    
+    }  
+
+    .card {
+    min-width: 100px;
+    max-width: 360px;
+    margin-bottom: 10px !important;
+    margin: auto;
+    }
     
 </style>
 
