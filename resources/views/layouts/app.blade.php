@@ -49,13 +49,6 @@
     width: 100%;
     }  
 
-    .card {
-    min-width: 100px;
-    max-width: 360px;
-    margin-bottom: 10px !important;
-    margin: auto;
-    }
-
     .avbarDropdown {
         font-family: Oswald;
     }
