@@ -52,7 +52,7 @@ class UsersController extends Controller
         $user = User::find($user->id); //idが、リクエストされた$userのidと一致するuserを取得
         $posts = Post::where('user_id', $user->id) //$userによる投稿を取得
             ->orderBy('date1', 'desc') // 投稿作成日が新しい順に並べる
-            ->paginate(10); // ページネーション; 
+            ->paginate(100); // ページネーション; 
         return view('users.show', [
             'user_name' => $user->name, // $user名をviewへ渡す
             'post' => $posts, // $userの書いた記事をviewへ渡す
