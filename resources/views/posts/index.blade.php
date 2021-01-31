@@ -1,8 +1,8 @@
 @extends('layouts.app')　
 @section('content')
-<div class="container mt-4">
-        <div class="mb-4">
-        <h2>OUR TRAVELS</h2>
+<div class="container-fluid">
+  <div class="mb-4">
+  <h2>OUR TRAVELS</h2>
 </div>
 <div class="row">
   <div class="col-sm-4">

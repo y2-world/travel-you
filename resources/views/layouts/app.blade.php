@@ -40,6 +40,7 @@
     padding-bottom: 56.25%;
     position: relative;
     }
+
     .gmap iframe {
     position: absolute;
     left: 0;
@@ -54,6 +55,12 @@
     margin-bottom: 10px !important;
     margin: auto;
     }
+
+    .avbarDropdown {
+        font-family: Oswald;
+    }
+
+    
     
 </style>
 
@@ -107,10 +114,12 @@
                                         {{ __('FAQ') }}
                                     <a class="dropdown-item" href="{{ url('contact') }}">
                                         {{ __('お問い合わせ') }}
+                                    <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ url('http://54.249.81.67/') }}">
                                         {{ __('NIPPO') }}
                                     <a class="dropdown-item" href="https://y2world.github.io/home/">
                                         {{ __('YUKI OFFICIAL') }}
+                                    <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
