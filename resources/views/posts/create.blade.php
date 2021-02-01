@@ -38,10 +38,15 @@
                     <input type="text" class="form-control" placeholder="訪れた国を入力" name="country">
                 </div>     
                 <div class="form-group">
-                <label>都市</label>
-                <input type="text" class="form-control" placeholder="訪れた都市を入力" name="city">
+                    <label>都市</label>
+                    <input type="text" class="form-control" placeholder="訪れた都市を入力" name="city">
                 </div>
                 <div class="form-group">
+                    <label>TRAVEL DIARY</label>
+                    <textarea class="form-control" rows="25" name="diary" value=></textarea>
+                </div>
+                <input required type="file" class="form-control" name="images[]" placeholder="写真" multiple>
+                <br>
                 <button type="submit" class="btn btn-primary" value="upload">投稿</button>
                 <hr>
             </form>
