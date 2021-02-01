@@ -94,6 +94,7 @@ class PostController extends Controller
         $post -> date2     = $request -> date2;
         $post -> country     = $request -> country;
         $post -> city     = $request -> city;
+        $post -> diary     = $request -> diary;
         $post -> save();
         return view('posts.show', compact('post'));
     }

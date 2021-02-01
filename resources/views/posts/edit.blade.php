@@ -33,6 +33,10 @@
                     <label>都市</label>
                     <input type="text" class="form-control" value="{{ $post->city }}" name="city">
                 </div>
+                <div class="form-group">
+                    <label>TRAVEL DIARY</label>
+                    <textarea class="form-control" rows="25" name="diary"> {{ $post->diary}} </textarea>
+                </div>
                 <div class="update">
                 <button type="submit" class="btn btn-primary">更新する</button>
                 </div>

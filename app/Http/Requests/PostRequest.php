@@ -26,6 +26,11 @@ class PostRequest extends FormRequest
             'image' => 'max:2000',
             'country'  => 'required',
             'city'  => 'required',
+            'diary'  => 'required',
+            'image1' => 'required',
+            'image2' => 'required',
+            'image3' => 'required',
+            'image4' => 'required',
         ];
     }
     public function messages()
@@ -38,6 +43,11 @@ class PostRequest extends FormRequest
             'image.max' => 'ファイルが大きすぎます。',
             'country.required'  => '国は必須です。',
             'city.required'  => '都市は必須です。',
+            'diary.required'  => 'ダイアリーは必須です。',
+            'image1.required'  => '写真を4枚選択してください (1枚目)',
+            'image2.required'  => '写真を4枚選択してください (2枚目)',
+            'image3.required'  => '写真を4枚選択してください (3枚目)',
+            'image4.required'  => '写真を4枚選択してください (4枚目)',
         ];
     }
 }
