@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Trouble;
+use App\User;
+use Auth;
 
 class TroubleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
-        //
+        $troubles = Trouble::latest()->get();
+        return view('troubles.index', compact('troubles'));
     }
 
     /**
@@ -23,7 +27,7 @@ class TroubleController extends Controller
      */
     public function create()
     {
-        //
+        return view('troubles.create');
     }
 
     /**

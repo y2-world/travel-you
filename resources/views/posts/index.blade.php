@@ -60,7 +60,6 @@
         <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>
         </div>
-        <hr>
     </div>
   </div>
 </div>

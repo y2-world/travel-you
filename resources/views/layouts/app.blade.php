@@ -26,7 +26,7 @@
         color: turquoise;
         font-family: Oswald;
     }
-    .mb-4 {
+    .mb-4,.trouble {
         color: turquoise;
         font-family: Oswald;
     }
@@ -101,7 +101,7 @@
                                         {{ __('OUR TRAVELS') }}
                                     <a class="dropdown-item" href="{{ route('users.show', Auth::user()->id )}}">
                                         {{ __('MY TRAVELS') }}
-                                    <a class="dropdown-item" href="{{ url('') }}">
+                                    <a class="dropdown-item" href="{{ url('troubles/create') }}">
                                         {{ __('TROUBLE×YOU') }}
                                     <a class="dropdown-item" href="{{ url('') }}">
                                         {{ __('Q&A') }}
