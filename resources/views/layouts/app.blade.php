@@ -53,7 +53,9 @@
         font-family: Oswald;
     }
 
-    
+    .diary {
+        font-family: Oswald;
+    }
     
 </style>
 

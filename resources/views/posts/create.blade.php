@@ -43,9 +43,24 @@
                 </div>
                 <div class="form-group">
                     <label>TRAVEL DIARY</label>
-                    <textarea class="form-control" rows="25" name="diary" value=></textarea>
+                    <textarea class="form-control" rows="25" name="diary"></textarea>
                 </div>
-                <input required type="file" class="form-control" name="images[]" placeholder="写真" multiple>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">写真①</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">写真②</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image2">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">写真③</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image3">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">写真④</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image4">
+                </div>
                 <br>
                 <button type="submit" class="btn btn-primary" value="upload">投稿</button>
                 <hr>

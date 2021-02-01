@@ -52,6 +52,12 @@ class PostController extends Controller
     
         $post -> country     = $request -> country;
         $post -> city     = $request -> city;
+        $post -> diary     = $request -> diary;
+        $post -> image1 = $request->file('image1')->store('image','public',$file_name);
+        $post -> image2 = $request->file('image2')->store('image','public',$file_name);
+        $post -> image3 = $request->file('image3')->store('image','public',$file_name);
+        $post -> image4 = $request->file('image4')->store('image','public',$file_name);
+    
         $post -> save(); //保存してあげましょう
         
         return redirect()->route('posts.index');

@@ -15,7 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->unsigned();
+            $table->Integer('user_id')->unsigned();
             $table->string('user_name');
             $table->string('title');
             $table->date('date1');
@@ -23,12 +23,16 @@ class CreatePostsTable extends Migration
             $table->string('image');
             $table->string('country');
             $table->string('city');
+            $table->text('diary');
+            $table->string('image1');
+            $table->string('image2');
+            $table->string('image3');
+            $table->string('image4');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('user_name')->references('name')->on('users');
             $table->unique(['user_id', 'user_name'],'uq_roles');
-
 
         });
     }
