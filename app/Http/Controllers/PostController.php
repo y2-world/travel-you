@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
+use App\Trouble;
 use App\Post;
 use App\User;
 use Auth;
@@ -17,6 +18,7 @@ class PostController extends Controller
     
     public function index()
     {   $posts = Post::latest()->get();
+        $troubles = Trouble::latest()->get();
         return view('posts.index', compact('posts'));
     }
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\TroubleRequest;
+use App\Http\Requests\PostRequest;
 use App\Trouble;
 use App\User;
 use Auth;
@@ -31,15 +31,22 @@ class TroubleController extends Controller
         return view('troubles.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     public function store(Request $request)
-    {
-        //
+    {   
+        $trouble = new Trouble; //インスタンスを作成
+        $trouble -> id         = $request -> id;
+        $trouble -> user_id  = Auth::id(); //ログイン中のユーザーidを代入
+        $trouble -> user_name  = Auth::user()->name;
+        $trouble -> title    = $request -> title; //ユーザー入力のtitleを代入
+        $trouble -> country     = $request -> country;
+        $trouble -> category     = $request -> category;
+        $trouble -> image = $request->file('image')->store('image','public');
+        $trouble -> content = $request ->content;
+    
+        $trouble -> save(); //保存してあげましょう
+        
+        return redirect()->route('troubles.index');
     }
 
     /**

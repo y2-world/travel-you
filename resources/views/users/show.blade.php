@@ -41,9 +41,9 @@
         <div class="card-header">
             <h4>TROUBLE×YOU</h4>
         </div>
-        <li class="list-group-item">
-            ここに投稿したトラブリューが入ります。
+        <li class="list-group-item"> 
         </li>
+        
     </div>
     <div class="col-sm-4">
         <div class="card-header">

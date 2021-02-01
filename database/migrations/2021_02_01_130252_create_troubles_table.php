@@ -19,11 +19,14 @@ class CreateTroublesTable extends Migration
             $table->string('user_name');
             $table->string('title');
             $table->string('country');
-            $table->string('category');
+            $table->string('category')->nullable();
             $table->string('image');
-            $table->string('content');
+            $table->text('content');
             $table->timestamps();
 
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_name')->references('name')->on('users');
+            $table->unique(['user_id', 'user_name'],'uq_roles');
           
         });
     }

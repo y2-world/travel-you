@@ -40,7 +40,6 @@ class PostRequest extends FormRequest
             'date1.required'  => '期間1は必須です。',
             'date2.required'  => '期間2は必須です。',
             'image.required'  => 'カバー写真は必須です。',
-            'image.max' => 'ファイルが大きすぎます。',
             'country.required'  => '国は必須です。',
             'city.required'  => '都市は必須です。',
             'diary.required'  => 'ダイアリーは必須です。',
