@@ -6,9 +6,9 @@
         <h2 class="trouble">TROUBLE×YOU</h2>
         <hr>
         <div class="title">
-                    <h4>あなたのTROUBLEをシェアしましょう</h4>
+                    <h5>あなたのTROUBLEをシェアしましょう</h5>
         </div>
-        <a href="{{ url('troubles/index') }}" class="btn btn-primary" id="my_travels_botton">投稿一覧</a>
+        <a href="{{ url('troubles') }}" class="btn btn-primary" id="my_travels_botton">投稿一覧</a>
         <hr>
         <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
             {{csrf_field()}}
@@ -22,7 +22,7 @@
                 </div>
             @endif
                 <div class="form-group">
-                    <label>TROUBLEのタイトル</label>
+                    <label>タイトル</label>
                     <input type="text" class="form-control" placeholder="トラブルのタイトル" name="title">
                 </div>  
                 <div class="form-group">

@@ -23,7 +23,7 @@ class PostRequest extends FormRequest
             'date1' => 'required',
             'date2'  => 'required',
             'image'  => 'required',
-            'image' => 'max:2000',
+            'image' => 'required',
             'country'  => 'required',
             'city'  => 'required',
             'diary'  => 'required',
