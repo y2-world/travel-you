@@ -174,6 +174,7 @@
                 </div>
                 <br>
                 <div class="links">
+                    <a href="{{ route('login.guest') }}">ゲストログイン</a>
                     <a href="{{ url('/faq') }}">FAQ</a>
                     <a href="{{ url('/contact') }}">お問い合わせ</a>
                     <a href="http://54.249.81.67">NIPPO</a>

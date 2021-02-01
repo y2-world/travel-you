@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -37,4 +38,15 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function guestLogin()
+    {
+    $email = 'hoge@hoge.jp';
+    $password = 'hogehoge';
+
+    if (Auth::attempt(['email' => $email, 'password' => $password])) {
+        return redirect()->route('posts.index');
+    }
+
+    return redirect('posts/index');  }
 }
