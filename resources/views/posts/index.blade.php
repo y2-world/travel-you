@@ -21,8 +21,8 @@
         <div class="card-footer">
           <small class="text-muted">{{ $post->updated_at }}</small>
         </div>
+        <br>
         @endforeach
-        <hr>
   </div>
 
   <div class="col-sm-4">
@@ -40,7 +40,7 @@
         <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>
         </div>
-        <hr>
+        <br>
     </li>
   </div>
 
