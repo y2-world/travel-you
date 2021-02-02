@@ -23,8 +23,7 @@
                 <a class="btn btn-primary btn-sm" href="{{ route('troubles.show', $trouble->id) }}">More</a>
                 <br>
                 <br>
-                by&nbsp;<a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a>
-                
+                by&nbsp;<a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a> 
             </div>
         </div>
     </div>
