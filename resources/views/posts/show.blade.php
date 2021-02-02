@@ -24,16 +24,16 @@
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('storage/' . $post->image1) }}" width="70%">
+                            <img src="{{ asset('storage/' . $post->image1) }}" width="100%">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('storage/' . $post->image2) }}" width="70%">
+                            <img src="{{ asset('storage/' . $post->image2) }}" width="100%">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('storage/' . $post->image3) }}" width="70%">
+                            <img src="{{ asset('storage/' . $post->image3) }}" width="100%">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('storage/' . $post->image4) }}" width="70%">
+                            <img src="{{ asset('storage/' . $post->image4) }}" width="100%">
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
