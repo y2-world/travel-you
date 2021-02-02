@@ -13,7 +13,7 @@ class TroubleRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,8 +26,6 @@ class TroubleRequest extends FormRequest
         return [
             'title' => 'required',
             'country' => 'required',
-            'category'  => 'required',
-            'diary'  => 'required',
             'image' => 'required',
             'content'  => 'required',
         ];
@@ -37,8 +35,6 @@ class TroubleRequest extends FormRequest
         return [
             'title.required' => 'タイトルは必須です。',
             'country.required'  => '国は必須です。',
-            'category.required'  => '都市は必須です。',
-            'diary.required'  => 'カテゴリーは必須です。',
             'image.required'  => '写真は必須です。',
             'content.required'  => '本文は必須です。',
         ];

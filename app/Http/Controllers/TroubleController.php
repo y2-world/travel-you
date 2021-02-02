@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\PostRequest;
+use App\Http\Requests\TroubleRequest;
 use App\Trouble;
+use App\Post;
 use App\User;
 use Auth;
 
@@ -32,7 +33,7 @@ class TroubleController extends Controller
     }
 
    
-    public function store(Request $request)
+    public function store(TroubleRequest $request)
     {   
         $trouble = new Trouble; //インスタンスを作成
         $trouble -> id         = $request -> id;
@@ -58,30 +59,32 @@ class TroubleController extends Controller
     public function show($id)
     {
         $trouble = Trouble::find($id);// ページネーション; 
-        return view('troubles.show');
+        return view('troubles.show', compact('trouble'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $trouble = Trouble::find($id);
+        if(Auth::id() !== $trouble->user_id){
+            return with("投稿したユーザーでないと編集できません。"); 
+        }
+        return view('troubles.edit', compact('trouble'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        $trouble = Trouble::find($id);
+
+        if(Auth::id() !== $trouble->user_id){
+            return with("投稿したユーザーでないと更新できません。"); 
+        }
+
+        $trouble -> title    = $request -> title; 
+        $trouble ->  country   = $request -> country; 
+        $trouble ->  category   = $request -> category;
+        $trouble -> content     = $request -> content;
+        $trouble -> save();
+        return view('troubles.show', compact('trouble'));
     }
 
     /**
@@ -92,6 +95,13 @@ class TroubleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $trouble = Trouble::find($id);
+
+        if(Auth::id() !== $trouble->user_id){
+            return with("投稿したユーザーでないと削除できません。"); 
+        }
+
+        $trouble -> delete();
+        return redirect()->route('users.show', Auth::user()->id );
     }
 }

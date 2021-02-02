@@ -45,6 +45,7 @@
             <br>
             <hr>
             <p>投稿日時：{{ $post->created_at }}</p> 
+            
             <br>
             <a href="{{ url('/posts') }}" class="btn btn-secondary">BACK</a>
         </li>

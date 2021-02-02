@@ -76,7 +76,7 @@ class PostController extends Controller
         $post = Post::find($id);
 
         if(Auth::id() !== $post->user_id){
-            return with("投稿したユーザーでないと削除できません。"); 
+            return with("投稿したユーザーでないと編集できません。"); 
         }
 
         return view('posts.edit', compact('post'));
@@ -88,7 +88,7 @@ class PostController extends Controller
         $post = Post::find($id);
 
         if(Auth::id() !== $post->user_id){
-            return with("投稿したユーザーでないと削除できません。"); 
+            return with("投稿したユーザーでないと更新できません。"); 
         }
 
         $post -> title    = $request -> title; //ユーザー入力のtitleを代入
@@ -111,14 +111,5 @@ class PostController extends Controller
 
         $post -> delete();
         return redirect()->route('users.show', Auth::user()->id );
-    }
-    public function detail(Post $post)
-    {
-        return view('posts/detail', [
-            'title' => $post->title,
-            'content' => $post->content,
-            'user_id' => $post->user_id,
-            'image_url' => str_replace('public/', 'storage/', $post->image_url), //今回追加
-        ]);        
     }
 }
