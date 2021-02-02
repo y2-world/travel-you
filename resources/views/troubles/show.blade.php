@@ -1,25 +1,35 @@
-@extends('layouts.app')
+@extends('layouts.app')　
 @section('content')
-<div class="row justify-content-center">
-    <div class="col-sm-8">
-         <div class="card-body">
-            <h4>{{ $trouble->title }}</h4>
-            <p class="card-category">by&nbsp;<a href="#"></a>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="trouble">TROUBLE×YOU</h2>
+        <div class="col-sm">
+        <hr>
+            <div class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img class="card-img" src="">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><h5 class="card-title">タイトル</h5></a></h5>
+                            <p>国 : </p>
+                            <p>カテゴリー : </p>
+                            <br>
+                            <p>本文</p>
+                            by ゲスト
+                        </div>
+                    </div>
+                    <div class="container">
+                        <p>投稿日時：</p> 
+                        <a href="{{ url('troubles') }}" class="btn btn-secondary">BACK</a>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
         </div>
-        <li class="list-group-item">
-            <img src="#" width="100%">
-            <br>
-            <br>
-            <p class="card-country">国 : </p>
-            <p class="card-city">カテゴリー : </p>
-            <hr>
-            <p class="card-city"></p>
-            <hr>
-            <p>投稿日時：</p> 
-            <br>
-            <a href="{{ url('/posts') }}" class="btn btn-secondary">BACK</a>
-        </li>
     </div>
-</div>
-            
+</div>  
 @endsection

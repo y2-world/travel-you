@@ -19,8 +19,7 @@
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title"> <h5 class="card-title">{{ $trouble->title }}</h5></a></h5>
-                <p>{{Str::limit($trouble->content, 50, '…' )}}</p>
-                <br>
+                <p>{{Str::limit($trouble->content, 150, '…' )}}</p>
                 <a class="btn btn-primary btn-sm" href="{{ route('troubles.show', $trouble->id) }}">More</a>
                 <br>
                 <br>
