@@ -14,6 +14,7 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title"><h5 class="card-title">{{ $post->title }}</h5></a></h5>
+                            <p class="card-date">{{ $post->date1 }}&nbsp;〜&nbsp;{{ $post->date2 }}</p>
                             <p class="card-category">by&nbsp;<a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a>
                             <p>国 : {{ $post->country }}</p>
                             <p>都市 : {{ $post->city }}</p>
@@ -23,16 +24,16 @@
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('storage/' . $post->image1) }}" width="50%">
+                            <img src="{{ asset('storage/' . $post->image1) }}" width="70%">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('storage/' . $post->image2) }}" width="50%">
+                            <img src="{{ asset('storage/' . $post->image2) }}" width="70%">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('storage/' . $post->image3) }}" width="50%">
+                            <img src="{{ asset('storage/' . $post->image3) }}" width="70%">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('storage/' . $post->image4) }}" width="50%">
+                            <img src="{{ asset('storage/' . $post->image4) }}" width="70%">
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

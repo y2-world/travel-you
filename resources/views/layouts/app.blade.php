@@ -56,6 +56,12 @@
     .diary {
         font-family: Oswald;
     }
+
+    @media screen and (max-width: 640px) {
+    .carousel-inner {
+        width:100%
+        }
+    }
     
 </style>
 
