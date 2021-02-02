@@ -57,7 +57,8 @@ class TroubleController extends Controller
      */
     public function show($id)
     {
-        //
+        $trouble = Trouble::find($id);// ページネーション; 
+        return view('troubles.show');
     }
 
     /**

@@ -101,7 +101,7 @@
                                         {{ __('OUR TRAVELS') }}
                                     <a class="dropdown-item" href="{{ route('users.show', Auth::user()->id )}}">
                                         {{ __('MY TRAVELS') }}
-                                    <a class="dropdown-item" href="{{ url('troubles/create') }}">
+                                    <a class="dropdown-item" href="{{ url('troubles') }}">
                                         {{ __('TROUBLE×YOU') }}
                                     <a class="dropdown-item" href="{{ url('') }}">
                                         {{ __('Q&A') }}

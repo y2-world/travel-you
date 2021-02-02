@@ -30,6 +30,10 @@ class CreatePostsTable extends Migration
             $table->string('image4');
             $table->timestamps();
 
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_name')->references('name')->on('users');
+            $table->unique(['user_id', 'user_name'],'uq_roles');
+
         });
     }
 
