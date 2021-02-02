@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <h2 class="trouble">TROUBLE×YOU</h2>
         <div class="col-sm">
         <hr>

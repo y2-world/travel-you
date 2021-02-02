@@ -102,6 +102,6 @@ class TroubleController extends Controller
         }
 
         $trouble -> delete();
-        return redirect()->route('users.show', Auth::user()->id );
+        return redirect()->route('troubles.index', Auth::user()->id );
     }
 }
