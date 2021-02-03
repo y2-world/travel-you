@@ -8,7 +8,7 @@
         <hr>
             <div class="card mb-3">
                 <div class="row no-gutters">
-                    <div class="col-md-4">
+                    <div class="col-md-5 my-auto">
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-7">
                         <div class="card-body">
                             <h5 class="card-title"><h5 class="card-title">{{ $post->title }}</h5></a></h5>
                             <p class="card-date">{{ $post->date1 }}&nbsp;〜&nbsp;{{ $post->date2 }}</p>
@@ -75,9 +75,10 @@
                         @endforeach
                     </div>
                 </div>
-                </div>
                 <hr>
-                        <a href="{{ url('/posts') }}" class="btn btn-secondary btn-sm">BACK</a>
+                <a href="{{ url('/posts') }}" class="btn btn-secondary btn-sm">BACK</a>
+                </div>
+                
                         <br>
                         <br>
                         </div>
