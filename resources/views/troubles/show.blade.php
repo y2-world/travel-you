@@ -8,10 +8,10 @@
         <hr>
             <div class="card mb-3">
                 <div class="row no-gutters">
-                    <div class="col-md-4 my-auto">
+                    <div class="col-md-5 my-auto">
                         <img class="card-img" src="{{ asset('storage/' . $trouble->image) }}">
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-7">
                         <div class="card-body">
                             <h5 class="card-title"><h5 class="card-title">{{ $trouble->title }}</h5></a></h5>
                             <p class="card-category">by&nbsp;<a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a>
