@@ -76,6 +76,7 @@
                     </div>
                 </div>
                 <hr>
+                <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-secondary btn-sm">編集</a>
                 <a href="{{ url('/posts') }}" class="btn btn-secondary btn-sm">BACK</a>
                 </div>
                         </div>
