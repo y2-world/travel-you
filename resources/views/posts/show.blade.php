@@ -78,9 +78,6 @@
                 <hr>
                 <a href="{{ url('/posts') }}" class="btn btn-secondary btn-sm">BACK</a>
                 </div>
-                
-                        <br>
-                        <br>
                         </div>
                     </div>
                 </div>
