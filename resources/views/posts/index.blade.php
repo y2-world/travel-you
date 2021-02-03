@@ -15,7 +15,7 @@
   @foreach ($posts as $post)
   <div class="card mb-3">
     <div class="row no-gutters">
-        <div class="col-md-3 my-auto">
+        <div class="col-md-4 my-auto">
           <a href="{{ route('posts.show', $post->id) }}"><img class="card-img-bottom" src="{{ asset('storage/' . $post->image) }}" alt="Card image cap"></a>
         </div>
         <div class="col-md-8">

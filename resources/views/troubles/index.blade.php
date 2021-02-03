@@ -13,7 +13,7 @@
   @foreach ($troubles as $trouble)
   <div class="card mb-3">
     <div class="row no-gutters">
-        <div class="col-md-3 my-auto">
+        <div class="col-md-4 my-auto">
             <img src="{{ asset('storage/' . $trouble->image) }}" width="100%">
         </div>
         <div class="col-md-8">
