@@ -9,7 +9,33 @@
             <div class="card mb-3">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img class="card-img" src="{{ asset('storage/' . $post->image) }}">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{{ asset('storage/' . $post->image) }}" width="100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('storage/' . $post->image1) }}" width="100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('storage/' . $post->image2) }}" width="100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('storage/' . $post->image3) }}" width="100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('storage/' . $post->image4) }}" width="100%">
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -21,33 +47,9 @@
                             <hr>
                             <p>{{ $post->diary }}</p>
                             <hr>
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{{ asset('storage/' . $post->image1) }}" width="100%">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('storage/' . $post->image2) }}" width="100%">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('storage/' . $post->image3) }}" width="100%">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('storage/' . $post->image4) }}" width="100%">
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                    <br>
                     <p>投稿日時：{{ $post->created_at }}</p> 
                     <hr>
-                    <div class="row justify-content-center">
+                    <div class="row">
                     <div class="col-md-8">
                         <form action="{{ route('comments.store') }}" method="POST">
                         {{csrf_field()}}
@@ -60,7 +62,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="row justify-content-center">
+                <div class="row">
                     <div class="col-md-8">
                         @foreach ((array)$post->comments as $comment)
                         <div class="card mt-3">
@@ -76,6 +78,7 @@
                 </div>
                 <hr>
                         <a href="{{ url('/posts') }}" class="btn btn-secondary btn-sm">BACK</a>
+                        <br>
                         <br>
                         </div>
                     </div>
