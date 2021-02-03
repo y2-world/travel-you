@@ -3,7 +3,16 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            @if ($errors->any())
+        <h2 class="trouble">Q & A</h2>
+        <hr>
+        <div class="title">
+                    <h5>旅について質問してみましょう</h5>
+        </div>
+        <a href="{{ url('questions') }}" class="btn btn-primary" id="my_travels_botton">投稿一覧</a>
+        <hr>
+        <form action="{{ route('questions.store') }}" method="POST" enctype="multipart/form-data">
+            {{csrf_field()}}
+            @if ($errors->any()) 
                 <div class="alert alert-danger">
                     <ul>
                         @foreach ($errors->all() as $error)
@@ -12,44 +21,34 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('troubles.update', $trouble->id) }}" method="POST">
-            {{csrf_field()}}
-            {{method_field('PATCH')}}
                 <div class="form-group">
                     <label>タイトル</label>
-                    <input type="text" class="form-control" value="{{ $trouble->title }}" name="title">
-                </div>
-                <div class="form-group">
-                    <label>国</label>
-                    <input type="text" class="form-control" value="{{ $trouble->country }}" name="country">
-                </div>
+                    <input type="text" class="form-control" placeholder="質問のタイトル" name="title">
+                </div>    
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">カテゴリー</label>
                     <select class="form-control" id="exampleFormControlSelect1" select name="category">
+                    <option value="基本情報">基本情報</option>
+                    <option value="チップ・マナー">チップ・マナー</option>
                     <option value="宿泊先">宿泊先 (ホテル・Airbnbなど)</option>
+                    <option value="観光地">観光地</option>
                     <option value="レストラン">レストラン</option>
                     <option value="交通機関">交通機関</option>
                     <option value="ショッピング">ショッピング</option>
+                    <option value="お土産">お土産</option>
                     <option value="治安">治安</option>
                     <option value="その他">その他</option>
                     </select>
-                </div>
+                </div>   
                 <div class="form-group">
                     <label>本文</label>
-                    <textarea class="form-control" rows="10" name="content"> {{ $trouble->content}} </textarea>
+                    <textarea class="form-control" rows="10" name="body"></textarea>
                 </div>
-                <div class="update">
-                <button type="submit" class="btn btn-primary">更新する</button>
-                </div>
-            </form>    
-                <br> 
-            <div class="delete">     
-            <form action='{{ route('troubles.destroy', $trouble->id) }}' method='post'>
-                {{ csrf_field() }}
-                {{ method_field('DELETE') }}
-                <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("削除しますか？");'>
+                
+                <br>
+                <button type="submit" class="btn btn-primary" value="upload">投稿</button>
+                <hr>
             </form>
-            </div>
         </div>
     </div>
 </div>

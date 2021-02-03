@@ -38,4 +38,5 @@ Route::resource('posts', 'PostController');
 Route::resource('users', 'UsersController');
 Route::resource('comments', 'CommentController');
 Route::resource('troubles', 'TroubleController');
+Route::resource('questions', 'QuestionController');
 

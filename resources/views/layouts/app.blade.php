@@ -109,7 +109,7 @@
                                         {{ __('MY TRAVELS') }}
                                     <a class="dropdown-item" href="{{ url('troubles') }}">
                                         {{ __('TROUBLE×YOU') }}
-                                    <a class="dropdown-item" href="{{ url('') }}">
+                                    <a class="dropdown-item" href="{{ url('questions') }}">
                                         {{ __('Q&A') }}
                                     <a class="dropdown-item" href="{{ url('faq') }}">
                                         {{ __('FAQ') }}

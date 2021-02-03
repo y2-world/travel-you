@@ -21,8 +21,8 @@
                             <p>{{ $trouble->content }}</p>
                             <hr>
                             <p>投稿日時：{{ $trouble->created_at }}</p> 
-                        <a href="{{ route('troubles.edit', $trouble->id) }}" class="btn btn-secondary">編集</a>
-                        <a href="{{ url('/troubles') }}" class="btn btn-secondary">BACK</a>
+                        <a href="{{ route('troubles.edit', $trouble->id) }}" class="btn btn-secondary btn-sm">編集</a>
+                        <a href="{{ url('/troubles') }}" class="btn btn-secondary btn-sm">BACK</a>
                         <br>
                         </div>
                     </div>

@@ -45,8 +45,37 @@
                         </a>
                     </div>
                     <br>
-                            <p>投稿日時：{{ $post->created_at }}</p> 
-                        <a href="{{ url('/posts') }}" class="btn btn-secondary">BACK</a>
+                    <p>投稿日時：{{ $post->created_at }}</p> 
+                    <hr>
+                    <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <form action="{{ route('comments.store') }}" method="POST">
+                        {{csrf_field()}}
+                            <input type="hidden" name="post_id" value="{{ $post->id }}">
+                            <div class="form-group">
+                                <label>コメント</label>
+                                <textarea class="form-control" placeholder="内容" rows="5" name="body"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm">コメントする</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        @foreach ((array)$post->comments as $comment)
+                        <div class="card mt-3">
+                            <h5 class="card-header">投稿者：{{ $comment->user->name }}</h5>
+                            <div class="card-body">
+                                <h5 class="card-title">投稿日時：{{ $comment->created_at }}</h5>
+                                <p class="card-text">内容：{{ $comment->body }}</p>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+                </div>
+                <hr>
+                        <a href="{{ url('/posts') }}" class="btn btn-secondary btn-sm">BACK</a>
                         <br>
                         </div>
                     </div>
@@ -56,4 +85,6 @@
         </div>
     </div>
 </div>  
+
+
 @endsection
