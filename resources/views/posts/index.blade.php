@@ -30,7 +30,7 @@
     </div>
         <div class="card-footer">
           <div class="row no-gutters">
-            <div class="col-md-12">
+            <div class="col-md-12 my-auto">
               <small class="text-muted">{{ $post->updated_at }}</small>
             </div>
           </div>

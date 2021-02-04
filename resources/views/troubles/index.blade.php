@@ -32,11 +32,10 @@
     </div>
         <div class="card-footer">
             <div class="row no-gutters">
-                <div class="col-md-11 my-auto">
+                <div class="col-md-12">
                     <small class="text-muted">{{ $trouble->updated_at }}</small>
                 </div>
-               
-                </div>
+            </div>
         </div>
   </div>
   @endforeach

@@ -23,7 +23,6 @@
         <div class="col-md-3 my-auto">
             <div class="card-body">
                 <a class="btn btn-primary btn-sm" href="{{ route('questions.show', $question->id) }}">回答する</a>
-                <br>
             </div>
         </div>
     </div>
