@@ -13,14 +13,14 @@
   @foreach ($questions as $question)
   <div class="card mb-3">
     <div class="row no-gutters">
-        <div class="col-md-9">
+        <div class="col-md-10">
             <div class="card-body">
                 <h5 class="card-title"> <h5 class="card-title">{{ $question->title }}</h5></a></h5>
                 <p>{{ $question->body }}</p>
                 by&nbsp;<a href="{{ route('users.show', $question->user_id)}}">{{ $question->user_name }}</a> 
             </div>
         </div>
-        <div class="col-md-3 my-auto">
+        <div class="col-md-2 my-auto">
             <div class="card-body">
                 <a class="btn btn-primary btn-sm" href="{{ route('questions.show', $question->id) }}">回答する</a>
             </div>
