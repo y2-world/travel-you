@@ -16,15 +16,11 @@
   <div class="card mb-3">
     <div class="row no-gutters">
     <a href="{{ route('posts.show', $post->id) }}"><img class="card-img-bottom" src="{{ asset('storage/' . $post->image) }}" alt="Card image cap"></a>
-        <div class="col-md-9">
+        <div class="col-md-12">
             <div class="card-body">
                 <h5 class="card-title"> <h5 class="card-title">{{ $post->title }}</h5></a></h5>
                 <p class="card-text"> {{ $post->date1 }} 〜 {{ $post->date2 }}</p>
-            </div>
-        </div>
-        <div class="col-md-3 my-auto">
-            <div class="card-body">
-            by&nbsp;<a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a> 
+                by&nbsp;<a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a> 
             </div>
         </div>
     </div>
