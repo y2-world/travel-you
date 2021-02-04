@@ -24,20 +24,14 @@
         </div>
         <div class="col-md-3 my-auto">
             <div class="card-body">
-            <br>
             by&nbsp;<a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a> 
             </div>
         </div>
     </div>
         <div class="card-footer">
           <div class="row no-gutters">
-            <div class="col-md-11 my-auto">
+            <div class="col-md-12">
               <small class="text-muted">{{ $post->updated_at }}</small>
-            </div>
-            <div class="col-md-1">
-              <small class="card-body">
-                ❤️
-              </small>
             </div>
           </div>
         </div>

@@ -23,18 +23,14 @@
         <div class="col-md-3 my-auto">
             <div class="card-body">
                 <a class="btn btn-primary btn-sm" href="{{ route('questions.show', $question->id) }}">回答する</a>
+                <br>
             </div>
         </div>
     </div>
         <div class="card-footer">
           <div class="row no-gutters">
-            <div class="col-md-11 my-auto">
+            <div class="col-md-12 my-auto">
               <small class="text-muted">{{ $question->updated_at }}</small>
-            </div>
-            <div class="col-md-1">
-              <small class="card-body">
-              ❤️
-              </small>
             </div>
           </div>
         </div>

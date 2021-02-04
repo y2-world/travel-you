@@ -26,6 +26,7 @@
         <div class="col-md-2 my-auto">
             <div class="card-body">
             <a class="btn btn-primary btn-sm" href="{{ route('troubles.show', $trouble->id) }}">More</a>
+            <br>
             </div>
         </div>
     </div>
@@ -34,11 +35,7 @@
                 <div class="col-md-11 my-auto">
                     <small class="text-muted">{{ $trouble->updated_at }}</small>
                 </div>
-                <div class="col-md-1">
-                    <small class="card-body">
-                    ❤️
-                    </small>
-                </div>
+               
                 </div>
         </div>
   </div>
