@@ -40,23 +40,29 @@
                     <div class="col-md-7">
                         <div class="card-body">
                             <h5 class="card-title"><h5 class="card-title">{{ $post->title }}</h5></a></h5>
-                            <p class="card-date">{{ $post->date1 }}&nbsp;〜&nbsp;{{ $post->date2 }}</p>
+                            <sm class="card-date">{{ $post->date1 }}&nbsp;〜&nbsp;{{ $post->date2 }}</sm>
+                            <br>
+                            <br>
                             <p class="card-category">by&nbsp;<a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a>
-                            <p>国 : {{ $post->country }}</p>
-                            <p>都市 : {{ $post->city }}</p>
+                            <br>
+                            <br>
+                            <sm>国 : {{ $post->country }}</sm>
+                            &nbsp;
+                            <sm>都市 : {{ $post->city }}</sm>
                             <hr>
                             <p>{{ $post->diary }}</p>
-                            <hr>
-                    <p>投稿日時：{{ $post->created_at }}</p> 
                     <hr>
+                    <small>投稿日時：{{ $post->created_at }}</small> 
+                    <br>
+                    <br>
                     <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <form action="{{ route('comments.store') }}" method="POST">
                         {{csrf_field()}}
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
                             <div class="form-group">
                                 <label>コメント</label>
-                                <textarea class="form-control" placeholder="内容" rows="5" name="body"></textarea>
+                                <textarea class="form-control" rows="3" name="body"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-sm">コメントする</button>
                         </form>
@@ -76,6 +82,9 @@
                     </div>
                 </div>
                 <hr>
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <br>
+                <br>
                 <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-secondary btn-sm">編集</a>
                 <a href="{{ url('/posts') }}" class="btn btn-secondary btn-sm">BACK</a>
                 </div>

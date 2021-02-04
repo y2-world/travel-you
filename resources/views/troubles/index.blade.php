@@ -16,19 +16,30 @@
         <div class="col-md-4 my-auto">
             <img src="{{ asset('storage/' . $trouble->image) }}" width="100%">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-6 my-auto">
             <div class="card-body">
                 <h5 class="card-title"> <h5 class="card-title">{{ $trouble->title }}</h5></a></h5>
                 <p>{{Str::limit($trouble->content, 100, '…' )}}</p>
-                <a class="btn btn-primary btn-sm" href="{{ route('troubles.show', $trouble->id) }}">More</a>
-                <br>
-                <br>
                 by&nbsp;<a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a> 
+            </div>
+        </div>
+        <div class="col-md-2 my-auto">
+            <div class="card-body">
+            <a class="btn btn-primary btn-sm" href="{{ route('troubles.show', $trouble->id) }}">More</a>
             </div>
         </div>
     </div>
         <div class="card-footer">
-          <small class="text-muted">{{ $trouble->updated_at }}</small>
+            <div class="row no-gutters">
+                <div class="col-md-11 my-auto">
+                    <small class="text-muted">{{ $trouble->updated_at }}</small>
+                </div>
+                <div class="col-md-1">
+                    <small class="card-body">
+                    ❤️
+                    </small>
+                </div>
+                </div>
         </div>
   </div>
   @endforeach

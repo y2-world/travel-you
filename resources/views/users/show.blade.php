@@ -17,9 +17,6 @@
             <h6 class="card-title"><a href="{{ route('posts.show', $rec->id) }}">{{ $rec->title }}</a></h6>
             <p class="card-date">{{ $rec->date1 }} 〜 {{ $rec->date2 }}</p>
             <a href="{{ route('posts.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}" width="100%"></a>
-            <br>
-            <br>
-            <a href="{{ route('posts.edit', $rec->id) }}" class="btn btn-secondary">編集</a>
         </li>
         @endforeach
     </div>
