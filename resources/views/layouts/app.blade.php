@@ -87,8 +87,12 @@
     
     .menu-profile {
     color: turquoise;
-    text-decoration: none;
+    text-decoration: none;}
     }
+
+    span {
+   display: inline-block;
+   }
 }
 
     
