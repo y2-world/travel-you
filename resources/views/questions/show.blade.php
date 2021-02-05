@@ -27,6 +27,9 @@
                             </div>
                             <a class="btn btn-primary btn-sm" value="upload">回答する</a>
                            <hr>
+                           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <br>
+                        <br>
                         <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-secondary btn-sm">編集</a>
                         <a href="{{ url('/questions') }}" class="btn btn-secondary btn-sm">BACK</a>
                         <br>

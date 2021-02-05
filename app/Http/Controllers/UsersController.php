@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Trouble;
 use App\User;
+use App\Question;
 
 class UsersController extends Controller
 {
@@ -49,14 +50,21 @@ class UsersController extends Controller
     
     public function show(User $user)
     {   
-        $troubles = Trouble::latest()->get();
         $user = User::find($user->id); //idが、リクエストされた$userのidと一致するuserを取得
         $posts = Post::where('user_id', $user->id) //$userによる投稿を取得
             ->orderBy('date1', 'desc') // 投稿作成日が新しい順に並べる
             ->paginate(100); // ページネーション; 
+        $troubles = Trouble::where('user_id', $user->id) //$userによる投稿を取得
+            ->orderBy('updated_at', 'desc') // 投稿作成日が新しい順に並べる
+            ->paginate(100); // ページネーション; 
+        $questions = Question::where('user_id', $user->id) //$userによる投稿を取得
+            ->orderBy('updated_at', 'desc') // 投稿作成日が新しい順に並べる
+            ->paginate(100); // ページネーション; 
         return view('users.show', [
             'user_name' => $user->name, // $user名をviewへ渡す
             'post' => $posts, // $userの書いた記事をviewへ渡す
+            'trouble'=> $troubles,
+            'question'=> $questions,
         ]);
     }
 

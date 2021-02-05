@@ -19,28 +19,38 @@
             <a href="{{ route('posts.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}" width="100%"></a>
         </li>
         @endforeach
+        <br>
     </div>
     <br>
     <div class="col-sm-4">
-        
+        <div class="card-header">
+            <h4>TROUBLE×YOU</h4>
+        </div>
+        @foreach ($trouble as $rec)
+        <li class="list-group-item"> 
+        <a href="{{ route('troubles.show', $rec->id) }}">{{ $rec->title }}</a>
+        <br>
+        {{ $rec->updated_at }} 
+        </li>
+        @endforeach
+        <br>
         <div class="card-header">
             <h4>MY QUESTIONS</h4>
         </div>
+        @foreach ($question as $rec)
         <li class="list-group-item">
-            ここに自分がした質問が入ります。
+        <a href="{{ route('questions.show', $rec->id) }}">{{ $rec->title }}</a>  
+        <br>
+        {{ $rec->updated_at }} 
         </li>
+        @endforeach
         <div class="card-header">
             <h4>MY ANSWERS</h4>
         </div>
         <li class="list-group-item">
             ここに自分がした回答が入ります。
         </li>
-        <div class="card-header">
-            <h4>TROUBLE×YOU</h4>
-        </div>
-        <li class="list-group-item"> 
-        </li>
-        
+        <br>
     </div>
     <div class="col-sm-4">
         <div class="card-header">
