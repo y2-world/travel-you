@@ -22,6 +22,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+
                             </div>
                         </div>
 
@@ -62,6 +63,11 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                                <br>
+                                <br>
+                                <a href="{{ route('login.guest') }}" class="btn btn-primary" id="my_travels_botton">ゲストログイン</a>
+                                &nbsp;
+                                会員登録せずにご利用いただけます。
                             </div>
                         </div>
                     </form>

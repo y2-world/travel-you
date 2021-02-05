@@ -66,6 +66,11 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                <br>
+                                <br>
+                                <a href="{{ route('login.guest') }}" class="btn btn-primary" id="my_travels_botton">ゲストログイン</a>
+                                <br>
+                                会員登録せずにご利用いただけます。
                             </div>
                         </div>
                     </form>

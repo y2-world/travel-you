@@ -62,6 +62,36 @@
         width:100%
         }
     }
+
+    .menu {
+    color: silver;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Oswald";  
+    padding : 0 30px;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 640px) {
+    .menu {
+    color: silver;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Oswald";  
+    text-decoration:none;
+    padding : 0 10px;
+    }
+    
+    .menu-profile {
+    color: turquoise;
+    text-decoration: none;
+    }
+}
+
+    
     
 </style>
 
