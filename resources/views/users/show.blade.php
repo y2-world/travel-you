@@ -18,6 +18,7 @@
             <br>
             {{ $rec->date1 }} 〜 {{ $rec->date2 }}
             <br>
+            <br>
             <a href="{{ route('posts.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}" width="100%"></a>
         </li>
         @endforeach
