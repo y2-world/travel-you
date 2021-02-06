@@ -37,7 +37,7 @@
         <a class="menu" href="{{ route('login.guest') }}"><span>ゲストログイン</span></a>
         <a class="menu" href="{{ url('/faq') }}"><span>FAQ</span></a>
         <a class="menu" href="{{ url('/contact') }}"><span>お問い合わせ</span></a>
-        <a class="menu" href="http://54.249.81.67"><span>NIPPO</span></a>
+        <a class="menu" href="http://54.249.81.67" target="_blank"><span>NIPPO</span></a>
         <a class="menu" href="https://y2world.github.io/home/" target="_blank"><span>YUKI OFFICIAL</span></a>
     </div>
     <hr>
