@@ -67,12 +67,12 @@ class QuestionController extends Controller
     public function edit($id)
     {
         $question = Question::find($id);
+
         if(Auth::id() !== $question->user_id){
             return with("投稿したユーザーでないと編集できません。"); 
         }
-        return view('users.show', [
-            'answer'=> $answers,
-        ]);
+
+        return view('questions.edit', compact('question'));
     }
 
     /**
@@ -94,7 +94,7 @@ class QuestionController extends Controller
         $question ->  category   = $request -> category; 
         $question ->  body   = $request -> body;
         $question -> save();
-        return view('question.show', compact('question'));
+        return view('questions.show', compact('question'));
     }
 
     /**
