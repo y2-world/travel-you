@@ -19,13 +19,13 @@
         <div class="col-md-6 my-auto">
             <div class="card-body">
                 <h5 class="card-title"> <h5 class="card-title">{{ $trouble->title }}</h5></a></h5>
-                <p>{{Str::limit($trouble->content, 100, '…' )}}</p>
+                <p>{{Str::limit($trouble->content, 80, '…' )}}</p>
                 by&nbsp;<a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a> 
             </div>
         </div>
         <div class="col-md-2 my-auto">
             <div class="card-body">
-            <a class="btn btn-primary btn-sm" href="{{ route('troubles.show', $trouble->id) }}">More</a>
+            <a class="btn btn-primary btn-sm" href="{{ route('troubles.show', $trouble->id) }}">MORE</a>
             <br>
             </div>
         </div>
