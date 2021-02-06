@@ -28,7 +28,7 @@
                                 <img class="d-block w-100" src="{{ asset('storage/' . $post->image2) }}" alt="Third slide">
                                 </div>
                                 <div class="carousel-item">
-                                <img class="d-block w-100" src="{{ asset('storage/' . $post->image3) }}" alt="Forth slide">
+                                <img class="d-block w-100" src="{{ asset('storage/' . $post->image3) }}" alt="Fourth slide">
                                 </div>
                                 <div class="carousel-item">
                                 <img class="d-block w-100" src="{{ asset('storage/' . $post->image4) }}" alt="Fifth slide">
