@@ -111,6 +111,6 @@ class PostController extends Controller
         }
 
         $post -> delete();
-        return redirect()->route('users.show', Auth::user()->id );
+        return redirect()->route('posts.show', Auth::user()->id );
     }
 }
