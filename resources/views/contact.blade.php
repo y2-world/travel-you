@@ -21,7 +21,7 @@
                 お問い合わせ内容
                 <textarea class="form-control" rows="6" name="content"></textarea>
                 <br>
-                <button type="submit" class="btn btn-primary">投稿</button>
+                <button type="submit" class="btn btn-primary">送信</button>
                 </div>
                 
             </div>
