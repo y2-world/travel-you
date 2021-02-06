@@ -9,11 +9,10 @@ use App\User;
 use App\Question;
 use App\Comment;
 
-class Trouble extends Model
+class Answer extends Model
 {
     public function user()
     {
         return $this->belongsTo('App\User');
     }
 }
-

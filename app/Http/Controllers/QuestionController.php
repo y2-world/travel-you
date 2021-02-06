@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\QuestionRequest;
 use App\Question;
+use App\Answer;
 use Auth;
 
 class QuestionController extends Controller
@@ -62,19 +63,16 @@ class QuestionController extends Controller
         return view('questions.show', compact('question'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit($id)
     {
         $question = Question::find($id);
         if(Auth::id() !== $question->user_id){
             return with("投稿したユーザーでないと編集できません。"); 
         }
-        return view('questions.edit', compact('question'));
+        return view('users.show', [
+            'answer'=> $answers,
+        ]);
     }
 
     /**
@@ -96,7 +94,7 @@ class QuestionController extends Controller
         $question ->  category   = $request -> category; 
         $question ->  body   = $request -> body;
         $question -> save();
-        return view('questions.show', compact('question'));
+        return view('question.show', compact('question'));
     }
 
     /**

@@ -8,6 +8,8 @@ use Illuminate\Notifications\Notifiable;
 use App\Post;
 use App\Trouble;
 use App\User;
+use App\Question;
+use App\Comment;
 
 class User extends Authenticatable
 {

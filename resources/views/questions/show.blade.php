@@ -22,10 +22,14 @@
                             <small>投稿日時：{{ $question->created_at }}</small> 
                             <br>
                             <br>
-                            <div class="form-group">
-                            <textarea class="form-control" rows="5" name="body"></textarea>
-                            </div>
-                            <a class="btn btn-primary btn-sm" value="upload">回答する</a>
+                            <form action="{{ route('answers.store') }}" method="POST">
+                                {{csrf_field()}}
+                                    <input type="hidden" name="question_id" value="{{ $question->id }}">
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="5" name="body"></textarea>
+                                        </div>
+                                    <a class="btn btn-primary btn-sm" value="upload">回答する</a>
+                            </form>
                            <hr>
                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         <br>
