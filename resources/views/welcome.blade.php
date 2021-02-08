@@ -38,7 +38,7 @@
         <a class="menu" href="{{ url('/faq') }}"><span>FAQ</span></a>
         <a class="menu" href="{{ url('/contact') }}"><span>お問い合わせ</span></a>
         <a class="menu" href="http://54.249.81.67" target="_blank"><span>NIPPO</span></a>
-        <a class="menu" href="http://13.231.98.103" target="_blank"><span>YUKI OFFICIAL</span></a>
+        <a class="menu" href="http://y2-world.com" target="_blank"><span>YUKI OFFICIAL</span></a>
     </div>
     <hr>
     <div style="text-align:center;">
