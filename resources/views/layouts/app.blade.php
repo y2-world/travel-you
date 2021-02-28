@@ -148,9 +148,9 @@
                                     <a class="dropdown-item" href="{{ url('contact') }}">
                                         {{ __('お問い合わせ') }}
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{{ url('http://54.249.81.67/') }}">
+                                    <a class="dropdown-item" href="{{ url('http://54.249.81.67/') }}" target="_blank">
                                         {{ __('NIPPO') }}
-                                    <a class="dropdown-item" href="http://y2-world.com/">
+                                    <a class="dropdown-item" href="http://y2-world.com/" target="_blank">
                                         {{ __('YUKI OFFICIAL') }}
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
