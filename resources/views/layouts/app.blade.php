@@ -33,6 +33,33 @@
     .card-header {
         font-family: Oswald;
     }
+
+    .top_paris {
+        position: relative;
+    }
+    .title_area {
+        position: absolute;
+        color: white;
+        top: 0;
+        left: 0;
+        padding: 25% 10%;
+        opacity: 0.6;
+    }
+    .title_area button {
+        margin-top: 15px;
+        opacity: 1.0;
+    }
+    .top_title {
+        font-family: Oswald;
+        color: white;
+        font-size: 40px;
+        line-height: 25px;
+    }
+    .top_subtitle {
+        font-family: Oswald;
+        color: white;
+        font-size: 14px;
+    }
    
     .gmap {
     height: 0;
@@ -56,26 +83,32 @@
     .diary {
         font-family: Oswald;
     }
+    @media screen and (max-width: 1026px) {
+    .title_area {
+        padding:15% 10%;
+    }
 
     @media screen and (max-width: 640px) {
-    .carousel-inner {
-        width:100%
-        }
+    .title_area {
+        padding:15% 5%;
+    }
+
+    .title_area button {
+        display: none
     }
 
     .menu {
     color: silver;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     font-family: "Oswald";  
-    padding : 0 30px;
+    padding : 0 20px;
     }
 
     a:hover {
         text-decoration: none;
     }
 
-    @media screen and (max-width: 640px) {
     .menu {
     color: silver;
     text-align: center;
@@ -169,8 +202,6 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
             @yield('content')
         </main>
     </div>
