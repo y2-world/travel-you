@@ -34,24 +34,21 @@
         font-family: Oswald;
     }
 
-    .top_paris {
+    .top_slider {
         position: relative;
     }
     .title_area {
         position: absolute;
-        color: white;
         top: 0;
         left: 0;
-        padding: 25% 10%;
-        opacity: 0.6;
+        padding: 20% 10%;
     }
     .title_area button {
         margin-top: 15px;
-        opacity: 1.0;
     }
     .top_title {
         font-family: Oswald;
-        color: white;
+        color: black;
         font-size: 40px;
         line-height: 25px;
     }
@@ -59,6 +56,48 @@
         font-family: Oswald;
         color: white;
         font-size: 14px;
+    }
+
+    .top_intro {
+        background-color: aliceblue;
+    }
+    .top_header {
+        font-family: Oswald;
+        font-size: 40px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .intro {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .header_title {
+        padding-top: 20px;
+        font-family: Oswald;
+        color: turquoise;
+    }
+
+    .top_instruction {
+        background-color: honeydew;
+        line-height: 25px;
+    }
+    .top_instruction_row {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .top_instruction_row_header {
+        font-size: 30px;
+        font-family: Oswald;
+    }
+    .top_instruction_row_sub {
+        font-size: 18px;
+    }
+
+    .header {
+        font-size: 40px;
+        font-family: Oswald;
     }
    
     .gmap {
@@ -83,52 +122,92 @@
     .diary {
         font-family: Oswald;
     }
+
+    .page_wrapper {
+        padding-bottom: 40px;
+    }
+
+    footer {
+        background-color: white;
+    }
+
+    .footer_title {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-family: Oswald;
+        font-size: 40px;
+        line-height: 25px;
+    }
+
+    .footer_title a {
+        color: black;
+    }
+
+    footer a:hover {
+        text-decoration: none;
+        color: gray;
+    }
+
+    .footer_menu a {
+        padding: 20px;
+        color: black;
+    }
+
+    .footer_subtitle {
+        font-size: 14px;
+    }
+
     @media screen and (max-width: 1026px) {
-    .title_area {
-        padding:15% 10%;
+        .title_area {
+            padding:15% 10%;
+        }
+        .footer_menu a {
+            display: none;
+        }
     }
 
     @media screen and (max-width: 640px) {
-    .title_area {
-        padding:15% 5%;
+        .title_area {
+            padding:15% 5%;
+        }
+        .top_title {
+            font-family: Oswald;
+            color: black;
+            font-size: 20px;
+            line-height: 20px;
+        }
+        .top_subtitle {
+            font-family: Oswald;
+            color: white;
+            font-size: 7px;
+        }
+        .title_area button {
+            display: none;
+        }
+        .top_header {
+            font-family: Oswald;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 40px;
+        }
+        .intro {
+            font-size: 12px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+        .footer_title {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-family: Oswald;
+            font-size: 20px;
+            line-height: 25px;
+        }
+        .footer_subtitle {
+            font-size: 10px;
+        }
     }
-
-    .title_area button {
-        display: none
-    }
-
-    .menu {
-    color: silver;
-    text-align: center;
-    font-size: 15px;
-    font-family: "Oswald";  
-    padding : 0 20px;
-    }
-
-    a:hover {
-        text-decoration: none;
-    }
-
-    .menu {
-    color: silver;
-    text-align: center;
-    font-size: 15px;
-    font-family: "Oswald";  
-    text-decoration:none;
-    padding : 0 10px;
-    }
-    
-    .menu-profile {
-    color: turquoise;
-    text-decoration: none;}
-    }
-
-    span {
-   display: inline-block;
-   }
 }
-
-    
     
 </style>
 
@@ -181,10 +260,10 @@
                                     <a class="dropdown-item" href="{{ url('contact') }}">
                                         {{ __('お問い合わせ') }}
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{{ url('http://54.249.81.67/') }}" target="_blank">
-                                        {{ __('NIPPO') }}
                                     <a class="dropdown-item" href="http://y2-world.com/" target="_blank">
                                         {{ __('YUKI OFFICIAL') }}
+                                    <a class="dropdown-item" href="#" target="_blank">
+                                    {{ __('LIVE×YOU') }}
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -202,8 +281,28 @@
                 </div>
             </div>
         </nav>
-            @yield('content')
-        </main>
     </div>
+    @yield('content')
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="footer_title">      
+                        <a href="{{ url('/') }}">TRAVEL×YOU<br>
+                        <span class="footer_subtitle">旅とあなたをつなぐプラットフォーム</span></a><br>
+                    </div> 
+                </div>
+                <div class="col-md-7 my-auto">
+                    <div class="footer_menu">
+                        <a href="{{ route('login.guest') }}"><span>ゲストログイン</span></a>
+                        <a href="{{ url('/faq') }}"><span>FAQ</span></a>
+                        <a href="{{ url('/contact') }}"><span>お問い合わせ</span></a>
+                        <a href="http://y2-world.com" target="_blank"><span>YUKI OFFICIAL</span></a>
+                        <a href="#" target="_blank"><span>LIVE×YOU</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
