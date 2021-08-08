@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="top_slider">
-    <img src="{{ asset('images/top_slider_img.jpg') }}" width="100%">
+    <img src="{{ asset('images/top_slider_img.jpg') }}">
         <div class="title_area">
             <div class="top_title">      
                 TRAVEL×YOU<br>
-                <span class="top_subtitle">旅とあなたをつなぐプラットフォーム</span><br>
+                <span class="top_subtitle">旅とあなたをつなぐプラットフォーム</span>
             </div>  
             <a href="{{ url('/register') }}"><button type="button" class="btn btn-light">今すぐ始める</button></a>
         </div>
@@ -46,9 +46,11 @@
                     <img src="{{ asset('images/lille.jpg') }}" width="100%">
                 </div>
                 <div class="col-md-6 my-auto">
-                    <div class="top_instruction_row_header">TROUBLE×YOU<br><span class="top_instruction_row_sub">旅先のトラブルをシェアできる</div>
-                    <br>
-                    <p>あなたの旅行で起こった問題、その解決方法をシェアすることができます。</p>
+                    <div class="trouble-you_row">
+                        <div class="top_instruction_row_header">TROUBLE×YOU<br><span class="top_instruction_row_sub">旅先のトラブルをシェアできる</div>
+                        <br>
+                        <p>あなたの旅行で起こった問題、その解決方法をシェアすることができます。</p>
+                    </div>
                 </div>
             </div>
             <br>

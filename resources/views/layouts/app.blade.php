@@ -37,6 +37,9 @@
     .top_slider {
         position: relative;
     }
+    .top_slider img {
+        width: 100%;
+    }
     .title_area {
         position: absolute;
         top: 0;
@@ -65,12 +68,12 @@
         font-family: Oswald;
         font-size: 40px;
         text-align: center;
-        padding-top: 40px;
+        padding-top: 100px;
         padding-bottom: 20px;
     }
     .intro {
         text-align: center;
-        padding-bottom: 40px;
+        padding-bottom: 100px;
     }
 
     .header_title {
@@ -85,7 +88,7 @@
     }
     .top_instruction_row {
         padding-top: 20px;
-        padding-bottom: 40px;
+        padding-bottom: 100px;
     }
     .top_instruction_row_header {
         font-size: 30px;
@@ -93,6 +96,9 @@
     }
     .top_instruction_row_sub {
         font-size: 18px;
+    }
+    .trouble-you_row {
+        text-align: right;
     }
 
     .header {
@@ -148,6 +154,11 @@
         color: gray;
     }
 
+    .footer_menu {
+        display: flex;
+        flex-direction: row;
+    }
+
     .footer_menu a {
         padding: 20px;
         color: black;
@@ -161,14 +172,18 @@
         .title_area {
             padding:15% 10%;
         }
+        .footer_menu {
+            font-size: 10px;
+        }
         .footer_menu a {
-            display: none;
+            padding: 10px;
+            color: black;
         }
     }
 
     @media screen and (max-width: 640px) {
         .title_area {
-            padding:15% 5%;
+            padding:10% 5%;
         }
         .top_title {
             font-family: Oswald;
@@ -182,7 +197,9 @@
             font-size: 7px;
         }
         .title_area button {
-            display: none;
+            width: 90px;
+            height: 30px;
+            font-size: 7px;
         }
         .top_header {
             font-family: Oswald;
@@ -196,15 +213,22 @@
             padding-top: 20px;
             padding-bottom: 40px;
         }
+        .trouble-you_row {
+            text-align: left;
+        }
         .footer_title {
             padding-top: 20px;
             padding-bottom: 20px;
             font-family: Oswald;
             font-size: 20px;
             line-height: 25px;
+            text-align: center;
         }
         .footer_subtitle {
             font-size: 10px;
+        }
+        .footer_menu a {
+            display: none;
         }
     }
 }
