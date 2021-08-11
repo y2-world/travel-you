@@ -27,41 +27,44 @@
 </div>
 
 <div class="top_instruction">
-    <div class="top_header">WHAT CAN I DO?</div> 
-    <div class="container">
-        <div class="top_instruction_row">
-            <div class="row">
-                <div class="col-md-6 my-auto">
-                    <div class="top_instruction_row_header">TRAVEL×YOU<br><span class="top_instruction_row_sub">旅の記録ができる<span></div>
-                    <br>
-                    <p>旅先で撮った写真、ちょっとした日記をシェアすることができます。さらに、あなたが今まで訪れた国が一覧で見れます。</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="{{ asset('images/paris.jpg') }}" width="100%">
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="{{ asset('images/lille.jpg') }}" width="100%">
-                </div>
-                <div class="col-md-6 my-auto">
-                    <div class="trouble-you_row">
-                        <div class="top_instruction_row_header">TROUBLE×YOU<br><span class="top_instruction_row_sub">旅先のトラブルをシェアできる</div>
+    <div class="panel">
+        <div class="panel-in">
+            <div class="panel-main">
+            <div class="top_header">WHAT CAN I DO?</div> 
+                <div class="container">
+                    <div class="top_instruction_row">
+                        <div class="row">
+                            <div class="col-md-6 my-auto">
+                                <div class="row_header">TRAVEL×YOU<br><span class="header_sub">旅の記録ができる<span></div>
+                                <p>旅先で撮った写真、ちょっとした日記をシェアすることができます。さらに、あなたが今まで訪れた国が一覧で見れます。</p>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="{{ asset('images/paris.jpg') }}" width="100%">
+                            </div>
+                        </div>
                         <br>
-                        <p>あなたの旅行で起こった問題、その解決方法をシェアすることができます。</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="{{ asset('images/lille.jpg') }}" width="100%">
+                            </div>
+                            <div class="col-md-6 my-auto">
+                                <div class="trouble-you_row">
+                                    <div class="row_header">TROUBLE×YOU<br><span class="header_sub">旅先のトラブルをシェアできる</div>
+                                    <p>あなたの旅行で起こった問題、<span>その解決方法をシェアすることができます。</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6 my-auto">
+                                <div class="row_header">Q&A<br><span class="header_sub">旅についての質問ができる</div>
+                                <p>旅行する予定の国や都市に関する質問を投稿したり、回答したりすることができます。</p>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="{{ asset('images/hollywood.jpg') }}" width="100%">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-md-6 my-auto">
-                    <div class="top_instruction_row_header">Q&A<br><span class="top_instruction_row_sub">旅についての質問ができる</div>
-                    <br>
-                    <p>旅行する予定の国や都市に関する質問を投稿したり、回答したりすることができます。</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="{{ asset('images/hollywood.jpg') }}" width="100%">
                 </div>
             </div>
         </div>

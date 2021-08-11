@@ -68,7 +68,7 @@
         font-family: Oswald;
         font-size: 40px;
         text-align: center;
-        padding-top: 100px;
+        padding-top: 40px;
         padding-bottom: 20px;
     }
     .intro {
@@ -81,20 +81,41 @@
         font-family: Oswald;
         color: turquoise;
     }
+    .panel {
+        position: relative;
+    }
+    .panel-in {
+        padding: 100px 100px;
+        position: relative;
+    }
+    .panel-main {
+        padding: 20px;
+        z-index: 30;
+        position: relative;
+        margin-bottom: 0;
+        border: solid 1px rgba(255,255,255,0.4);
+        background: rgba(255,255,255,0.6);
+    }
 
     .top_instruction {
         background-color: honeydew;
         line-height: 25px;
+        background-image: url("{{ asset('images/bremen.jpg') }}");
+        background-size: 100%;
+    }
+    .top_instruction img {
+        width: 100%;
     }
     .top_instruction_row {
         padding-top: 20px;
-        padding-bottom: 100px;
+        padding-bottom: 40px;
     }
-    .top_instruction_row_header {
+    .row_header {
         font-size: 30px;
         font-family: Oswald;
+        padding-bottom: 14px;
     }
-    .top_instruction_row_sub {
+    .header_sub {
         font-size: 18px;
     }
     .trouble-you_row {
@@ -167,17 +188,24 @@
     .footer_subtitle {
         font-size: 14px;
     }
+    span {
+        display: inline-block;
+    }
 
     @media screen and (max-width: 1026px) {
         .title_area {
             padding:15% 10%;
         }
-        .footer_menu {
-            font-size: 10px;
+        .panel-in {
+            padding: 50px 50px;
+            position: relative;
         }
         .footer_menu a {
             padding: 10px;
             color: black;
+        }
+        span {
+            display: inline-block;
         }
     }
 
@@ -206,6 +234,21 @@
             font-size: 30px;
             text-align: center;
             padding-top: 40px;
+        }
+        .row_header {
+            font-size: 20px;
+            padding-bottom: 10px;
+        }
+        .header_sub {
+            font-size: 15px;
+        }
+        .top_instruction p {
+            font-size: 12px;
+            line-height: 12px;
+        }
+        .panel-in {
+            padding: 15px 15px;
+            position: relative;
         }
         .intro {
             font-size: 12px;
