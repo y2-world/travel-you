@@ -63,17 +63,16 @@
 
     .top_intro {
         background-color: aliceblue;
+        padding: 40px;
     }
     .top_header {
         font-family: Oswald;
         font-size: 40px;
         text-align: center;
-        padding-top: 40px;
         padding-bottom: 20px;
     }
     .intro {
         text-align: center;
-        padding-bottom: 100px;
     }
 
     .header_title {
@@ -98,7 +97,6 @@
     }
 
     .top_instruction {
-        background-color: honeydew;
         line-height: 25px;
         background-image: url("{{ asset('images/bremen.jpg') }}");
         background-size: 100%;
