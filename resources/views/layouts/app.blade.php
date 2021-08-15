@@ -22,10 +22,6 @@
     html, body {
         font-family: helvetica;
     }
-    * {
-        margin: 0px;
-        padding: 0px;
-    }
     .navbar-brand {
         color: turquoise;
         font-family: Oswald;
@@ -75,8 +71,9 @@
     }
     .box {
         display: flex;
+        align-items: center;
     }
-    .row-header {
+    .order1 {
         vertical-align: middle;
     }
     .instruction-row {
@@ -86,6 +83,7 @@
     }
     .instruction-row img {
         width: 100%;
+        box-shadow : 15px 15px 37px gray;
     }
     .intro-wrapper p {
         text-align: center;
@@ -94,8 +92,10 @@
         position: relative;
     }
     .panel-in {
-        padding: 100px 100px;
+        padding: 15px 15px;
         position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     .panel-main {
         padding: 20px;
@@ -110,16 +110,19 @@
         background-image: url("{{ asset('images/bremen.jpg') }}");
         background-size: 100%;
     }
-    .row-header {
+    .row-text {
         font-size: 30px;
         font-family: Oswald;
         padding-bottom: 14px;
+        
     }
-    .instruction-wrapper p {
+    .row-text p {
+        padding-top: 10px;
         font-size: 14px;
     }
     .header-sub {
         font-size: 18px;
+        padding-top: 10px;
     }
     .header-title {
         padding-top: 20px;
@@ -186,13 +189,24 @@
         .logo-wrapper {
             padding:15% 10%;
         }
-        .panel-in {
-            padding: 50px 50px;
-            position: relative;
-        }
         .instruction-row {
             width: 100%;
             box-sizing: border-box;
+        }
+        .footer-row {
+            font-size: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+        .footer-title {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-family: Oswald;
+            font-size: 30px;
+            line-height: 25px;
         }
         .footer_menu a {
             padding: 10px;
@@ -229,26 +243,24 @@
             text-align: center;
             padding-top: 40px;
         }
-        .row-header {
+        .row-text {
             font-size: 20px;
             padding-bottom: 0px;
         }
         .header-sub {
             font-size: 15px;
         }
-        .instruction-wrapper p {
+        .row-text p {
             font-size: 12px;
-            line-height: 12px;
-        }
-        .panel-in {
-            padding: 15px 15px;
-            position: relative;
         }
         .intro {
             font-size: 12px;
             text-align: center;
             padding-top: 20px;
             padding-bottom: 40px;
+        }
+        .intro-wrapper p {
+            font-size: 14px;
         }
         .box {
             flex-direction: column;
@@ -284,14 +296,6 @@
         }
         .footer-catchcopy {
             font-size: 10px;
-        }
-        .footer-row {
-            font-size: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
         }
         .footer-menu a {
             color: black;
