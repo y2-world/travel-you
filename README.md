@@ -1,5 +1,5 @@
 # はじめに
-スクールの個人開発でWebアプリを作りました。
+Webアプリを作りました。
 アプリ名は「TRAVEL×YOU (トラベリュー)」です。
 
 ![works_image2.jpg](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1059683/84631cd0-a571-4e59-adcc-5f344b7ee13e.jpeg)
