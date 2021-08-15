@@ -46,14 +46,17 @@
                             <img src="{{ asset('images/lille.jpg') }}">
                         </div>
                         <div class="instruction-row order3">
-                            <div class="row-text">TROUBLE×YOU<br><div class="header-sub">旅先のトラブルをシェアできる</div>
+                            <div class="row-text">
+                                TROUBLE×YOU
+                                <div class="header-sub">旅先のトラブルをシェアできる</div>
                                 <p>あなたの旅行で起こった問題、その解決方法をシェアすることができます。</p>
                             </div>
                         </div>
                     </div>
                     <div class="box">
                         <div class="instruction-row order5">
-                            <div class="row-text">Q&A<br><div class="header-sub">旅についての質問ができる</div>
+                            <div class="row-text">Q&A
+                                <div class="header-sub">旅についての質問ができる</div>
                                 <p>旅行する予定の国や都市に関する質問を投稿したり、回答したりすることができます。</p>
                             </div>
                         </div>
