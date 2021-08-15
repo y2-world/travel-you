@@ -31,7 +31,9 @@
                 <div class="top-header">WHAT CAN I DO?</div> 
                     <div class="box">
                         <div class="instruction-row order1">
-                            <div class="row-text">TRAVEL×YOU<div class="header-sub">旅の記録ができる</div>
+                            <div class="row-text">
+                                TRAVEL×YOU
+                                <div class="header-sub">旅の記録ができる</div>
                                 <p>旅先で撮った写真、ちょっとした日記をシェアすることができます。さらに、あなたが今まで訪れた国が一覧で見れます。</p>
                             </div>
                         </div>
