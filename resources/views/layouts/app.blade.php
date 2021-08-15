@@ -22,6 +22,10 @@
     html, body {
         font-family: helvetica;
     }
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
     .navbar-brand {
         color: turquoise;
         font-family: Oswald;
@@ -33,52 +37,58 @@
     .card-header {
         font-family: Oswald;
     }
-
-    .top_slider {
+    .slider-wrapper {
         position: relative;
     }
-    .top_slider img {
+    .slider-wrapper img {
         width: 100%;
     }
-    .title_area {
+    .logo-wrapper {
         position: absolute;
         top: 0;
         left: 0;
         padding: 20% 10%;
     }
-    .title_area button {
+    .logo-wrapper button {
         margin-top: 15px;
     }
-    .top_title {
+    .main-logo {
         font-family: Oswald;
         color: black;
         font-size: 40px;
         line-height: 25px;
     }
-    .top_subtitle {
+    .catchcopy {
         font-family: Oswald;
         color: white;
         font-size: 14px;
     }
-
-    .top_intro {
+    .intro-wrapper {
         background-color: aliceblue;
-        padding: 40px;
+        padding-bottom: 40px;
     }
-    .top_header {
+    .top-header {
         font-family: Oswald;
         font-size: 40px;
         text-align: center;
-        padding-bottom: 20px;
+        padding: 20px;
     }
-    .intro {
+    .box {
+        display: flex;
+    }
+    .row-header {
+        vertical-align: middle;
+    }
+    .instruction-row {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .instruction-row img {
+        width: 100%;
+    }
+    .intro-wrapper p {
         text-align: center;
-    }
-
-    .header_title {
-        padding-top: 20px;
-        font-family: Oswald;
-        color: turquoise;
     }
     .panel {
         position: relative;
@@ -95,43 +105,33 @@
         border: solid 1px rgba(255,255,255,0.4);
         background: rgba(255,255,255,0.6);
     }
-
-    .top_instruction {
+    .instruction-wrapper {
         line-height: 25px;
         background-image: url("{{ asset('images/bremen.jpg') }}");
         background-size: 100%;
     }
-    .top_instruction img {
-        width: 100%;
-    }
-    .top_instruction_row {
-        padding-top: 20px;
-        padding-bottom: 40px;
-    }
-    .row_header {
+    .row-header {
         font-size: 30px;
         font-family: Oswald;
         padding-bottom: 14px;
     }
-    .header_sub {
+    .instruction-wrapper p {
+        font-size: 14px;
+    }
+    .header-sub {
         font-size: 18px;
     }
-    .trouble-you_row {
-        text-align: right;
-    }
-
-    .header {
-        font-size: 40px;
+    .header-title {
+        padding-top: 20px;
         font-family: Oswald;
+        color: turquoise;
     }
-   
     .gmap {
     height: 0;
     overflow: hidden;
     padding-bottom: 56.25%;
     position: relative;
     }
-
     .gmap iframe {
     position: absolute;
     left: 0;
@@ -139,51 +139,43 @@
     height: 100%;
     width: 100%;
     }  
-
     .avbarDropdown {
         font-family: Oswald;
     }
-
     .diary {
         font-family: Oswald;
     }
-
     .page_wrapper {
         padding-bottom: 40px;
     }
-
     footer {
         background-color: white;
     }
-
-    .footer_title {
+    .footer-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-title {
         padding-top: 40px;
         padding-bottom: 40px;
         font-family: Oswald;
-        font-size: 40px;
+        font-size: 30px;
         line-height: 25px;
     }
-
-    .footer_title a {
+    .footer-title a {
         color: black;
     }
-
     footer a:hover {
         text-decoration: none;
         color: gray;
     }
-
-    .footer_menu {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .footer_menu a {
-        padding: 20px;
+    .footer-menu a {
         color: black;
+        padding: 20px;
     }
-
-    .footer_subtitle {
+    .footer-catchcopy {
         font-size: 14px;
     }
     span {
@@ -191,12 +183,16 @@
     }
 
     @media screen and (max-width: 1026px) {
-        .title_area {
+        .logo-wrapper {
             padding:15% 10%;
         }
         .panel-in {
             padding: 50px 50px;
             position: relative;
+        }
+        .instruction-row {
+            width: 100%;
+            box-sizing: border-box;
         }
         .footer_menu a {
             padding: 10px;
@@ -208,39 +204,39 @@
     }
 
     @media screen and (max-width: 640px) {
-        .title_area {
+        .logo-wrapper {
             padding:10% 5%;
         }
-        .top_title {
+        .main-logo {
             font-family: Oswald;
             color: black;
             font-size: 20px;
             line-height: 20px;
         }
-        .top_subtitle {
+        .catchcopy {
             font-family: Oswald;
             color: white;
             font-size: 7px;
         }
-        .title_area button {
+        .logo-wrapper button {
             width: 90px;
             height: 30px;
             font-size: 7px;
         }
-        .top_header {
+        .top-header {
             font-family: Oswald;
             font-size: 30px;
             text-align: center;
             padding-top: 40px;
         }
-        .row_header {
+        .row-header {
             font-size: 20px;
-            padding-bottom: 10px;
+            padding-bottom: 0px;
         }
-        .header_sub {
+        .header-sub {
             font-size: 15px;
         }
-        .top_instruction p {
+        .instruction-wrapper p {
             font-size: 12px;
             line-height: 12px;
         }
@@ -254,10 +250,31 @@
             padding-top: 20px;
             padding-bottom: 40px;
         }
-        .trouble-you_row {
-            text-align: left;
+        .box {
+            flex-direction: column;
         }
-        .footer_title {
+        .order1 {
+            order: 1;
+        }
+        .order2 {
+            order: 2;
+        }
+        .order3 {
+            order: 3;
+        }
+        .order4 {
+            order: 4;
+        }
+        .order5 {
+            order: 5;
+        }
+        .order6 {
+            order: 6;
+        }
+        footer {
+            padding-bottom: 20px;
+        }
+        .footer-title {
             padding-top: 20px;
             padding-bottom: 20px;
             font-family: Oswald;
@@ -265,11 +282,20 @@
             line-height: 25px;
             text-align: center;
         }
-        .footer_subtitle {
+        .footer-catchcopy {
             font-size: 10px;
         }
-        .footer_menu a {
-            display: none;
+        .footer-row {
+            font-size: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+        .footer-menu a {
+            color: black;
+            padding: 5px;
         }
     }
 }
@@ -350,23 +376,19 @@
     @yield('content')
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="footer_title">      
-                        <a href="{{ url('/') }}">TRAVEL×YOU<br>
-                        <span class="footer_subtitle">旅とあなたをつなぐプラットフォーム</span></a><br>
-                    </div> 
+            <div class="footer-row">    
+                <div class="footer-title">      
+                    <a href="{{ url('/') }}">TRAVEL×YOU<br>
+                    <span class="footer-catchcopy">旅とあなたをつなぐプラットフォーム</span></a><br>
+                </div> 
+                <div class="footer-menu">
+                    <a href="{{ route('login.guest') }}"><span>ゲストログイン</span></a>|
+                    <a href="{{ url('/faq') }}"><span>FAQ</span></a>|
+                    <a href="{{ url('/contact') }}"><span>お問い合わせ</span></a>|
+                    <a href="http://y2-world.com" target="_blank"><span>YUKI OFFICIAL</span></a>|
+                    <a href="#" target="_blank"><span>LIVE×YOU</span></a>
                 </div>
-                <div class="col-md-7 my-auto">
-                    <div class="footer_menu">
-                        <a href="{{ route('login.guest') }}"><span>ゲストログイン</span></a>
-                        <a href="{{ url('/faq') }}"><span>FAQ</span></a>
-                        <a href="{{ url('/contact') }}"><span>お問い合わせ</span></a>
-                        <a href="http://y2-world.com" target="_blank"><span>YUKI OFFICIAL</span></a>
-                        <a href="#" target="_blank"><span>LIVE×YOU</span></a>
-                    </div>
-                </div>
-            </div>
+            </div> 
         </div>
     </footer>
 </body>
