@@ -69,5 +69,22 @@
         </div>
     </div>
 </div>
+<footer id='footer'>
+    <div class="container">
+        <div class="footer-row">    
+            <div class="footer-title">      
+                <a href="{{ url('/') }}">TRAVEL×YOU<br>
+                <span class="footer-catchcopy">旅とあなたをつなぐプラットフォーム</span></a><br>
+            </div> 
+            <div class="footer-menu">
+                <a href="{{ route('login.guest') }}"><span>ゲストログイン</span></a>|
+                <a href="{{ url('/faq') }}"><span>FAQ</span></a>|
+                <a href="{{ url('/contact') }}"><span>お問い合わせ</span></a>|
+                <a href="http://y2-world.com" target="_blank"><span>YUKI OFFICIAL</span></a>|
+                <a href="#" target="_blank"><span>LIVE×YOU</span></a>
+            </div>
+        </div> 
+    </div>
+</footer>
 
 @endsection
