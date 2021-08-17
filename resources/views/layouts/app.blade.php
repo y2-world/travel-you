@@ -40,7 +40,7 @@
         position: relative;
     }
     .slider-wrapper img {
-        width: 100%;
+        max-width: 100%;
     }
     .logo-wrapper {
         position: absolute;
@@ -63,7 +63,7 @@
         font-size: 14px;
     }
     .intro-wrapper {
-        padding-bottom: 40px;
+        padding-bottom: 50px;
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -80,7 +80,7 @@
         font-family: Oswald;
         font-size: 40px;
         text-align: center;
-        padding: 20px;
+        padding: 30px;
     }
     .box {
         display: flex;
@@ -247,6 +247,10 @@
     }
 
     @media screen and (max-width: 640px) {
+        .slider-wrapper img {
+            max-width: 100%;
+	        height: auto;
+        }
         .logo-wrapper {
             padding:10% 5%;
         }
