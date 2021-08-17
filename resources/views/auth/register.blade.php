@@ -67,7 +67,7 @@
                             <br>
                             <br>
                             <a href="{{ route('login.guest') }}" class="btn btn-primary" id="my_travels_botton">ゲストログイン</a>
-                            &nbsp;
+                            <br>
                             会員登録せずにご利用いただけます。
                         </div>
                     </div>

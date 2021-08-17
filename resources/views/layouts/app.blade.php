@@ -63,8 +63,18 @@
         font-size: 14px;
     }
     .intro-wrapper {
-        background-color: aliceblue;
         padding-bottom: 40px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .intro-wrapper p {
+        text-align: center;
+    }
+    .intro-wrapper img {
+        width: 100%;
     }
     .top-header {
         font-family: Oswald;
@@ -87,9 +97,6 @@
     .instruction-row img {
         width: 100%;
         box-shadow : 15px 15px 37px gray;
-    }
-    .intro-wrapper p {
-        text-align: center;
     }
     .panel {
         position: relative;
@@ -127,23 +134,28 @@
         font-size: 18px;
         padding-top: 10px;
     }
-    .header-title {
+    .page-wrapper {
         padding-top: 20px;
+    }
+    .page-wrapper h4 {
+        font-weight: bold;
+    }
+    .header-title {
         font-family: Oswald;
         color: turquoise;
     }
     .gmap {
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    }
-    .gmap iframe {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        }
+        .gmap iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
     }  
     .avbarDropdown {
         font-family: Oswald;
@@ -183,6 +195,17 @@
     }
     .footer-catchcopy {
         font-size: 14px;
+    }
+    .js-fadein {
+        opacity: 0; 
+        visibility: hidden;
+        transform: translateY(40px);
+        transition: all 1s;
+    }
+    .js-fadein.is-show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
     }
     span {
         display: inline-block;
@@ -304,6 +327,12 @@
             color: black;
             padding: 5px;
         }
+        .register-wrapper {
+            padding: 10px 5px;
+        }
+        .register-wrapper btn-btn-primary {
+            margin: 0 auto;
+        }
     }
 }
     
@@ -381,4 +410,41 @@
     </nav>
 </div>
 @yield('content')
+
+<script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+
+<script>
+function showElementAnimation() {
+                    
+    var element = document.getElementsByClassName('js-fadein');
+    if(!element) return; // 要素がなかったら処理をキャンセル
+                        
+    var showTiming = window.innerHeight > 768 ? 200 : 600; // 要素が出てくるタイミングはここで調整
+    var scrollY = window.pageYOffset; //スクロール量を取得
+    var windowH = window.innerHeight; //ブラウザウィンドウのビューポート(viewport)の高さを取得
+                        
+    for(var i=0;i<element.length;i++) { 
+        var elemClientRect = element[i].getBoundingClientRect(); 
+        var elemY = scrollY + elemClientRect.top; 
+        if(scrollY + windowH - showTiming > elemY) {
+        element[i].classList.add('is-show');
+        } else if(scrollY + windowH < elemY) {
+        // 上にスクロールして再度非表示にする場合はこちらを記述
+        element[i].classList.remove('is-show');
+        }
+    }
+    }
+    showElementAnimation();
+    window.addEventListener('scroll', showElementAnimation);
+</script>
+
+<noscript>
+<style>
+    .js-fadein {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    }
+</style>
+</noscript>  
 

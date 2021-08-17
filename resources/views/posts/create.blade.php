@@ -4,9 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-            <div class="title">
-                        <h4>あなたの旅をシェアしましょう</h4>
-            </div>
+            <h4>あなたの旅をシェアしましょう</h4>
             <a href="{{ route('users.show', Auth::user()->id )}}" class="btn btn-primary" id="my_travels_botton">MY TRAVELS</a>
             <hr>
             <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
