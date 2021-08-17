@@ -1,5 +1,6 @@
-@extends('layouts.app')　
+@extends('layouts.app')
 @section('content')
+
 <div class="page-wrapper">
     <div class="container">
         <div class="row justify-content-center">
@@ -40,9 +41,7 @@
             </div>
     </div>
   @endforeach
-</div>     
-
-
+</div>    
 @endsection
 
 
