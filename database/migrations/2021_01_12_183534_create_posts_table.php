@@ -23,11 +23,11 @@ class CreatePostsTable extends Migration
             $table->string('image');
             $table->string('country');
             $table->string('city');
-            $table->text('diary');
-            $table->string('image1');
-            $table->string('image2');
-            $table->string('image3');
-            $table->string('image4');
+            $table->text('diary')->nullable();
+            $table->string('image1')->nullable();
+            $table->string('image2')->nullable();
+            $table->string('image3')->nullable();
+            $table->string('image4')->nullable();
             $table->timestamps();
 
            

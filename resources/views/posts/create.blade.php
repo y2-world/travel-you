@@ -19,25 +19,25 @@
                     </div>
                 @endif
                     <div class="form-group">
-                        <label>タイトル</label>
+                        <label>タイトル</label>&nbsp;<span class="badge bg-danger">必須</span>
                         <input type="text" class="form-control" placeholder="旅のタイトル" name="title">
                     </div>  
                     <div class="form-group">
-                        <label>期間&nbsp;&nbsp;</label>
+                        <label>期間&nbsp;<span class="badge bg-danger">必須</span></label><br>
                         <input type="date" placeholder="yyyy-mm-dd" name="date1">
                     〜
                     <input type="date" placeholder="yyyy-mm-dd" name="date2">
                     </div> 
                     <div class="form-group">
-                        <label for="exampleFormControlFile1">カバー写真</label>
+                        <label for="exampleFormControlFile1">カバー写真</label>&nbsp;<span class="badge bg-danger">必須</span>
                         <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
                     </div>
                     <div class="form-group">
-                        <label>国</label>
+                        <label>国</label>&nbsp;<span class="badge bg-danger">必須</span>
                         <input type="text" class="form-control" placeholder="訪れた国を入力" name="country">
                     </div>     
                     <div class="form-group">
-                        <label>都市</label>
+                        <label>都市</label>&nbsp;<span class="badge bg-danger">必須</span>
                         <input type="text" class="form-control" placeholder="訪れた都市を入力" name="city">
                     </div>
                     <div class="form-group">
@@ -45,20 +45,8 @@
                         <textarea class="form-control" rows="10" name="diary"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlFile1">写真①</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image1">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlFile1">写真②</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image2">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlFile1">写真③</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image3">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlFile1">写真④</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image4">
+                        <label for="exampleFormControlFile1">写真 (4枚まで)</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image1" multiple>
                     </div>
                     <br>
                     <button type="submit" class="btn btn-primary" value="upload">投稿</button>

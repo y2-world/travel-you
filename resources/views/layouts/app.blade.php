@@ -26,7 +26,7 @@
         color: turquoise;
         font-family: Oswald;
     }
-    .mb-4,.trouble {
+    .trouble {
         color: turquoise;
         font-family: Oswald;
     }
@@ -86,9 +86,6 @@
         display: flex;
         align-items: center;
     }
-    .order1 {
-        vertical-align: middle;
-    }
     .instruction-row {
         width: 50%;
         box-sizing: border-box;
@@ -124,7 +121,6 @@
         font-size: 30px;
         font-family: Oswald;
         padding-bottom: 14px;
-        
     }
     .row-text p {
         padding-top: 10px;
@@ -136,6 +132,7 @@
     }
     .page-wrapper {
         padding-top: 20px;
+        padding-bottom: 40px;
     }
     .page-wrapper h4 {
         font-weight: bold;
@@ -162,9 +159,6 @@
     }
     .diary {
         font-family: Oswald;
-    }
-    .page_wrapper {
-        padding-bottom: 40px;
     }
     footer {
         background-color: white;
@@ -206,6 +200,9 @@
         opacity: 1;
         visibility: visible;
         transform: translateY(0px);
+    }
+    .badge {
+        color: white;
     }
     span {
         display: inline-block;
@@ -341,7 +338,6 @@
 }
     
 </style>
-
 
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">

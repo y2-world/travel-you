@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="page-wrapper">
-    <div class="container-fluid">
-        <div class="mb-4">
+    <div class="container">
+        <div class="trouble">
         <h2>{{ $user_name }}'s TRAVELS</h2>
     </div>
 
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div class="card-header">
                 <h4>MY TRAVELS</h4>
             </div>
@@ -23,9 +23,6 @@
             </li>
             @endforeach
             <br>
-        </div>
-        <br>
-        <div class="col-sm-4">
             <div class="card-header">
                 <h4>TROUBLE×YOU</h4>
             </div>
@@ -53,9 +50,8 @@
             <li class="list-group-item">
                 ここに自分がした回答が入ります。
             </li>
-            <br>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div class="card-header">
                 <h4>MY MAP</h4>
                 </div>
