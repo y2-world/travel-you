@@ -419,7 +419,7 @@ function showElementAnimation() {
     var element = document.getElementsByClassName('js-fadein');
     if(!element) return; // 要素がなかったら処理をキャンセル
                         
-    var showTiming = window.innerHeight > 768 ? 200 : 600; // 要素が出てくるタイミングはここで調整
+    var showTiming = window.innerHeight > 768 ? 200 : 300; // 要素が出てくるタイミングはここで調整
     var scrollY = window.pageYOffset; //スクロール量を取得
     var windowH = window.innerHeight; //ブラウザウィンドウのビューポート(viewport)の高さを取得
                         

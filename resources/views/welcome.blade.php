@@ -16,7 +16,9 @@
 </div>
 <div class="intro-wrapper">
     <div class="intro-text">
-        <div class="top-header">WHAT'S TRAVEL×YOU?</div>   
+        <div class="element js-fadein">
+            <div class="top-header">WHAT'S TRAVEL×YOU?</div>   
+        </div>
         <div class="element js-fadein">
             <img src="{{ asset('images/world.jpg') }}">  
         </div>
