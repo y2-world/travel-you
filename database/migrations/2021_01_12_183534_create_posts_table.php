@@ -24,10 +24,6 @@ class CreatePostsTable extends Migration
             $table->string('country');
             $table->string('city');
             $table->text('diary')->nullable();
-            $table->string('image1')->nullable();
-            $table->string('image2')->nullable();
-            $table->string('image3')->nullable();
-            $table->string('image4')->nullable();
             $table->timestamps();
 
            

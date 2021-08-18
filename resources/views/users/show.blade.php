@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="card-header">
-                <h4>MY TRAVELS</h4>
+                <h4>MY TRAVELS&emsp;<a href="{{ url('posts/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
             @foreach ($post as $rec)
             <li class="list-group-item">
@@ -24,7 +24,7 @@
             @endforeach
             <br>
             <div class="card-header">
-                <h4>TROUBLE×YOU</h4>
+                <h4>TROUBLE×YOU&emsp;<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
             @foreach ($trouble as $rec)
             <li class="list-group-item"> 
@@ -35,7 +35,7 @@
             @endforeach
             <br>
             <div class="card-header">
-                <h4>MY QUESTIONS</h4>
+                <h4>MY QUESTIONS&emsp;<a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
             @foreach ($question as $rec)
             <li class="list-group-item">

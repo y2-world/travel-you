@@ -4,10 +4,8 @@
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-md-8">
-          <h2 class="trouble">Q & A</h2>
+          <h2 class="trouble">Q & A　<a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h2>
           <div class="col-sm">
-          <a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a>
-          <hr>
       </li>
     </div>
 

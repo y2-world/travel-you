@@ -6,7 +6,6 @@
             <div class="col-md-8">
                 <h2 class="trouble">Q & A</h2>
             <div class="col-sm">
-            <hr>
                 <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-12">

@@ -157,9 +157,6 @@
     .avbarDropdown {
         font-family: Oswald;
     }
-    .diary {
-        font-family: Oswald;
-    }
     footer {
         background-color: white;
     }
@@ -203,6 +200,12 @@
     }
     .badge {
         color: white;
+    }
+    .card-date {
+        padding-bottom: 10px;
+    }
+    .card-sub {
+        padding-top: 10px;
     }
     span {
         display: inline-block;

@@ -41,12 +41,12 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     { 
-        $post = new Post; //インスタンスを作成
+        $post = new Post;
         $post -> id         = $request -> id;
-        $post -> user_id  = Auth::id(); //ログイン中のユーザーidを代入
+        $post -> user_id  = Auth::id();
         $post -> user_name  = Auth::user()->name;
-        $post -> title    = $request -> title; //ユーザー入力のtitleを代入
-        $post -> date1     = $request -> date1; //ユーザー入力のbodyを代入
+        $post -> title    = $request -> title;
+        $post -> date1     = $request -> date1;
         $post -> date2     = $request -> date2;
 
         $file_name = $request->file('image')->getClientOriginalName();
@@ -55,12 +55,8 @@ class PostController extends Controller
         $post -> country     = $request -> country;
         $post -> city     = $request -> city;
         $post -> diary     = $request -> diary;
-        $post -> image1 = $request->file('image1')->store('image','public',$file_name);
-        $post -> image2 = $request->file('image2')->store('image','public',$file_name);
-        $post -> image3 = $request->file('image3')->store('image','public',$file_name);
-        $post -> image4 = $request->file('image4')->store('image','public',$file_name);
     
-        $post -> save(); //保存してあげましょう
+        $post -> save();
         
         return redirect()->route('posts.index');
     }
@@ -92,8 +88,8 @@ class PostController extends Controller
             return with("投稿したユーザーでないと更新できません。"); 
         }
 
-        $post -> title    = $request -> title; //ユーザー入力のtitleを代入
-        $post -> date1     = $request -> date1; //ユーザー入力のbodyを代入
+        $post -> title    = $request -> title; 
+        $post -> date1     = $request -> date1;
         $post -> date2     = $request -> date2;
         $post -> country     = $request -> country;
         $post -> city     = $request -> city;

@@ -4,9 +4,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <h2 class="header-title">OUR TRAVELS</h2>
-        <a href="{{ url('posts/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a>
-        <hr>
+        <h2 class="header-title">OUR TRAVELS　<a href="{{ url('posts/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h2>
         @foreach ($posts as $post)
         <div class="card-header">
           <a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a> 
