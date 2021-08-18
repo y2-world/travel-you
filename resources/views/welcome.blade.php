@@ -21,8 +21,6 @@
         </div>
         <div class="element js-fadein">
             <img src="{{ asset('images/world.jpg') }}">  
-        </div>
-        <div class="element js-fadein">
             <p>今までのあなたの旅の歴史を記録し、<br>
             <span>さらにこれからのあなたの旅を</span><span>より楽しいものにするツールです。</span><br>
             旅行記を作ったり、<br>
