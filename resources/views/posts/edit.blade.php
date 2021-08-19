@@ -4,8 +4,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-            <h2 class="trouble">TRAVEL DIARY</h2>
-                <hr>
+                <div class="header-title">
+                    <h2>編集</h2>
+                </div>
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>

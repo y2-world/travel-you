@@ -3,7 +3,7 @@
 @section('content')
 <div class="page-wrapper">
     <div class="container">
-        <div class="trouble">
+        <div class="header-title">
         <h2>{{ $user_name }}'s TRAVELS</h2>
     </div>
 

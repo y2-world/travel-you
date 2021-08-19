@@ -4,24 +4,21 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h2 class="trouble">Q & A</h2>
+                <h2 class="header-title">Q & A</h2>
             <div class="col-sm">
                 <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-12">
                             <div class="card-body">
                                 <h5 class="card-title"><h5 class="card-title">{{ $question->title }}</h5></a></h5>
-                                <p class="card-category">by&nbsp;<a href="{{ route('users.show', $question->user_id)}}">{{ $question->user_name }}</a>
-                                <br>
-                                <br>
-                                <sm>カテゴリー : {{ $question->category }}</sm>
-                                <br>
+                                by&nbsp;<a href="{{ route('users.show', $question->user_id)}}">{{ $question->user_name }}</a>
+                                <div class="card-info">
+                                    <sm>カテゴリー : {{ $question->category }}</sm><br>
+                                    <small>投稿日時：{{ $question->created_at }}</small> 
+                                </div>
                                 <hr>
-                                <p>{{ $question->body }}</p>
+                                <p>Q : {{ $question->body }}</p>
                                 <hr>
-                                <small>投稿日時：{{ $question->created_at }}</small> 
-                                <br>
-                                <br>
                                 <form action="{{ route('answers.store') }}" method="POST">
                                     {{csrf_field()}}
                                         <input type="hidden" name="question_id" value="{{ $question->id }}">

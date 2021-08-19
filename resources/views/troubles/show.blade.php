@@ -4,9 +4,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <h2 class="trouble">TROUBLE×YOU</h2>
+                <h2 class="header-title">TROUBLE×YOU</h2>
             <div class="col-sm">
-            <hr>
                 <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-5 my-auto">
@@ -15,18 +14,15 @@
                         <div class="col-md-7">
                             <div class="card-body">
                                 <h5 class="card-title"><h5 class="card-title">{{ $trouble->title }}</h5></a></h5>
-                                <p class="card-category">by&nbsp;<a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a>
-                                <br>
-                                <br>
-                                <sm>国 : {{ $trouble->country }}</sm>
-                                &nbsp;
-                                <sm>カテゴリー : {{ $trouble->category }}</sm>
+                                <div class="card-date">by&nbsp;<a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a>
+                                <div class="card-info">
+                                    <sm>国 : {{ $trouble->country }}</sm>&emsp;
+                                    <sm>カテゴリー : {{ $trouble->category }}</sm>
+                                </div>
                                 <hr>
                                 <p>{{ $trouble->content }}</p>
                                 <hr>
-                                <small>投稿日時：{{ $trouble->created_at }}</small> 
-                                <br>
-                                <br>
+                                <div class="post-date">投稿日時：{{ $trouble->created_at }}</div> 
                                 <div class="row">
                                     <div class="col-md-12">
                                         <form action="{{ route('comments.store') }}" method="POST">

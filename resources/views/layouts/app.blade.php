@@ -26,10 +26,6 @@
         color: turquoise;
         font-family: Oswald;
     }
-    .trouble {
-        color: turquoise;
-        font-family: Oswald;
-    }
     .card-header {
         font-family: Oswald;
     }
@@ -204,8 +200,12 @@
     .card-date {
         padding-bottom: 10px;
     }
-    .card-sub {
+    .card-info {
         padding-top: 10px;
+    }
+    .post-date {
+        font-size: 11px;
+        padding-bottom: 20px;
     }
     span {
         display: inline-block;
