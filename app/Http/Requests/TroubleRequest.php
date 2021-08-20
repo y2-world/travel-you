@@ -26,7 +26,6 @@ class TroubleRequest extends FormRequest
         return [
             'title' => 'required',
             'country' => 'required',
-            'image' => 'required',
             'content'  => 'required',
         ];
     }
@@ -35,7 +34,6 @@ class TroubleRequest extends FormRequest
         return [
             'title.required' => 'タイトルは必須です。',
             'country.required'  => '国は必須です。',
-            'image.required'  => '写真は必須です。',
             'content.required'  => '本文は必須です。',
         ];
     }

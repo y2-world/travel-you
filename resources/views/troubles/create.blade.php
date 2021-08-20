@@ -228,14 +228,14 @@
                         </div>  
                         <div class="form-group">
                             <label>カテゴリー</label>&nbsp;<span class="badge bg-danger">必須</span>
-                            <select class="form-control"　name="category">
-                            <option hidden>カテゴリーを選択</option>
-                            <option value="宿泊先">宿泊先 (ホテル・Airbnbなど)</option>
-                            <option value="レストラン">レストラン</option>
-                            <option value="交通機関">交通機関</option>
-                            <option value="ショッピング">ショッピング</option>
-                            <option value="治安">治安</option>
-                            <option>その他</option>
+                            <select class="form-control"　select name="category">
+                                <option hidden>カテゴリーを選択</option>
+                                <option value="宿泊先">宿泊先 (ホテル・Airbnbなど)</option>
+                                <option value="レストラン">レストラン</option>
+                                <option value="交通機関">交通機関</option>
+                                <option value="ショッピング">ショッピング</option>
+                                <option value="治安">治安</option>
+                                <option>その他</option>
                             </select>
                         </div>   
                         <div class="form-group">

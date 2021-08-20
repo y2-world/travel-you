@@ -13,7 +13,7 @@
                                 <h5 class="card-title"><h5 class="card-title">{{ $question->title }}</h5></a></h5>
                                 by&nbsp;<a href="{{ route('users.show', $question->user_id)}}">{{ $question->user_name }}</a>
                                 <div class="card-info">
-                                    <sm>カテゴリー : {{ $question->category }}</sm><br>
+                                    <small>カテゴリー : {{ $question->category }}</small><br>
                                     <small>投稿日時：{{ $question->created_at }}</small> 
                                 </div>
                                 <hr>
