@@ -16,8 +16,8 @@
                                 by <a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a></div>
                                 <div class="card-date">{{ $post->date1 }}&nbsp;〜&nbsp;{{ $post->date2 }}</div>
                                 <div class="card-info">
-                                    <sm>国 : {{ $post->country }}</sm>&emsp;
-                                    <sm>都市 : {{ $post->city }}</sm><br>
+                                    <small>国 : {{ $post->country }}</small><br>
+                                    <small>都市 : {{ $post->city }}</small>
                                 </div>
                                 <hr>
                                 <p>{{ $post->diary }}</p>

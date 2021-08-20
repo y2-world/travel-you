@@ -16,8 +16,8 @@
                                 <h5 class="card-title"><h5 class="card-title">{{ $trouble->title }}</h5></a></h5>
                                 <div class="card-date">by&nbsp;<a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a>
                                 <div class="card-info">
-                                    <sm>国 : {{ $trouble->country }}</sm>&emsp;
-                                    <sm>カテゴリー : {{ $trouble->category }}</sm>
+                                    <small>国 : {{ $trouble->country }}</small><br>
+                                    <small>カテゴリー : {{ $trouble->category }}</small>
                                 </div>
                                 <hr>
                                 <p>{{ $trouble->content }}</p>
