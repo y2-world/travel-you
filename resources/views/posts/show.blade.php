@@ -3,9 +3,8 @@
 <div class="page-wrapper">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12">
-                <h2 class="header-title">TRAVEL DIARY</h2>
             <div class="col-sm">
+            <h2 class="header-title">TRAVEL DIARY</h2>
                 <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-5 my-auto">
