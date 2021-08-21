@@ -5,6 +5,11 @@
     <div class="row justify-content-center">
       <div class="col-md-6">
         <h2 class="header-title">OUR TRAVELS　<a href="{{ url('posts/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h2>
+        @if(!isset($posts))
+        <div class="list-group-item"> 
+        <p>まだ投稿はありません。</p>
+        </div>
+        @endif 
         @foreach ($posts as $post)
         <div class="card-header">
           <a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a> 

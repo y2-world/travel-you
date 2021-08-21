@@ -12,6 +12,11 @@
             <div class="card-header">
                 <h4>MY TRAVELS&emsp;<a href="{{ url('posts/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
+            @if(!isset($posts))
+            <div class="list-group-item"> 
+            <p>まだ投稿はありません。</p>
+            </div>
+            @endif 
             @foreach ($post as $rec)
             <li class="list-group-item">
                 <a href="{{ route('posts.show', $rec->id) }}">{{ $rec->title }}</a>
@@ -26,6 +31,11 @@
             <div class="card-header">
                 <h4>TROUBLE×YOU&emsp;<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
+            @if(!isset($troubles))
+            <div class="list-group-item"> 
+            <p>まだ投稿はありません。</p>
+            </div>
+            @endif
             @foreach ($trouble as $rec)
             <li class="list-group-item"> 
             <a href="{{ route('troubles.show', $rec->id) }}">{{ $rec->title }}</a>
@@ -37,6 +47,11 @@
             <div class="card-header">
                 <h4>MY QUESTIONS&emsp;<a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
+            @if(!isset($questions))
+            <div class="list-group-item"> 
+            <p>まだ投稿はありません。</p>
+            </div>
+            @endif
             @foreach ($question as $rec)
             <li class="list-group-item">
             <a href="{{ route('questions.show', $rec->id) }}">{{ $rec->title }}</a>  
@@ -47,9 +62,11 @@
             <div class="card-header">
                 <h4>MY ANSWERS</h4>
             </div>
-            <li class="list-group-item">
-                ここに自分がした回答が入ります。
-            </li>
+            @if(!isset($answers))
+            <div class="list-group-item"> 
+            <p>まだ投稿はありません。</p>
+            </div>
+            @endif 
         </div>
         <div class="col-sm-6">
             <div class="card-header">
