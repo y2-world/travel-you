@@ -12,9 +12,9 @@
             <div class="card-header">
                 <h4>MY TRAVELS&emsp;<a href="{{ url('posts/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
-            @if(!isset($posts))
+            @if(!isset($post))
             <div class="list-group-item"> 
-            <p>まだ投稿はありません。</p>
+            <p>まだ投稿がありません。</p>
             </div>
             @endif 
             @foreach ($post as $rec)
@@ -31,9 +31,9 @@
             <div class="card-header">
                 <h4>TROUBLE×YOU&emsp;<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
-            @if(!isset($troubles))
+            @if(!isset($trouble))
             <div class="list-group-item"> 
-            <p>まだ投稿はありません。</p>
+            <p>まだ投稿がありません。</p>
             </div>
             @endif
             @foreach ($trouble as $rec)
@@ -47,9 +47,9 @@
             <div class="card-header">
                 <h4>MY QUESTIONS&emsp;<a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
-            @if(!isset($questions))
+            @if(!isset($question))
             <div class="list-group-item"> 
-            <p>まだ投稿はありません。</p>
+            <p>まだ投稿がありません。</p>
             </div>
             @endif
             @foreach ($question as $rec)
@@ -62,11 +62,9 @@
             <div class="card-header">
                 <h4>MY ANSWERS</h4>
             </div>
-            @if(!isset($answers))
             <div class="list-group-item"> 
-            <p>まだ投稿はありません。</p>
+            <p>まだ投稿がありません。</p>
             </div>
-            @endif 
         </div>
         <div class="col-sm-6">
             <div class="card-header">

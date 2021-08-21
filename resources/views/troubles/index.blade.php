@@ -8,9 +8,9 @@
             <h2 class="header-title">TROUBLE×YOU　<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h2>
             <div class="col-sm">
         </li>
-        @if(!isset($troubles))
-        <p>まだ投稿はありません。</p>
-        @endif
+        @if(!isset($trouble))
+        <p>まだ投稿がありません。</p>
+        @endif 
     </div>
     @foreach ($troubles as $trouble)
     <div class="card mb-3">
