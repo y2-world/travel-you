@@ -197,9 +197,6 @@
     .badge {
         color: white;
     }
-    .card-date {
-        padding-bottom: 10px;
-    }
     .card-info {
         padding-top: 10px;
     }

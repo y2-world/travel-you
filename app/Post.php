@@ -11,9 +11,7 @@ use App\Comment;
 
 class Post extends Model
 {
-    protected $fillable = [
-        
-    ];
+    protected $fillable = ['title', 'body'];
 
     public function user()
     {
