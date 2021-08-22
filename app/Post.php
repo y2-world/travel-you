@@ -7,7 +7,7 @@ use App\Post;
 use App\Trouble;
 use App\User;
 use App\Question;
-use App\Comment;
+use App\Comment;    
 
 class Post extends Model
 {
@@ -16,5 +16,9 @@ class Post extends Model
     public function user()
     {
         return $this->belongsTo('App\User');
+    }
+
+    public function comment() {
+        return $this->hasMany('App\Comment');
     }
 }
