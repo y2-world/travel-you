@@ -39,14 +39,14 @@ class QuestionController extends Controller
      */
     public function store(QuestionRequest $request)
     {
-        $question = new Question; //インスタンスを作成
+        $question = new Question; 
         $question -> id         = $request -> id;
-        $question -> user_id  = Auth::id(); //ログイン中のユーザーidを代入
+        $question -> user_id  = Auth::id(); 
         $question -> user_name  = Auth::user()->name;
-        $question -> title    = $request -> title; //ユーザー入力のtitleを代入
+        $question -> title    = $request -> title; 
         $question -> category     = $request -> category;
         $question -> body = $request-> body;
-        $question -> save(); //保存してあげましょう
+        $question -> save(); 
         
         return redirect()->route('questions.index');
     }
@@ -59,7 +59,9 @@ class QuestionController extends Controller
      */
     public function show($id)
     {
-        $question = Question::find($id);// ページネーション; 
+        $question = Question::find($id);
+        $question->load('user', 'answer');
+        
         return view('questions.show', compact('question'));
     }
 

@@ -15,5 +15,9 @@ class Trouble extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function trouble_comments() {
+        return $this->hasMany('App\TroubleComment');
+    }
 }
 

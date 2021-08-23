@@ -25,15 +25,16 @@
                                 <div class="post-date">投稿日時：{{ $trouble->created_at }}</div> 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <form action="{{ route('comments.store') }}" method="POST">
+                                        <form action="{{ route('trouble_comments.store') }}" method="POST">
                                         {{csrf_field()}}
-                                            <input type="hidden" name="post_id" value="#">
+                                            <input type="hidden" name="trouble_id" value="{{ $trouble->id }}">
                                             <div class="form-group">
                                                 <label>コメント</label>
                                                 <textarea class="form-control" rows="3" name="body"></textarea>
                                             </div>
                                             <button type="submit" class="btn btn-primary btn-sm">コメントする</button>
                                         </form>
+                                        
                                     </div>
                                     <hr>
                                 </div>

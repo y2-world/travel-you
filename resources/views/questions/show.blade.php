@@ -21,12 +21,21 @@
                                 <hr>
                                 <form action="{{ route('answers.store') }}" method="POST">
                                     {{csrf_field()}}
-                                        <input type="hidden" name="question_id" value="{{ $question->id }}">
-                                            <div class="form-group">
-                                                <textarea class="form-control" rows="5" name="body"></textarea>
-                                            </div>
-                                        <a class="btn btn-primary btn-sm" value="upload">回答する</a>
+                                <input type="hidden" name="question_id" value="{{ $question->id }}">
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="5" name="body"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-sm">回答する</button>
                                 </form>
+                                @foreach ((array)$question->answers as $answer)
+                                    <div class="card mt-3">
+                                        <h5 class="card-header">投稿者：{{ $answer->user->name }}</h5>
+                                        <div class="card-body">
+                                            <h5 class="card-title">投稿日時：{{ $answer->created_at }}</h5>
+                                            <p class="card-text">内容：{{ $answer->body }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
                             <hr>
                             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                             <br>

@@ -3,19 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\AnswerRequest;
-use App\Comment;
-use App\Question;
-use App\Answer;
-use App\User;
+use App\Http\Requests\TroubleCommentRequest;
+use App\TroubleComment;
+use App\Trouble;
 use Auth;
 
-class AnswerController extends Controller
+class TroubleCommentController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         //
@@ -28,7 +32,7 @@ class AnswerController extends Controller
      */
     public function create()
     {
-        return view('answers.create');
+        //
     }
 
     /**
@@ -37,15 +41,15 @@ class AnswerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(AnswerRequest $request)
-    {   
-        $question = Question::find($request->question_id);  
-        $answer = new Answer;             
-        $answer -> body    = $request -> body;
-        $answer -> user_id = Auth::id();
-        $answer -> question_id = $request -> question_id;
-        $answer -> save();
-        return view('questions.show', compact('question'));
+    public function store(TroubleCommentRequest $request)
+    {
+        $trouble = Trouble::find($request->trouble_id); 
+        $troublecomment = new TroubleComment;             
+        $troublecomment -> body    = $request -> body;
+        $troublecomment -> user_id = Auth::id();
+        $troublecomment -> trouble_id = $request -> trouble_id;
+        $troublecomment -> save();
+        return view('troubles.show', compact('trouble'));
     }
 
     /**
