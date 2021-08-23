@@ -32,14 +32,10 @@
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-sm">コメントする</button>
                                 </form>
-                                    @foreach ((array)$post->comments as $comment)
-                                    <div class="card mt-3">
-                                        <h5 class="card-header">投稿者：{{ $comment->user->name }}</h5>
-                                        <div class="card-body">
-                                            <h5 class="card-title">投稿日時：{{ $comment->created_at }}</h5>
-                                            <p class="card-text">内容：{{ $comment->body }}</p>
-                                        </div>
-                                    </div>
+                                    @foreach ($post->comments as $comment)
+                                    <small>投稿者：<a href="{{ route('users.show', $trouble->user_id)}}">{{ $comment->user->name }}</small></a>
+                                    <small>{{ $comment->created_at }}</small><br>
+                                    {{ $comment->body }}</p>
                                     @endforeach
                                 <hr>
                                 <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

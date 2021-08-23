@@ -60,6 +60,7 @@ class TroubleController extends Controller
     {
         $trouble = Trouble::find($id);
         $trouble->load('user', 'trouble_comments');
+        
         return view('troubles.show', compact('trouble'));
     }
 

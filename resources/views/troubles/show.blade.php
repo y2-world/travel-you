@@ -8,7 +8,7 @@
             <div class="col-sm">
                 <div class="card mb-3">
                     <div class="row no-gutters">
-                        <div class="col-md-5 my-auto">
+                        <div class="col-md-5">
                             <img class="card-img" src="{{ asset('storage/' . $trouble->image) }}">
                         </div>
                         <div class="col-md-7">
@@ -34,7 +34,12 @@
                                             </div>
                                             <button type="submit" class="btn btn-primary btn-sm">コメントする</button>
                                         </form>
-                                        
+                                        <hr>
+                                        @foreach ($trouble->trouble_comments as $trouble_comment)
+                                            <small>投稿者：<a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble_comment->user->name }}</small></a>&nbsp;
+                                            <small>{{ $trouble_comment->created_at }}</small><br>
+                                            {{ $trouble_comment->body }}</p>
+                                        @endforeach
                                     </div>
                                     <hr>
                                 </div>
