@@ -19,10 +19,11 @@
                                 <hr>
                                 <p>Q : {{ $question->body }}</p>
                                 <hr>
-                                @foreach ((array)$question->answers as $answer)
-                                    <small>投稿者：<a href="{{ route('users.show', $question->user_id)}}">{{ $trouble_comment->user->name }}</small></a>
-                                    <small>{{ $trouble_comment->created_at }}</small><br>
-                                    A : {{ $trouble_comment->body }}</p>
+                                @foreach ($question->answers as $answer)
+                                    <hr>
+                                    <small>投稿者：<a href="{{ route('users.show', $question->user_id)}}">{{ $answer->user->name }}</small></a>
+                                    <small>{{ $answer->created_at }}</small><br>
+                                    A : {{ $answer->body }}</p>
                                 @endforeach
                                 <form action="{{ route('answers.store') }}" method="POST">
                                     {{csrf_field()}}

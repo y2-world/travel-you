@@ -3,16 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Post;
-use App\Trouble;
-use App\User;
-use App\Question;
-use App\Comment;
 
 class Comment extends Model
-
-{   protected $fillable = ['body'];
-
+{
     public function user()
     {
         return $this->belongsTo('App\User');

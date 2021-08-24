@@ -34,14 +34,13 @@
                                             </div>
                                             <button type="submit" class="btn btn-primary btn-sm">コメントする</button>
                                         </form>
-                                        <hr>
                                         @foreach ($trouble->trouble_comments as $trouble_comment)
+                                            <hr>
                                             <small>投稿者：<a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble_comment->user->name }}</small></a>&nbsp;
                                             <small>{{ $trouble_comment->created_at }}</small><br>
                                             {{ $trouble_comment->body }}</p>
                                         @endforeach
                                     </div>
-                                    <hr>
                                 </div>
                                 <hr>
                             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

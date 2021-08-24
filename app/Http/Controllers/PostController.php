@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 use App\Trouble;
+use App\Comment;
 use App\Post;
 use App\User;
 use Auth;
@@ -64,7 +65,7 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        $post->load('user', 'comment');
+        $post->load('user', 'comments');
         
         return view('posts.show', compact('post'));
     }
