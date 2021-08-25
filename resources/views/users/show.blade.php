@@ -33,7 +33,7 @@
             <div class="d-flex justify-content-center">
             {{ $post->links() }}
             </div>
-            
+            <br>
             <div class="card-header">
                 <h4>TROUBLE×YOU&emsp;<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
