@@ -19,15 +19,21 @@
             @endif 
             @foreach ($post as $rec)
             <li class="list-group-item">
-                <a href="{{ route('posts.show', $rec->id) }}">{{ $rec->title }}</a>
-                <br>
-                {{ $rec->date1 }} 〜 {{ $rec->date2 }}
-                <br>
-                <br>
-                <a href="{{ route('posts.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}" width="100%"></a>
+                <div class="row">
+                    <div class="col-md-7">
+                        <a href="{{ route('posts.show', $rec->id) }}">{{ $rec->title }}</a><br>
+                        {{ $rec->date1 }} 〜 {{ $rec->date2 }}
+                    </div>
+                    <div class="col-md-5">
+                        <a href="{{ route('posts.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}" width="100%"></a>
+                    </div>
+                </div>
             </li>
             @endforeach
-            <br>
+            <div class="d-flex justify-content-center">
+            {{ $post->links() }}
+            </div>
+            
             <div class="card-header">
                 <h4>TROUBLE×YOU&emsp;<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
@@ -59,21 +65,7 @@
             {{ $rec->updated_at }} 
             </li>
             @endforeach
-            <div class="card-header">
-                <h4>MY ANSWERS</h4>
-            </div>
-            {{-- @if($answer->isEmpty())
-            <div class="list-group-item"> 
-            <p>まだ投稿がありません。</p>
-            </div>
-            @endif
-            @foreach ($answer as $rec)
-            <li class="list-group-item">
-            <a href="{{ route('questions.show', $rec->id) }}">{{ $rec->title }}</a>  
             <br>
-            {{ $rec->updated_at }} 
-            </li>
-            @endforeach --}}
         </div>
         <div class="col-sm-6">
             <div class="card-header">

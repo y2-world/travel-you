@@ -137,6 +137,12 @@
         font-family: Oswald;
         color: turquoise;
     }
+    .comment-area {
+        padding-top: 30px;
+    }
+    .comment-header {
+        font-weight: bold;
+    }
     .gmap {
         height: 0;
         overflow: hidden;
@@ -152,6 +158,9 @@
     }  
     .avbarDropdown {
         font-family: Oswald;
+    }
+    .post-img {
+        padding-top: 100px;
     }
     footer {
         background-color: white;

@@ -17,7 +17,7 @@ class Trouble extends Model
     }
 
     public function trouble_comments() {
-        return $this->hasMany('App\TroubleComment')->orderByDesc('created_at');
+        return $this->hasMany('App\TroubleComment')->orderBy('created_at');
     }
 }
 

@@ -7,8 +7,10 @@
             <h2 class="header-title">TRAVEL DIARY</h2>
                 <div class="card mb-3">
                     <div class="row no-gutters">
-                        <div class="col-md-5 my-auto">
-                            <img class="card-img-bottom" src="{{ asset('storage/' . $post->image) }}" alt="travel-img"></a>
+                        <div class="col-md-5">
+                            <div class="post-img">
+                                <img class="card-img-bottom" src="{{ asset('storage/' . $post->image) }}" alt="travel-img"></a>
+                            </div>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
@@ -23,28 +25,30 @@
                                 <p>{{ $post->diary }}</p>
                                 <hr>
                                 <div class="post-date">投稿日時：{{ $post->created_at }}</div> 
-                                <form action="{{ route('comments.store') }}" method="POST">
-                                {{csrf_field()}}
-                                    <input type="hidden" name="post_id" value="{{ $post->id }}">
-                                    <div class="form-group">
-                                        <label>コメント</label>
-                                        <textarea class="form-control" rows="3" name="body"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-sm">コメントする</button>
-                                </form>
-                                @foreach ($post->comments as $comment)
-                                    <hr>
-                                    <small>投稿者：<a href="{{ route('users.show', $post->user_id)}}">{{ $comment->user->name }}</small></a>
-                                    <small>{{ $comment->created_at }}</small><br>
-                                    {{ $comment->body }}</p>
-                                    <!-- <div class="delete">     
-                                        <form action='{{ route('comments.destroy', $post->id) }}' method='post'>
-                                            {{ csrf_field() }}
-                                            {{ method_field('DELETE') }}
-                                            <input type='submit' value='削除' class="btn btn-danger btn-sm" onclick='return confirm("削除しますか？");'>
-                                        </form>
-                                    </div> -->
-                                @endforeach
+                                <div class="comment-area">
+                                    <form action="{{ route('comments.store') }}" method="POST">
+                                    {{csrf_field()}}
+                                        <input type="hidden" name="post_id" value="{{ $post->id }}">
+                                        <div class="form-group">
+                                            <p class="comment-header">コメント</p>
+                                            @foreach ($post->comments as $comment)
+                                                <hr>
+                                                <small>投稿者：<a href="{{ route('users.show', $post->user_id)}}">{{ $comment->user->name }}</small></a>
+                                                <small>{{ $comment->created_at }}</small><br>
+                                                {{ $comment->body }}</p>
+                                                <!-- <div class="delete">     
+                                                    <form action='{{ route('comments.destroy', $post->id) }}' method='post'>
+                                                        {{ csrf_field() }}
+                                                        {{ method_field('DELETE') }}
+                                                        <input type='submit' value='削除' class="btn btn-danger btn-sm" onclick='return confirm("削除しますか？");'>
+                                                    </form>
+                                                </div> -->
+                                            @endforeach
+                                            <textarea class="form-control" rows="1" name="body"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-sm">コメントする</button>
+                                    </form>
+                                </div>
                                 <hr>
                                 <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                                 <br>
