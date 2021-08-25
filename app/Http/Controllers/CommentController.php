@@ -90,13 +90,6 @@ class CommentController extends Controller
      */
     public function destroy($id)
     {
-        $post = Post::find($id);
-
-        if(Auth::id() !== $post->user_id){
-            return with("投稿したユーザーでないと削除できません。"); 
-        }
-
-        $post -> delete();
-        return redirect()->route('posts.index', Auth::user()->id );
+        //
     }
 }

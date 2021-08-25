@@ -18,7 +18,6 @@
                                 </div>
                                 <hr>
                                 <p>Q : {{ $question->body }}</p>
-                                <hr>
                                 @foreach ($question->answers as $answer)
                                     <hr>
                                     <small>投稿者：<a href="{{ route('users.show', $question->user_id)}}">{{ $answer->user->name }}</small></a>
