@@ -12,7 +12,7 @@
             <div class="card-header">
                 <h4>MY TRAVELS&emsp;<a href="{{ url('posts/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
-            @if(!isset($post))
+            @if($post->isEmpty())
             <div class="list-group-item"> 
             <p>まだ投稿がありません。</p>
             </div>
@@ -31,7 +31,7 @@
             <div class="card-header">
                 <h4>TROUBLE×YOU&emsp;<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
-            @if(!isset($trouble))
+            @if($trouble->isEmpty())
             <div class="list-group-item"> 
             <p>まだ投稿がありません。</p>
             </div>
@@ -47,7 +47,7 @@
             <div class="card-header">
                 <h4>MY QUESTIONS&emsp;<a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h4>
             </div>
-            @if(!isset($question))
+            @if($question->isEmpty())
             <div class="list-group-item"> 
             <p>まだ投稿がありません。</p>
             </div>
@@ -62,9 +62,18 @@
             <div class="card-header">
                 <h4>MY ANSWERS</h4>
             </div>
+            {{-- @if($answer->isEmpty())
             <div class="list-group-item"> 
             <p>まだ投稿がありません。</p>
             </div>
+            @endif
+            @foreach ($answer as $rec)
+            <li class="list-group-item">
+            <a href="{{ route('questions.show', $rec->id) }}">{{ $rec->title }}</a>  
+            <br>
+            {{ $rec->updated_at }} 
+            </li>
+            @endforeach --}}
         </div>
         <div class="col-sm-6">
             <div class="card-header">
@@ -78,6 +87,11 @@
             <div class="card-header">
                 <h4>MY COUNTRIES</h4>
             </div>
+            @if($post->isEmpty())
+            <div class="list-group-item"> 
+            <p>まだ投稿がありません。</p>
+            </div>
+            @endif 
             <li class="list-group-item">
                 <ol>
                 @foreach ($post as $rec) 
@@ -88,7 +102,6 @@
                 @endforeach
                 </ol>
             </li>
-                
         </div>
     </div>
 </div>

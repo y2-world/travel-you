@@ -6,9 +6,9 @@
           <div class="col-md-8">
           <h2 class="header-title">Q & A　<a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h2>
           <div class="col-sm">
-          @if(!isset($question))
-          <p>まだ投稿がありません。</p>
-          @endif 
+            @if($questions->isEmpty())
+            <p>まだ投稿がありません。</p>
+            @endif 
       </li>
     </div>
 
