@@ -59,7 +59,6 @@ class TroubleController extends Controller
     public function show($id)
     {
         $trouble = Trouble::find($id);
-        $trouble->load('user', 'trouble_comments');
         
         return view('troubles.show', compact('trouble'));
     }

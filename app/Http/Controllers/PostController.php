@@ -65,7 +65,6 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        $post->load('user', 'comments');
         
         return view('posts.show', compact('post'));
     }
@@ -97,7 +96,7 @@ class PostController extends Controller
         $post -> city     = $request -> city;
         $post -> diary     = $request -> diary;
         $post -> save();
-        return view('posts.show', compact('post'));
+        return view('posts.show', compact('posts'));
     }
 
     public function destroy($id)

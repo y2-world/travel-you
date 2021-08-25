@@ -31,13 +31,12 @@
                                         <textarea class="form-control" rows="3" name="body"></textarea>
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-sm">コメントする</button>
-                                    <hr>
                                 </form>
                                 @foreach ($post->comments as $comment)
                                     <hr>
-                                    <small>投稿者：<a href="{{ route('users.show', $post->user_id)}}">{{ $post->user->name }}</small></a>
-                                    <small>{{ $post->created_at }}</small><br>
-                                    {{ $post->body }}</p>
+                                    <small>投稿者：<a href="{{ route('users.show', $post->user_id)}}">{{ $comment->user->name }}</small></a>
+                                    <small>{{ $comment->created_at }}</small><br>
+                                    {{ $comment->body }}</p>
                                 @endforeach
                                 <hr>
                                 <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

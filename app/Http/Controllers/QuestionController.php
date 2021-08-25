@@ -60,7 +60,7 @@ class QuestionController extends Controller
     public function show($id)
     {
         $question = Question::find($id);
-        $question->load('user', 'answers');
+        // $question->load('user', 'answers');
         
         return view('questions.show', compact('question'));
     }

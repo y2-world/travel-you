@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\CommentRequest;
+use App\Http\Requests\CommentRequest;
 use App\Comment;
 use App\Post;
 use Auth;
@@ -44,7 +44,7 @@ class CommentController extends Controller
         $comment -> user_id = Auth::id();
         $comment -> post_id = $request -> post_id;
         $comment -> save();
-        return view('post.show', compact('posts'));
+        return view('posts.show', compact('post'));
 
     }
 
@@ -90,6 +90,13 @@ class CommentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+
+        if(Auth::id() !== $post->user_id){
+            return with("投稿したユーザーでないと削除できません。"); 
+        }
+
+        $post -> delete();
+        return redirect()->route('posts.index', Auth::user()->id );
     }
 }

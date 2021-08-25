@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
       <div class="col-md-6">
         <h2 class="header-title">OUR TRAVELS　<a href="{{ url('posts/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h2>
-        @if(!isset($post))
+        @if($posts->isEmpty())
         <p>まだ投稿がありません。</p>
         @endif 
         @foreach ($posts as $post)

@@ -8,7 +8,7 @@
             <h2 class="header-title">TROUBLE×YOU　<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h2>
             <div class="col-sm">
         </li>
-        @if(!isset($trouble))
+        @if($troubles->isEmpty())
         <p>まだ投稿がありません。</p>
         @endif 
     </div>
