@@ -46,7 +46,7 @@
                             <br>
                             <br>
                             <a href="{{ route('troubles.edit', $trouble->id) }}" class="btn btn-secondary btn-sm">編集</a>
-                            <a href="{{ url('/troubles') }}" class="btn btn-secondary btn-sm">BACK</a>
+                            <a href="javascript:history.back()" class="btn btn-secondary btn-sm">BACK</a>
                             <br>
                             </div>
                         </div>
