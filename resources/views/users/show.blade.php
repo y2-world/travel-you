@@ -85,16 +85,16 @@
             <p>まだ投稿がありません。</p>
             </div>
             @endif 
-            @foreach ($post as $rec) 
             <li class="list-group-item">
                 <ol>
+                @foreach ($post as $rec) 
                 <li><a href="{{ route('posts.show', $rec->id) }}">{{$rec->country}}</a>
                     <br>
                     ({{ $rec->date1 }} 〜 {{ $rec->date2 }})
                 </li>
+                @endforeach
                 </ol>
             </li>
-            @endforeach
         </div>
     </div>
 </div>

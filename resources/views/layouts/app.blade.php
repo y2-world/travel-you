@@ -244,7 +244,7 @@
     }
     .card-diary {
         padding: 10px;
-        font-size: 11px;
+        font-size: 12px;
     }
     .post-date {
         color: gray;
