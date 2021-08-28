@@ -142,11 +142,9 @@
         font-family: Oswald;
         color: turquoise;
     }
-    .comment-area {
-        padding-top: 30px;
-    }
     .comment-header {
         font-weight: bold;
+
     }
     .gmap {
         height: 0;
@@ -165,7 +163,7 @@
         font-family: Oswald;
     }
     .post-img {
-        padding-top: 100px;
+        width: 100%;
     }
     footer {
         background-color: white;
@@ -220,7 +218,7 @@
         margin: 10px;
     }
     .travel-card:hover {
-        box-shadow : 15px 15px 37px gray;
+        box-shadow : 15px 15px 50px gray;
     }
     .cards {
         display: flex;
@@ -232,13 +230,15 @@
        padding-right: 15px;
        margin: 0;
     }
-    .travel-card a {
-        color: gray;
-    }
     .card-user {
         font-size: 12px;
         padding-top: 10px;
+        font-weight: bold;
     }
+    .card-user a {
+        color: black;
+    }
+
     .card-title {
         font-size: 15px;
     }
@@ -247,15 +247,43 @@
         padding-bottom: 10px;
     }
     .card-diary {
-        padding: 10px;
+        padding-top: 10px;
         font-size: 12px;
+        padding-bottom: 8px;
     }
     .post-date {
         color: gray;
+        padding-bottom: 10px;
         font-size: 9px;
     }
-    .card-info {
-        padding-bottom: 10px;
+    .travel-card-show {
+        background-color: white;
+        box-shadow: 0 12px 12px gray;
+        transition: box-shadow .5s;
+        max-width: 1000px;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 20px;
+    }
+    .travel-card-show img {
+        box-shadow: 0 12px 12px gray;
+    }
+    .travel-card-show p {
+        margin: 0;
+    }
+    .comment-area p {
+        font-size: 12px;
+        line-height: 10px;
+    }
+    .back {
+        padding: 25px;
+    }
+    .btn-show {
+        display: flex;
+        align-items: center;
+    }
+    .twitter-share-button {
+        margin-left: 10px;
     }
     span {
         display: inline-block;
