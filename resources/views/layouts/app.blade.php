@@ -213,10 +213,14 @@
     }
     .travel-card {
         background-color: white;
-        box-shadow : 15px 15px 37px gray;
-        width: 300px;
+        box-shadow: 0 12px 12px gray;
+        transition: box-shadow .5s;
+        width: 330px;
         border-radius: 10px;
         margin: 10px;
+    }
+    .travel-card:hover {
+        box-shadow : 15px 15px 37px gray;
     }
     .cards {
         display: flex;
