@@ -32,10 +32,9 @@
                                         <div class="form-group">
                                             <p class="comment-header">コメント</p>
                                             @foreach ($post->comments as $comment)
-                                                <hr>
-                                                <small>投稿者：<a href="{{ route('users.show', $post->user_id)}}">{{ $comment->user->name }}</small></a>
-                                                <small>{{ $comment->created_at }}</small><br>
-                                                {{ $comment->body }}</p>
+                                                <p>{{ $comment->body }}<br>
+                                                <small>by <a href="{{ route('users.show', $post->user_id)}}">{{ $comment->user->name }}</small></a>
+                                                <small>{{ $comment->created_at }}</small>
                                                 <!-- <div class="delete">     
                                                     <form action='{{ route('comments.destroy', $post->id) }}' method='post'>
                                                         {{ csrf_field() }}

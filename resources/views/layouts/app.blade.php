@@ -71,6 +71,11 @@
     }
     .intro-wrapper img {
         width: 100%;
+        cursor: pointer;
+    }
+    .changed {
+        padding: 60px 0px;
+        font-size: 20px;
     }
     .top-header {
         font-family: Oswald;
@@ -426,7 +431,7 @@
 function showElementAnimation() {
                     
     var element = document.getElementsByClassName('js-fadein');
-    if(!element) return; // 要素がなかったら処理をキャンセル
+    if(!element) return;
                         
     var showTiming = window.innerHeight > 768 ? 200 : 300; // 要素が出てくるタイミングはここで調整
     var scrollY = window.pageYOffset; //スクロール量を取得

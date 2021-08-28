@@ -20,8 +20,8 @@
             <div class="top-header">WHAT'S TRAVEL×YOU?</div>   
         </div>
         <div class="element js-fadein">
-            <img src="{{ asset('images/world.jpg') }}">  
-            <p>今までのあなたの旅の歴史を記録し、<br>
+            <img src="{{ asset('images/world.jpg') }}" alt="map img" id="trigger">  
+            <p id="target">今までのあなたの旅の歴史を記録し、<br>
             <span>さらにこれからのあなたの旅を</span><span>より楽しいものにするツールです。</span><br>
             旅行記を作ったり、<br>
             旅行先でのトラブルをシェアしたり、<br>
@@ -99,5 +99,16 @@
         </div> 
     </div>
 </footer>
+
+<script>
+'use strict';
+
+function hover() {
+    document.getElementById('target').textContent = 'あなたの訪れた国はどこですか？';
+    document.getElementById('target').classList.add('changed');
+}
+
+document.getElementById('trigger').addEventListener('click', hover);
+</script>
 
 @endsection
