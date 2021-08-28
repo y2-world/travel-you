@@ -38,7 +38,7 @@ class PostRequest extends FormRequest
             'image.required'  => 'カバー写真は必須です。',
             'country.required'  => '国は必須です。',
             'city.required'  => '都市は必須です。',
-            'diary.required'  => '都市は必須です。',
+            'diary.required'  => 'Travel Diaryは必須です。',
         ];
     }
 }

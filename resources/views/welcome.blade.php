@@ -104,7 +104,7 @@
 'use strict';
 
 function hover() {
-    document.getElementById('target').textContent = 'あなたの訪れた国はどこですか？';
+    document.getElementById('target').textContent = 'あなたが訪れた国はどこですか？';
     document.getElementById('target').classList.add('changed');
 }
 

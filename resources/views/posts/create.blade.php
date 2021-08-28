@@ -27,7 +27,7 @@
                     <input type="date" placeholder="yyyy-mm-dd" name="date2">
                     </div> 
                     <div class="form-group">
-                        <label>カバー写真</label>&nbsp;<span class="badge bg-danger">必須</span>
+                        <label>写真</label>&nbsp;<span class="badge bg-danger">必須</span>
                         <input type="file" class="form-control-file"name="image">
                     </div>
                     <div class="form-group">

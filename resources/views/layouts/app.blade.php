@@ -211,12 +211,47 @@
     .badge {
         color: white;
     }
-    .card-info {
+    .travel-card {
+        background-color: white;
+        box-shadow : 15px 15px 37px gray;
+        width: 300px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .travel-card p {
+       padding-left: 15px;
+       padding-right: 15px;
+       margin: 0;
+    }
+    .travel-card a {
+        color: gray;
+    }
+    .card-user {
+        font-size: 12px;
         padding-top: 10px;
     }
-    .post-date {
+    .card-title {
+        font-size: 15px;
+    }
+    .card-date {
+        font-size: 9px;
+        padding-bottom: 10px;
+    }
+    .card-diary {
+        padding: 10px;
         font-size: 11px;
-        padding-bottom: 20px;
+    }
+    .post-date {
+        color: gray;
+        font-size: 9px;
+    }
+    .card-info {
+        padding-bottom: 10px;
     }
     span {
         display: inline-block;

@@ -96,7 +96,7 @@ class PostController extends Controller
         $post -> city     = $request -> city;
         $post -> diary     = $request -> diary;
         $post -> save();
-        return view('posts.show', compact('posts'));
+        return view('posts.show', compact('post'));
     }
 
     public function destroy($id)
