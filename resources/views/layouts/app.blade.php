@@ -271,10 +271,6 @@
     .travel-card-show p {
         margin: 0;
     }
-    .comment-area p {
-        font-size: 12px;
-        line-height: 10px;
-    }
     .back {
         padding: 25px;
     }
@@ -284,6 +280,24 @@
     }
     .twitter-share-button {
         margin-left: 10px;
+    }
+    .comment-user {
+        font-size: 12px;
+        color: black;
+    }
+    .comment-user a {
+        color: black;
+        font-weight: bold;
+    }
+    .comment-date {
+        font-size: 8px;
+        color: gray;
+        text-align: left;
+    }
+    .comment-info {
+        display: flex;
+        font-size: 12px;
+        justify-content: space-between;
     }
     span {
         display: inline-block;

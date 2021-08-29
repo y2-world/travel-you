@@ -32,7 +32,11 @@
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
                             <div class="form-group">
                                 @foreach ($post->comments as $comment)
-                                    <p><span class="card-user"><a href="{{ route('users.show', $post->user_id)}}">{{ $comment->user->name }}</span></a>&emsp;&emsp;{{ $comment->body }}</p>
+                                    <div class="comment-info">
+                                        <div class="comment-user"><a href="{{ route('users.show', $post->user_id)}}">{{ $comment->user->name }}</a>&emsp;&emsp;
+                                        {{ $comment->body }}</div>
+                                        <div class="comment-date">{{ $comment->created_at }}</div>
+                                    </div>
                                     <!-- <div class="delete">     
                                         <form action='{{ route('comments.destroy', $post->id) }}' method='post'>
                                             {{ csrf_field() }}
