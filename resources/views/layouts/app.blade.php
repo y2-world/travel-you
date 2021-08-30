@@ -230,6 +230,11 @@
        padding-right: 15px;
        margin: 0;
     }
+    .trouble-card p {
+       padding-left: 15px;
+       padding-right: 15px;
+       margin: 0;
+    }
     .card-user {
         font-size: 12px;
         padding-top: 10px;
@@ -297,6 +302,21 @@
     .comment-info {
         display: flex;
         font-size: 12px;
+        justify-content: space-between;
+    }
+    .trouble-card {
+        background-color: white;
+        box-shadow: 0 12px 12px gray;
+        transition: box-shadow .5s;
+        width: 330px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    .trouble-card:hover {
+        box-shadow : 15px 15px 50px gray;
+    }
+    .trouble-row {
+        display: flex;
         justify-content: space-between;
     }
     span {
