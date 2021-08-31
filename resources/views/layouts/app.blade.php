@@ -282,9 +282,8 @@
     .back {
         padding: 25px;
     }
-    .btn-show {
-        display: flex;
-        align-items: center;
+    .btn-edit {
+        padding-top: 15px;
     }
     .twitter-share-button {
         margin-left: 10px;
@@ -325,6 +324,10 @@
     .trouble-more {
         padding: 10px;
     }
+    .btn-show {
+        display: flex;
+        align-items: center;
+    }
     span {
         display: inline-block;
     }
@@ -361,6 +364,15 @@
         }
         span {
             display: inline-block;
+        }
+    }
+
+    @media screen and (max-width: 770px) {
+        .btn-edit {
+            display: none;
+        }
+        .card-info {
+            padding-top: 15px;
         }
     }
 
