@@ -320,6 +320,7 @@
     .trouble-row {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
     }
     .trouble-more {
         padding: 10px;
