@@ -243,9 +243,12 @@
     .card-user a {
         color: black;
     }
-
     .card-title {
         font-size: 15px;
+    }
+    .card-title-trouble {
+        font-size: 15px;
+        padding-bottom: 10px;
     }
     .card-date {
         font-size: 9px;
@@ -318,6 +321,9 @@
     .trouble-row {
         display: flex;
         justify-content: space-between;
+    }
+    .trouble-more {
+        padding: 10px;
     }
     span {
         display: inline-block;

@@ -13,12 +13,12 @@
         @foreach ($troubles as $trouble)
             <div class="trouble-card">
                 <p class="card-user"><a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a></p>
-                <p class="card-title">{{ $trouble->title }}</a></p>
-                <img src="{{ asset('storage/' . $trouble->image) }}" width="100%">
+                <p class="card-title-trouble">{{ $trouble->title }}</a></p>
+                <a href="{{ route('troubles.show', $trouble->id) }}"><img src="{{ asset('storage/' . $trouble->image) }}" width="100%"></a>
                 <p class="card-diary">{{Str::limit($trouble->content, 80, '…' )}}</p>
                 <div class="trouble-row">
                     <p class="post-date">{{ $trouble->updated_at }}</p>
-                    <a class="btn btn-primary btn-sm" href="{{ route('troubles.show', $trouble->id) }}">MORE</a>
+                    <div class="trouble-more"><a class="btn btn-primary btn-sm" href="{{ route('troubles.show', $trouble->id) }}">MORE</a></div>
                 </div>
             </div>
         @endforeach
