@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="container">
-                        <img class="post-img" src="{{ asset('storage/' . $post->image) }}" alt="travel-img"></a>
+                        <img class="post-img" src="{{ asset('storage/' . $post->image) }}" alt="travel-img">
                         <div class="btn-edit">
                             <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-secondary btn-sm">編集</a>
                         </div>          
