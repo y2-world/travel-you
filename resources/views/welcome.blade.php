@@ -105,8 +105,9 @@
 'use strict';
 
 function clickMap() {
-    document.getElementById('target').innerText = '今までのあなたの旅の歴史を記録し、\nさらにこれからのあなたの旅をより楽しいものにするツールです。\n旅行記を作ったり、旅行先でのトラブルをシェアしたり、\n疑問に思ったことを質問したり... \n楽しみ方は何通りもあります。\nさぁ、一緒に旅に出かけましょう！';
-    document.getElementById('target').classList.add('changed');
+    const targetNode = document.getElementById('target');
+    targetNode.innerText = '今までのあなたの旅の歴史を記録し、\nさらにこれからのあなたの旅をより楽しいものにするツールです。\n旅行記を作ったり、旅行先でのトラブルをシェアしたり、\n疑問に思ったことを質問したり... \n楽しみ方は何通りもあります。\nさぁ、一緒に旅に出かけましょう！';
+    targetNode.classList.add('changed');
 }
 
 document.getElementById('trigger').addEventListener('click', clickMap);
