@@ -20,14 +20,15 @@
             <div class="top-header">WHAT'S TRAVEL×YOU?</div>   
         </div>
         <div class="element js-fadein">
-            <img src="{{ asset('images/world.jpg') }}" alt="map img" id="trigger">  
-            <p id="target">今までのあなたの旅の歴史を記録し、<br>
-            <span>さらにこれからのあなたの旅を</span><span>より楽しいものにするツールです。</span><br>
-            旅行記を作ったり、<br>
-            旅行先でのトラブルをシェアしたり、<br>
-            疑問に思ったことを質問したり... <br>
-            楽しみ方は何通りもあります。<br>
-            さぁ、一緒に旅に出かけましょう！</p>
+            <div class="intro-img">
+                <div class="click-img">
+                    <img src="{{ asset('images/click.png') }}" alt="click">  
+                </div>
+                <div class="world-img">
+                    <img src="{{ asset('images/world.jpg') }}" alt="map img" id="trigger"> 
+                </div> 
+            </div>
+            <p id="target" class="intro-text">あなたが訪れた国はどこですか？</p>
         </div>
     </div>
 </div>
@@ -104,7 +105,7 @@
 'use strict';
 
 function hover() {
-    document.getElementById('target').textContent = 'あなたが訪れた国はどこですか？';
+    document.getElementById('target').innerText = '今までのあなたの旅の歴史を記録し、\nさらにこれからのあなたの旅をより楽しいものにするツールです。\n旅行記を作ったり、旅行先でのトラブルをシェアしたり、\n疑問に思ったことを質問したり... \n楽しみ方は何通りもあります。\nさぁ、一緒に旅に出かけましょう！';
     document.getElementById('target').classList.add('changed');
 }
 
