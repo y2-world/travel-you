@@ -25,7 +25,7 @@
                     <img src="{{ asset('images/click.png') }}" alt="click">  
                 </div>
                 <div class="world-img">
-                    <img src="{{ asset('images/world.jpg') }}" alt="map img" id="trigger"> 
+                    <img src="{{ asset('images/world.jpg') }}" alt="map img" id="trigger" title="訪れた国をクリック！"> 
                 </div> 
             </div>
             <p id="target" class="intro-text">あなたが訪れた国はどこですか？</p>
