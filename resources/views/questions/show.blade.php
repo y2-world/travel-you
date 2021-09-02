@@ -37,7 +37,7 @@
                             <br>
                             <br>
                             <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-secondary btn-sm">編集</a>
-                            <a href="javascript:history.back()" class="btn btn-secondary btn-sm">BACK</a>
+                            <a href="{{ url('/questions') }}" class="btn btn-secondary btn-sm">BACK</a>
                             <br>
                             </div>
                         </div>

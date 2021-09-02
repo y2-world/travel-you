@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="back">
-            <a href="javascript:history.back()" class="btn btn-secondary btn-sm">BACK</a>
+            <a href="{{ url('/posts') }}" class="btn btn-secondary btn-sm">BACK</a>
         </div>
     </div>  
 </div> 

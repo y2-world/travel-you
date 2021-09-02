@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="back">
-                <a href="javascript:history.back()" class="btn btn-secondary btn-sm">BACK</a>
+                <a href="{{ url('/troubles') }}" class="btn btn-secondary btn-sm">BACK</a>
             </div>
         </div>
     </div>  
