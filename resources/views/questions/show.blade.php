@@ -2,49 +2,48 @@
 @section('content')
 <div class="page-wrapper">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <h2 class="header-title">Q & A</h2>
-            <div class="col-sm">
-                <div class="card mb-3">
-                    <div class="row no-gutters">
-                        <div class="col-md-12">
-                            <div class="card-body">
-                                <h5 class="card-title"><h5 class="card-title">{{ $question->title }}</h5></a></h5>
-                                by&nbsp;<a href="{{ route('users.show', $question->user_id)}}">{{ $question->user_name }}</a>
-                                <div class="card-info">
-                                    <small>カテゴリー : {{ $question->category }}</small><br>
-                                    <small>投稿日時：{{ $question->created_at }}</small> 
-                                </div>
-                                <hr>
-                                <p>Q : {{ $question->body }}</p>
-                                @foreach ($question->answers as $answer)
-                                    <hr>
-                                    <small>投稿者：<a href="{{ route('users.show', $question->user_id)}}">{{ $answer->user->name }}</small></a>
-                                    <small>{{ $answer->created_at }}</small><br>
-                                    A : {{ $answer->body }}</p>
-                                @endforeach
-                                <form action="{{ route('answers.store') }}" method="POST">
-                                    {{csrf_field()}}
-                                <input type="hidden" name="question_id" value="{{ $question->id }}">
-                                    <div class="form-group">
-                                        <textarea class="form-control" rows="5" name="body"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-sm">回答する</button>
-                                </form>
-                            <hr>
-                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            <br>
-                            <br>
-                            <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-secondary btn-sm">編集</a>
-                            <a href="{{ url('/questions') }}" class="btn btn-secondary btn-sm">BACK</a>
-                            <br>
-                            </div>
-                        </div>
+        <h2 class="header-title">Q & A</h2>
+        <div class="travel-card-show">
+            <div class="card-info-question">
+                <p class="card-user-question"><a href="{{ route('users.show', $question->user_id)}}">{{ $question->user_name }}</a>
+                <p class="card-title">{{ $question->title }}</a></p>
+                <small>カテゴリー : {{ $question->category }}</small><br>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="question-header">Q</div>
+                    <div class="question-text">{{ $question->body }}</span></div>
+                    <p class="post-date">投稿日時：{{ $question->created_at }}</p>
+                    <div class="btn-edit">
+                        <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-secondary btn-sm">編集</a>
                     </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="question-header">A</div>
+                    @foreach ($question->answers as $answer)
+                    <div class="answer-info">
+                        <div class="question-text">{{ $answer->body }}</div>
+                        <div class="comment-user"><a href="{{ route('users.show', $question->user_id)}}">{{ $answer->user->name }}</a>&emsp;&emsp;<span class="comment-date">{{ $answer->created_at }}</span></div>
+                    </div>
+                    @endforeach
+                    <form action="{{ route('answers.store') }}" method="POST">
+                        {{csrf_field()}}
+                        <input type="hidden" name="question_id" value="{{ $question->id }}">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" name="body"></textarea>
+                        </div>
+                        <div class="btn-show">
+                            <button type="submit" class="btn btn-primary btn-sm">回答する</button>
+                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>  
+        <div class="back">
+            <a href="{{ url('/questions') }}" class="btn btn-secondary btn-sm">BACK</a>
+        </div>
+    </div>
 </div>
 @endsection

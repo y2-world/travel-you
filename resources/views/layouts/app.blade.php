@@ -161,7 +161,6 @@
     }
     .comment-header {
         font-weight: bold;
-
     }
     .gmap {
         height: 0;
@@ -345,6 +344,32 @@
     .btn-show {
         display: flex;
         align-items: center;
+    }
+    .answer-btn {
+        padding: 10px;
+    }
+    .post-date-question {
+        color: gray;
+        font-size: 9px;
+    }
+    .question-header {
+        font-family: Oswald;
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+    .question-text {
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+    .answer-info {
+        padding-bottom: 10px;
+    }
+    .card-user-question {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .card-user-question a {
+        color: black;
     }
     span {
         display: inline-block;

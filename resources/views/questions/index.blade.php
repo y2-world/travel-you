@@ -1,42 +1,29 @@
 @extends('layouts.app')
 @section('content')
 <div class="page-wrapper">
-  <div class="container">
-      <div class="row justify-content-center">
-          <div class="col-md-8">
-          <h2 class="header-title">Q & A　<a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h2>
-          <div class="col-sm">
-            @if($questions->isEmpty())
-            <p>まだ投稿がありません。</p>
-            @endif 
-      </li>
-    </div>
-
-    @foreach ($questions as $question)
-    <div class="card mb-3">
-      <div class="row no-gutters">
-          <div class="col-md-10">
-              <div class="card-body">
-                  <h5 class="card-title"> <h5 class="card-title">{{ $question->title }}</h5></a></h5>
-                  <p>{{ $question->body }}</p>
-                  by&nbsp;<a href="{{ route('users.show', $question->user_id)}}">{{ $question->user_name }}</a> 
-              </div>
-          </div>
-          <div class="col-md-2 my-auto">
-              <div class="card-body">
-                  <a class="btn btn-primary btn-sm" href="{{ route('questions.show', $question->id) }}"><span>回答</span><span>する</span></a>
-              </div>
-          </div>
+  <div class="container-fluid">
+      <div class="container">
+        <h2 class="header-title">Q & A　<a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">新規投稿</a></h2>
+        @if($questions->isEmpty())
+        <p>まだ投稿がありません。</p>
+        @endif 
       </div>
-          <div class="card-footer">
-            <div class="row no-gutters">
-              <div class="col-md-12 my-auto">
-                <small class="text-muted">{{ $question->updated_at }}</small>
-              </div>
-            </div>
-          </div>
     </div>
-    @endforeach
+    <div class="cards">
+      @foreach ($questions as $question)
+      <div class="travel-card">
+        <p class="card-user"><a href="{{ route('users.show', $question->user_id)}}">{{ $question->user_name }}</a></p>
+        <p class="card-title">{{ $question->title }}</a></p>
+        <p class="card-diary">{{ $question->body }}</p>
+        <div class="card-info-question">    
+          <p class="post-date-question">{{ $question->updated_at }}</p>  
+          <div class="answer-btn">
+            <a class="btn btn-primary btn-sm" href="{{ route('questions.show', $question->id) }}">回答する</a>    
+          </div>
+        </div>
+      </div>
+      @endforeach
+    </div> 
   </div>  
 </div>   
 

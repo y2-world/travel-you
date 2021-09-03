@@ -17,7 +17,7 @@
         <a href="{{ route('posts.show', $post->id) }}"><img class="card-img-bottom" src="{{ asset('storage/' . $post->image) }}" alt="Card image cap"></a>
         <div class="card-info">
           <p class="card-diary"> {{ $post->diary }}</p>
-          <p class="post-date">{{ $post->updated_at }}</small>
+          <p class="post-date">{{ $post->updated_at }}</p>
         </div>
       </div>
       @endforeach
