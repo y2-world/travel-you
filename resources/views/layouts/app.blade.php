@@ -214,7 +214,7 @@
     .js-fadein {
         opacity: 0; 
         visibility: hidden;
-        transform: translateY(40px);
+        transform: translateY(30px);
         transition: all 1s;
     }
     .js-fadein.is-show {
@@ -604,7 +604,7 @@ function showElementAnimation() {
     var element = document.getElementsByClassName('js-fadein');
     if(!element) return;
                         
-    var showTiming = window.innerHeight > 768 ? 200 : 300; // 要素が出てくるタイミングはここで調整
+    var showTiming = window.innerHeight > 768 ? 200 : 100; // 要素が出てくるタイミングはここで調整
     var scrollY = window.pageYOffset; //スクロール量を取得
     var windowH = window.innerHeight; //ブラウザウィンドウのビューポート(viewport)の高さを取得
                         

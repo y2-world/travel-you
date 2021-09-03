@@ -18,8 +18,7 @@
     <div class="intro-text">
         <div class="element js-fadein">
             <div class="top-header">WHAT'S TRAVEL×YOU?</div>   
-        </div>
-        <div class="element js-fadein">
+        
             <div class="intro-img">
                 <div class="click-img">
                     <img src="{{ asset('images/click.png') }}" alt="click">  
@@ -28,7 +27,9 @@
                     <img src="{{ asset('images/world.jpg') }}" alt="map img" id="trigger" title="訪れた国をクリック！"> 
                 </div> 
             </div>
-            <p id="target" class="intro-text">あなたが訪れた国はどこですか？</p>
+            <div class="element js-fadein">
+                <p id="target" class="intro-text">あなたが訪れた国はどこですか？</p>
+            </div>
         </div>
     </div>
 </div>
