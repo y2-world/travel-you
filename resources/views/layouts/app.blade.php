@@ -91,7 +91,7 @@
     }
     .changed {
         font-size: 15px;
-        transition: all 0.5s;
+        transition: all 0.5s ease;
         padding: 0px;
     }
     .top-header {

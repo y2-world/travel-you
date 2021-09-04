@@ -112,6 +112,7 @@ function clickMap() {
 }
 
 document.getElementById('trigger').addEventListener('click', clickMap);
+
 </script>
 
 @endsection
