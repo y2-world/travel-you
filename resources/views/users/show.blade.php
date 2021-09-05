@@ -72,11 +72,11 @@
                 <div class="user-header">
                     <h4>MY COUNTRIES</h4>
                 </div>
-                @if($post->isEmpty())
-                <p>まだ投稿がありません。</p>
-                @endif 
                 <div class="user-cards">
                     <div class="travel-card">
+                        @if($post->isEmpty())
+                        <p>まだ投稿がありません。</p>
+                        @endif 
                         <ol>
                             @foreach ($post as $rec) 
                             <li>
