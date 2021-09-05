@@ -75,7 +75,7 @@
                 <div class="user-cards">
                     <div class="travel-card">
                         @if($post->isEmpty())
-                        <p>まだ投稿がありません。</p>
+                        <p class="user-title">まだ投稿がありません。</p>
                         @endif 
                         <ol>
                             @foreach ($post as $rec) 
