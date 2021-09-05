@@ -11,12 +11,12 @@
                 <div class="user-header">
                     <h4>MY TRAVELS&emsp;<a href="{{ url('posts/create') }}" class="btn btn-primary" id="my_travels_botton">NEW POST</a></h4>
                 </div>
+                @if($post->isEmpty())
+                <p class="user-title">まだ投稿がありません。</p>
+                @endif 
                 @foreach ($post as $rec)
                 <div class="user-cards">
                     <div class="travel-card">
-                        @if($post->isEmpty())
-                        <p class="user-title">まだ投稿がありません。</p>
-                        @endif 
                         <p class="user-title"><a href="{{ route('posts.show', $rec->id) }}">{{ $rec->title }}</a></p>
                         <p class="card-date">{{ $rec->date1 }} 〜 {{ $rec->date2 }}</p>
                         <div class="travel-img">
@@ -31,12 +31,12 @@
                 <div class="user-header">
                     <h4>TROUBLE×YOU&emsp;<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">NEW POST</a></h4>
                 </div>
+                @if($trouble->isEmpty())
+                <p class="user-title">まだ投稿がありません。</p>
+                @endif 
                 @foreach ($trouble as $rec)
                 <div class="user-cards">
                     <div class="trouble-card">
-                        @if($trouble->isEmpty())
-                        <p class="user-title">まだ投稿がありません。</p>
-                        @endif 
                         <p class="user-title"><a href="{{ route('troubles.show', $rec->id) }}">{{ $rec->title }}</a></p>
                         <p class="card-diary">{{Str::limit($rec->content, 90, '…' )}}</p>
                         <div class="travel-img">
@@ -51,12 +51,12 @@
                 <div class="user-header">
                     <h4>MY Q&A&emsp;<a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">NEW POST</a></h4>
                 </div>
+                @if($question->isEmpty())
+                <p class="user-title">まだ投稿がありません。</p>
+                @endif 
                 @foreach ($question as $rec)
                 <div class="user-cards">
                     <div class="travel-card">
-                        @if($question->isEmpty())
-                        <p class="user-title">まだ投稿がありません。</p>
-                        @endif 
                         <p class="user-title"><a href="{{ route('questions.show', $rec->id) }}">{{ $rec->title }}</a> </p>
                         <p class="card-diary">{{ $rec->body }}</p>
                         <p class="post-date">{{ $rec->updated_at }} </p>
@@ -75,7 +75,7 @@
                 <div class="user-cards">
                     <div class="travel-card">
                         @if($post->isEmpty())
-                        <p class="user-title">まだ投稿がありません。</p>
+                        <p class="user-title">まだ訪れた国が登録されていません。</p>
                         @endif 
                         <ol>
                             @foreach ($post as $rec) 

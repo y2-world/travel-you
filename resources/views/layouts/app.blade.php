@@ -427,7 +427,7 @@
         color: black;
     }
     .user-container {
-        max-width: 1500px;
+        max-width: 1400px;
         padding-right: 15px;
         padding-left: 15px;
         margin-right: auto;
