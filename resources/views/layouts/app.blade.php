@@ -285,7 +285,11 @@
     .card-user a {
         color: black;
     }
-    .card-title {
+    .user-title {
+        font-size: 15px;
+        padding-top: 10px;
+    }
+    .user-title {
         font-size: 15px;
     }
     .card-title-trouble {
@@ -302,6 +306,12 @@
         padding-bottom: 8px;
     }
     .post-date {
+        color: gray;
+        padding-bottom: 10px;
+        font-size: 9px;
+    }
+    .user-post-date {
+        padding-top: 10px;
         color: gray;
         padding-bottom: 10px;
         font-size: 9px;
@@ -405,6 +415,7 @@
     }
     .user-header {
         font-family: Oswald;
+        padding-top: 15px;
     }
     .user-cards {
         display: flex;
@@ -415,6 +426,21 @@
     .user-cards a {
         color: black;
     }
+    .user-container {
+        max-width: 1500px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .user-date {
+        font-size: 9px;
+    }
+    .country-list {
+        padding-top: 10px;
+    }
+
+    
     @media screen and (max-width: 1026px) {
         .logo-wrapper {
             padding:15% 10%;

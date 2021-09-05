@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="page-wrapper">
-    <div class="container-fluid">
+    <div class="user-container">
         <div class="header-title">
             <h2>{{ $user_name }}'s TRAVELS</h2>
         </div>
@@ -17,11 +17,12 @@
                 @foreach ($post as $rec)
                 <div class="user-cards">
                     <div class="travel-card">
-                        <p class="card-title"><a href="{{ route('posts.show', $rec->id) }}">{{ $rec->title }}</a></p>
+                        <p class="user-title"><a href="{{ route('posts.show', $rec->id) }}">{{ $rec->title }}</a></p>
                         <p class="card-date">{{ $rec->date1 }} 〜 {{ $rec->date2 }}</p>
                         <div class="travel-img">
                             <a href="{{ route('posts.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}"></a>
                         </div>
+                        <p class="user-post-date">{{ $rec->updated_at }}</p>
                     </div>
                 </div>
                 @endforeach
@@ -36,11 +37,12 @@
                 @foreach ($trouble as $rec)
                 <div class="user-cards">
                     <div class="trouble-card">
-                        <p class="card-title"><a href="{{ route('troubles.show', $rec->id) }}">{{ $rec->title }}</a></p>
-                        <p class="card-date">{{ $rec->updated_at }} </p>
+                        <p class="user-title"><a href="{{ route('troubles.show', $rec->id) }}">{{ $rec->title }}</a></p>
+                        <p class="card-diary">{{Str::limit($rec->content, 90, '…' )}}</p>
                         <div class="travel-img">
                             <a href="{{ route('posts.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}"></a>
                         </div>
+                        <p class="user-post-date">{{ $rec->updated_at }} </p>
                     </div>
                 </div>
                 @endforeach
@@ -55,8 +57,9 @@
                 @foreach ($question as $rec)
                 <div class="user-cards">
                     <div class="travel-card">
-                        <p class="card-title"><a href="{{ route('questions.show', $rec->id) }}">{{ $rec->title }}</a> </p>
-                        <p class="card-date">{{ $rec->updated_at }} </p>
+                        <p class="user-title"><a href="{{ route('questions.show', $rec->id) }}">{{ $rec->title }}</a> </p>
+                        <p class="card-diary">{{ $rec->body }}</p>
+                        <p class="post-date">{{ $rec->updated_at }} </p>
                     </div>
                 </div>
                 @endforeach
@@ -66,7 +69,6 @@
                     <h4>MY MAP</h4>
                 </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12541698.638610173!2d-12.716311725758255!3d39.87562343338272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc42e3783261bc8b%3A0xa6ec2c940768a3ec!2z44K544Oa44Kk44Oz!5e0!3m2!1sja!2sjp!4v1611992075084!5m2!1sja!2sjp" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
-                <hr>
                 <div class="user-header">
                     <h4>MY COUNTRIES</h4>
                 </div>
@@ -78,8 +80,10 @@
                         <ol>
                             @foreach ($post as $rec) 
                             <li>
-                                <a href="{{ route('posts.show', $rec->id) }}">{{$rec->country}}</a>
-                                <p class="card-date">({{ $rec->date1 }} 〜 {{ $rec->date2 }})</p>
+                                <div class="country-list">
+                                    <a href="{{ route('posts.show', $rec->id) }}">{{$rec->country}}</a>
+                                    <p class="user-date">({{ $rec->date1 }} 〜 {{ $rec->date2 }})</p>
+                                </div>
                             </li>
                             @endforeach
                         </ol>
