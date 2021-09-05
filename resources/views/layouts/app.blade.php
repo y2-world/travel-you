@@ -252,7 +252,13 @@
         flex-wrap: wrap;
         justify-content: center;
     }
-    .cards,.user-cards img {
+    .cards img {
+        max-width: 100%;
+        display: inline-block;
+        height: 220px;
+        box-shadow: 0 5px 5px gray;
+    }
+    .user-cards img {
         max-width: 100%;
         display: inline-block;
         height: 220px;
@@ -405,6 +411,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .user-cards a {
+        color: black;
     }
     @media screen and (max-width: 1026px) {
         .logo-wrapper {
