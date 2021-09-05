@@ -236,10 +236,30 @@
     .travel-card:hover {
         box-shadow : 15px 15px 50px gray;
     }
+    .question-card {
+        background-color: white;
+        box-shadow: 0 12px 12px gray;
+        transition: box-shadow .5s;
+        width: 330px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    .question-card:hover {
+        box-shadow : 15px 15px 50px gray;
+    }
     .cards {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .cards,.user-cards img {
+        max-width: 100%;
+        display: inline-block;
+        height: 220px;
+        box-shadow: 0 5px 5px gray;
+    }
+    .trouble-img, .travel-img {
+        text-align: center;
     }
     .travel-card p {
        padding-left: 15px;
@@ -374,7 +394,18 @@
     span {
         display: inline-block;
     }
-
+    .btn {
+        font-family: Oswald;
+    }
+    .user-header {
+        font-family: Oswald;
+    }
+    .user-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     @media screen and (max-width: 1026px) {
         .logo-wrapper {
             padding:15% 10%;

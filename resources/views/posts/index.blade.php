@@ -14,7 +14,9 @@
         <p class="card-user"><a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a></p>
         <p class="card-title">{{ $post->title }}</a></p>
         <p class="card-date"> {{ $post->date1 }} 〜 {{ $post->date2 }}</p>
-        <a href="{{ route('posts.show', $post->id) }}"><img class="card-img-bottom" src="{{ asset('storage/' . $post->image) }}" alt="Card image cap"></a>
+        <div class="travel-img">
+          <a href="{{ route('posts.show', $post->id) }}"><img src="{{ asset('storage/' . $post->image) }}"></a>
+        </div>
         <div class="card-info">
           <p class="card-diary"> {{ $post->diary }}</p>
           <p class="post-date">{{ $post->updated_at }}</p>

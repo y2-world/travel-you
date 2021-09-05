@@ -2,7 +2,6 @@
 @section('content')
 <div class="page-wrapper">
     <div class="container">
-        <h2 class="header-title">Q & A</h2>
         <div class="travel-card-show">
             <div class="card-info-question">
                 <p class="card-user-question"><a href="{{ route('users.show', $question->user_id)}}">{{ $question->user_name }}</a>

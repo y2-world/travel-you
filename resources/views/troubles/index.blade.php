@@ -14,8 +14,10 @@
             <div class="trouble-card">
                 <p class="card-user"><a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a></p>
                 <p class="card-title-trouble">{{ $trouble->title }}</a></p>
-                <a href="{{ route('troubles.show', $trouble->id) }}"><img src="{{ asset('storage/' . $trouble->image) }}" width="100%"></a>
-                <p class="card-diary">{{Str::limit($trouble->content, 80, '…' )}}</p>
+                <div class="trouble-img">
+                    <a href="{{ route('troubles.show', $trouble->id) }}"><img src="{{ asset('storage/' . $trouble->image) }}"></a>
+                </div>
+                <p class="card-diary">{{Str::limit($trouble->content, 90, '…' )}}</p>
                 <div class="trouble-row">
                     <p class="post-date">{{ $trouble->updated_at }}</p>
                     <div class="trouble-more"><a class="btn btn-primary btn-sm" href="{{ route('troubles.show', $trouble->id) }}">MORE</a></div>

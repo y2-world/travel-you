@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-            <h4>あなたの旅をシェアしましょう　<a href="{{ route('users.show', Auth::user()->id )}}" class="btn btn-primary" id="my_travels_botton">MY TRAVELS</a></h4>
+            <h4>あなたの旅をシェアしましょう</h4>
             <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
                 {{csrf_field()}}
                 @if ($errors->any()) 

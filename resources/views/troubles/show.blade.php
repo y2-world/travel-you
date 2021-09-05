@@ -2,7 +2,6 @@
 @section('content')
 <div class="page-wrapper">
     <div class="container">
-        <h2 class="header-title">TROUBLE×YOU</h2>
             <div class="travel-card-show">
                 <div class="row">
                     <div class="col-md-6">
