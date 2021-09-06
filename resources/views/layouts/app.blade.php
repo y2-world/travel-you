@@ -447,7 +447,7 @@
         background: #fff;
         max-width: 500px;
         padding: 20px;
-        border-radius: 4px;
+        border-radius: 10px;
         position: absolute;
         top: 35%;
         left: 0;
@@ -527,10 +527,6 @@
     }
 
     @media screen and (max-width: 640px) {
-        .slider-wrapper img {
-            max-width: 100%;
-	        height: auto;
-        }
         .logo-wrapper {
             padding:10% 5%;
         }
@@ -618,7 +614,7 @@
             margin: 0 auto;
         }
         #modal {
-            max-width: 350px;
+            max-width: 340px;
             top: 25%;
             font-size: 9px;
             line-height: 20px;

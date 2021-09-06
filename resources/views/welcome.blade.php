@@ -34,7 +34,7 @@
             <div id="mask" class="hidden"></div>
             <section id="modal" class="hidden">
                 <div id="close">
-                    <i class="fas fa-times"></i>
+                    <i class="fas fa-times fa-lg"></i>
                 </div>
                 <p>
                 今までのあなたの旅の歴史を記録し、<br>
