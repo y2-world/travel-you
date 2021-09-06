@@ -14,6 +14,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e47a10189c.js" crossorigin="anonymous"></script>
 </head>
 
 <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
@@ -72,12 +73,6 @@
     .intro-img {
         position: relative;
     }
-    .world-img {
-        text-align: center;
-    }
-    .world-img img {
-        width: 60%;
-    }
     .click-img {
         padding-left: 50%;
     }
@@ -87,12 +82,6 @@
     }
     .intro-text {
         font-size: 20px;
-        padding: 30px 0px;
-    }
-    .changed {
-        font-size: 15px;
-        transition: all 0.5s ease;
-        padding: 0px;
     }
     .top-header {
         font-family: Oswald;
@@ -439,7 +428,53 @@
     .country-list {
         padding-top: 10px;
     }
-
+    #mask {
+        background: rgba(0, 0, 0, 0.4);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%; 
+        height:1000%;
+    }
+    #open {
+        cursor: pointer;
+        text-align: center;
+    }
+    .world-img img {
+        width: 60%;
+    }
+    #modal {
+        background: #fff;
+        max-width: 500px;
+        padding: 20px;
+        border-radius: 4px;
+        position: absolute;
+        top: 35%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 30px;
+        opacity: 1;
+        transition-duration: 0.4s;
+    }
+    #close {
+        text-align: right;
+        cursor: pointer;
+    }
+    #modal > p {
+        padding-bottom: 10px;
+    }
+    #mask.hidden {
+        display: none;
+    }
+    #modal.hidden {
+        opacity: 0;
+        pointer-events: none
+    }
+    i:hover {
+        color: gray;
+    }
     
     @media screen and (max-width: 1026px) {
         .logo-wrapper {
@@ -540,9 +575,6 @@
         .intro-text {
             font-size: 14px;
         }
-        .changed {
-            font-size: 12px;
-        }
         .box {
             flex-direction: column;
         }
@@ -584,6 +616,21 @@
         }
         .register-wrapper btn-btn-primary {
             margin: 0 auto;
+        }
+        #modal {
+            background: #fff;
+            max-width: 350px;
+            padding: 20px;
+            border-radius: 4px;
+            position: absolute;
+            top: 25%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            font-size: 9px;
+            line-height: 20px;
+            opacity: 1;
+            transition: transform 1s;
         }
     }
 }

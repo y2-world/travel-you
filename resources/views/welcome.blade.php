@@ -18,18 +18,33 @@
     <div class="intro-text">
         <div class="element js-fadein">
             <div class="top-header">WHAT'S TRAVEL×YOU?</div>   
-        
             <div class="intro-img">
                 <div class="click-img">
                     <img src="{{ asset('images/click.png') }}" alt="click">  
                 </div>
                 <div class="world-img">
-                    <img src="{{ asset('images/world.jpg') }}" alt="map img" id="trigger" title="訪れた国をクリック！"> 
+                    <div id="open">
+                        <img src="{{ asset('images/world.jpg') }}" class="world-img" alt="map img" id="trigger" title="訪れた国をクリック！"> 
+                    </div> 
                 </div> 
+                <div class="element js-fadein">
+                    <p id="target" class="intro-text">あなたが訪れた国はどこですか？</p>
+                </div>
             </div>
-            <div class="element js-fadein">
-                <p id="target" class="intro-text">あなたが訪れた国はどこですか？</p>
-            </div>
+            <div id="mask" class="hidden"></div>
+            <section id="modal" class="hidden">
+                <div id="close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <p>
+                今までのあなたの旅の歴史を記録し、<br>
+                さらにこれからのあなたの旅をより楽しいものにするツールです。<br>
+                旅行記を作ったり、旅行先でのトラブルをシェアしたり、<br>
+                疑問に思ったことを質問したり... <br>
+                楽しみ方は何通りもあります。<br>
+                さぁ、一緒に旅に出かけましょう！
+                </p>
+            </section>
         </div>
     </div>
 </div>
@@ -104,15 +119,26 @@
 
 <script>
 'use strict';
+{
+    const open = document.getElementById('open');
+    const close = document.getElementById('close');
+    const modal = document.getElementById('modal');
+    const mask = document.getElementById('mask');
 
-function clickMap() {
-    const targetNode = document.getElementById('target');
-    targetNode.innerText = '今までのあなたの旅の歴史を記録し、\nさらにこれからのあなたの旅をより楽しいものにするツールです。\n旅行記を作ったり、旅行先でのトラブルをシェアしたり、\n疑問に思ったことを質問したり... \n楽しみ方は何通りもあります。\nさぁ、一緒に旅に出かけましょう！';
-    targetNode.classList.add('changed');
+    open.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        mask.classList.remove('hidden');
+    });
+
+    close.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        mask.classList.add('hidden');
+    });
+
+    mask.addEventListener('click', () => {
+       close.click();
+    });
 }
-
-document.getElementById('trigger').addEventListener('click', clickMap);
-
 </script>
 
 @endsection
