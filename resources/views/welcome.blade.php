@@ -30,21 +30,26 @@
                 <div class="element js-fadein">
                     <p id="target" class="intro-text">あなたが訪れた国はどこですか？</p>
                 </div>
-            </div>
-            <div id="mask" class="hidden"></div>
-            <section id="modal" class="hidden">
-                <div id="close">
-                    <i class="fas fa-times fa-lg"></i>
+            
+                <div id="mask" class="hidden"></div>
+                <section id="modal" class="hidden">
+                    <div id="close">
+                        <i class="fas fa-times fa-lg"></i>
+                    </div>
+                    <p>
+                    今までのあなたの旅の歴史を記録し、<br>
+                    さらにこれからのあなたの旅をより楽しいものにするツールです。<br>
+                    旅行記を作ったり、旅行先でのトラブルをシェアしたり、<br>
+                    疑問に思ったことを質問したり... <br>
+                    楽しみ方は何通りもあります。<br>
+                    さぁ、一緒に旅に出かけましょう！
+                    </p>
+                </section>
+                <p class="scroll">
+                    SCROLL<br>
+                    ⌵
                 </div>
-                <p>
-                今までのあなたの旅の歴史を記録し、<br>
-                さらにこれからのあなたの旅をより楽しいものにするツールです。<br>
-                旅行記を作ったり、旅行先でのトラブルをシェアしたり、<br>
-                疑問に思ったことを質問したり... <br>
-                楽しみ方は何通りもあります。<br>
-                さぁ、一緒に旅に出かけましょう！
-                </p>
-            </section>
+            </div>
         </div>
     </div>
 </div>
@@ -52,7 +57,7 @@
     <div class="panel">
         <div class="panel-in">   
             <div class="panel-main">
-                <div class="top-header">WHAT CAN I DO?</div> 
+                <div class="top-header">TRAVEL×YOU</div> 
                     <div class="box">
                         <div class="instruction-row order1">
                             <div class="row-text">
