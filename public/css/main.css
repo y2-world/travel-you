@@ -600,8 +600,11 @@ i:hover {
     }
     #modal {
         max-width: 340px;
-        top: 5%;
+        top: 25%;
         font-size: 9px;
         line-height: 20px;
+    }
+    .scroll {
+        font-size: 16px;
     }
 }
