@@ -456,7 +456,7 @@
         font-size: 14px;
         line-height: 30px;
         opacity: 1;
-        transition-duration: 0.4s;
+        transition-duration: 0.6s;
     }
     #close {
         text-align: right;
@@ -618,19 +618,10 @@
             margin: 0 auto;
         }
         #modal {
-            background: #fff;
             max-width: 350px;
-            padding: 20px;
-            border-radius: 4px;
-            position: absolute;
             top: 25%;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
             font-size: 9px;
             line-height: 20px;
-            opacity: 1;
-            transition: transform 1s;
         }
     }
 }
