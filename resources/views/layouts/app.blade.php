@@ -97,14 +97,3 @@
 <!-- JS -->
 <script src="{{ asset('/js/main.js') }}"></script>
 <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
-<noscript>
-    
-<style>
-    .js-fadein {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0px);
-    }
-</style>
-</noscript>  
-
