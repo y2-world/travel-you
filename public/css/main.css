@@ -1,31 +1,39 @@
 html, body {
     font-family: helvetica;
 }
+
 .navbar-brand {
     color: turquoise;
     font-family: Oswald;
 }
+
 .card-header {
     font-family: Oswald;
 }
+
 .register-wrapper {
     padding: 50px;
 }
+
 .slider-wrapper {
     position: relative;
 }
+
 .slider-wrapper img {
     max-width: 100%;
 }
+
 .logo-wrapper {
     position: absolute;
     top: 0;
     left: 0;
     padding: 20% 10%;
 }
+
 .logo-wrapper button {
     margin-top: 15px;
 }
+
 .main-logo {
     font-family: Oswald;
     color: black;
@@ -37,44 +45,55 @@ html, body {
     color: white;
     font-size: 14px;
 }
+
 .intro-wrapper {
     background-color: white;
     position: relative;
 }
+
 .intro-wrapper p {
     text-align: center;
 }
+
 .intro-wrapper img {
     cursor: pointer;
 }
+
 .intro-img {
     padding-bottom: 20px;
 }
+
 .click-img {
     padding-left: 50%;
 }
+
 .click-img img {
     max-width: 100px;
     position: absolute;
 }
+
 .intro-text {
     font-size: 20px;
 }
+
 .top-header {
     font-family: Oswald;
     font-size: 40px;
     text-align: center;
     padding: 30px;
 }
+
 .demo-wrapper {
     background-color: #003a8e;
     padding-bottom: 30px;
 }
+
 .demo-wrapper p {
     color: white;
     font-size: 16px;
     text-align: center;
 }
+
 .demo-header {
     font-family: Oswald;
     font-size: 40px;
@@ -82,35 +101,44 @@ html, body {
     padding: 30px;
     color: white;
 }
+
 .page-wrapper {
     padding-top: 20px;
     padding-bottom: 40px;
 }
+
 .page-wrapper h4 {
     font-weight: bold;
 }
+
 .header-title {
     font-family: Oswald;
     color: turquoise;
 }
+
 .comment-header {
     font-weight: bold;
 }
+
 .avbarDropdown {
     font-family: Oswald;
 }
+
 .post-img {
     width: 100%;
 }
+
 footer {
     background-color: white;
 }
+
 .footer-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+
 .footer-title {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -118,34 +146,42 @@ footer {
     font-size: 30px;
     line-height: 25px;
 }
+
 .footer-title a {
     color: black;
 }
+
 footer a:hover {
     text-decoration: none;
     color: gray;
 }
+
 .footer-menu a {
     color: black;
     padding: 20px;
 }
+
 .footer-catchcopy {
     font-size: 14px;
 }
+
 .js-fadein {
     opacity: 0; 
     visibility: hidden;
     transform: translateY(30px);
     transition: all 1s;
 }
+
 .js-fadein.is-show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0px);
 }
+
 .badge {
     color: white;
 }
+
 .travel-card {
     background-color: white;
     box-shadow: 0 12px 12px gray;
@@ -154,9 +190,11 @@ footer a:hover {
     border-radius: 10px;
     margin: 10px;
 }
+
 .travel-card:hover {
     box-shadow : 15px 15px 50px gray;
 }
+
 .question-card {
     background-color: white;
     box-shadow: 0 12px 12px gray;
@@ -165,14 +203,17 @@ footer a:hover {
     border-radius: 10px;
     margin: 10px;
 }
+
 .question-card:hover {
     box-shadow : 15px 15px 50px gray;
 }
+
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .top-cards {
     display: flex;
     justify-content: center;
@@ -180,6 +221,7 @@ footer a:hover {
     flex-wrap: wrap;
     padding: 20px 0px;
 }
+
 .more {
     font-size: 24px;
     font-family: Oswald;
@@ -187,84 +229,102 @@ footer a:hover {
     text-align: center;
     padding: 30px;
 }
+
 .more a {
     color: rgb(219, 214, 214);
     opacity: 0.8;
 }
+
 .more a:hover {
     color:#003a8e;
     text-decoration: none;
 }
+
 .user-cards img {
     max-width: 100%;
     display: inline-block;
     height: 220px;
     box-shadow: 0 5px 5px gray;
 }
+
 .travel-card img {
     max-width: 100%;
     display: inline-block;
     height: 220px;
     box-shadow: 0 5px 5px gray;
 }
+
 .trouble-card img {
     max-width: 100%;
     display: inline-block;
     height: 220px;
     box-shadow: 0 5px 5px gray;
 }
+
 .trouble-img, .travel-img {
     text-align: center;
 }
+
 .travel-card p {
    padding-left: 15px;
    padding-right: 15px;
    margin: 0;
 }
+
 .trouble-card p {
    padding-left: 15px;
    padding-right: 15px;
    margin: 0;
 }
+
 .card-user {
     font-size: 12px;
     padding-top: 10px;
     font-weight: bold;
 }
+
 .card-user a {
     color: black;
 }
+
 .user-title {
     font-size: 15px;
     padding-top: 10px;
 }
+
 .user-title {
     font-size: 15px;
 }
+
 .card-title-trouble {
     font-size: 15px;
     padding-bottom: 10px;
 }
+
 .card-date {
     font-size: 9px;
     padding-bottom: 10px;
 }
+
 .card-diary {
     padding-top: 10px;
     font-size: 12px;
     padding-bottom: 8px;
 }
+
 .post-date {
     color: gray;
     padding-bottom: 10px;
     font-size: 9px;
 }
+
 .user-post-date {
     padding-top: 10px;
     color: gray;
     padding-bottom: 10px;
     font-size: 9px;
 }
+
 .travel-card-show {
     background-color: white;
     box-shadow: 0 12px 12px gray;
@@ -274,39 +334,49 @@ footer a:hover {
     margin: 10px;
     padding: 20px;
 }
+
 .travel-card-show img {
     box-shadow: 0 12px 12px gray;
 }
+
 .travel-card-show p {
     margin: 0;
 }
+
 .back {
     padding: 25px;
 }
+
 .btn-edit {
     padding-top: 15px;
 }
+
 .twitter-share-button {
     margin-left: 10px;
 }
+
 .comment-user {
     font-size: 12px;
     color: black;
 }
+
 .comment-user a {
     color: black;
     font-weight: bold;
 }
+
 .comment-date {
     font-size: 8px;
     color: gray;
     text-align: left;
 }
+
 .comment-info {
     display: flex;
     font-size: 12px;
     justify-content: space-between;
 }
+
 .trouble-card {
     background-color: white;
     box-shadow: 0 12px 12px gray;
@@ -315,66 +385,83 @@ footer a:hover {
     border-radius: 10px;
     margin: 10px;
 }
+
 .trouble-card:hover {
     box-shadow : 15px 15px 50px gray;
 }
+
 .trouble-row {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
+
 .trouble-more {
     padding: 10px;
 }
+
 .btn-show {
     display: flex;
     align-items: center;
 }
+
 .answer-btn {
     padding: 10px;
 }
+
 .post-date-question {
     color: gray;
     font-size: 9px;
 }
+
 .question-header {
     font-family: Oswald;
     font-size: 16px;
     padding-bottom: 5px;
 }
+
 .question-text {
     font-family: sans-serif;
     font-size: 14px;
 }
+
 .answer-info {
     padding-bottom: 10px;
 }
+
 .card-user-question {
     font-size: 12px;
     font-weight: bold;
 }
+
 .card-user-question a {
     color: black;
 }
+
 span {
     display: inline-block;
 }
+
 .btn {
     font-family: Oswald;
 }
+
 .user-header {
     font-family: Oswald;
     padding-top: 15px;
 }
+
 .user-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .user-cards a {
     color: black;
 }
+
 .user-container {
     max-width: 1400px;
     padding-right: 15px;
@@ -382,12 +469,15 @@ span {
     margin-right: auto;
     margin-left: auto;
 }
+
 .user-date {
     font-size: 9px;
 }
+
 .country-list {
     padding-top: 10px;
 }
+
 .scroll {
     color: rgb(219, 214, 214);
     opacity: 0.5;
@@ -395,6 +485,7 @@ span {
     font-family: Oswald;
     text-align: center;
 }
+
 #mask {
     background: rgba(0, 0, 0, 0.4);
     position: fixed;
@@ -403,13 +494,16 @@ span {
 	top: 0; 
 	left: 0;
 }
+
 #open {
     cursor: pointer;
     text-align: center;
 }
+
 .world-img img {
     max-width: 1000px;
 }
+
 #modal {
     background: #fff;
     max-width: 500px;
@@ -425,20 +519,25 @@ span {
     opacity: 1;
     transition-duration: 0.6s;
 }
+
 #close {
     text-align: right;
     cursor: pointer;
 }
+
 #modal > p {
     padding-bottom: 10px;
 }
+
 #mask.hidden {
     display: none;
 }
+
 #modal.hidden {
     opacity: 0;
     pointer-events: none
 }
+
 i:hover {
     color: gray;
 }
@@ -448,9 +547,11 @@ i:hover {
     .logo-wrapper {
         padding:15% 10%;
     }
+
     footer {
         padding-bottom: 20px;
     }
+
     .footer-row {
         font-size: 10px;
         display: flex;
@@ -459,6 +560,7 @@ i:hover {
         align-items: center;
         text-align: center;
     }
+
     .footer-title {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -466,13 +568,16 @@ i:hover {
         font-size: 30px;
         line-height: 25px;
     }
+
     .footer_menu a {
         padding: 10px;
         color: black;
     }
+
     .world-img img {
         width: 100%;
     }
+
     span {
         display: inline-block;
     }
@@ -482,6 +587,7 @@ i:hover {
     .btn-edit {
         display: none;
     }
+
     .card-info {
         padding-top: 15px;
     }
@@ -491,40 +597,48 @@ i:hover {
     .logo-wrapper {
         padding:10% 5%;
     }
+
     .main-logo {
         font-family: Oswald;
         color: black;
         font-size: 20px;
         line-height: 20px;
     }
+
     .catchcopy {
         font-family: Oswald;
         color: white;
         font-size: 7px;
     }
+    
     .logo-wrapper button {
         width: 90px;
         height: 30px;
         font-size: 7px;
     }
+
     .top-header {
         font-family: Oswald;
         font-size: 30px;
         text-align: center;
         padding-top: 40px;
     }
+
     .intro {
         font-size: 12px;
         text-align: center;
         padding-top: 20px;
         padding-bottom: 40px;
     }
+
     .intro-text {
         font-size: 14px;
     }
+
     .demo-header {
         font-size: 24px;
     }
+
     .footer-title {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -533,28 +647,35 @@ i:hover {
         line-height: 25px;
         text-align: center;
     }
+
     .footer-catchcopy {
         font-size: 10px;
     }
+
     .footer-menu a {
         color: black;
         padding: 5px;
     }
+
     .register-wrapper {
         padding: 10px 5px;
     }
+
     .register-wrapper btn-btn-primary {
         margin: 0 auto;
     }
+
     #modal {
         max-width: 340px;
         top: 25%;
         font-size: 9px;
         line-height: 20px;
     }
+
     .scroll {
         font-size: 16px;
     }
+    
     .click-img img {
         max-width: 50px;
     }

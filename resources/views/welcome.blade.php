@@ -30,7 +30,6 @@
                 <div class="element js-fadein">
                     <p id="target" class="intro-text">あなたが訪れた国はどこですか？</p>
                 </div>
-            
                 <div id="mask" class="hidden"></div>
                 <section id="modal" class="hidden">
                     <div id="close">
