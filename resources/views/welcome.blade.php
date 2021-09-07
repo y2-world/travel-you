@@ -53,56 +53,79 @@
         </div>
     </div>
 </div>
-<div class="instruction-wrapper">
-    <div class="panel">
-        <div class="panel-in">   
-            <div class="panel-main">
-                <div class="top-header">TRAVEL×YOU</div> 
-                    <div class="box">
-                        <div class="instruction-row order1">
-                            <div class="row-text">
-                                TRAVEL×YOU
-                                <div class="header-sub">旅の記録ができる</div>
-                                <p>旅先で撮った写真、ちょっとした日記をシェアすることができます。さらに、あなたが今まで訪れた国が一覧で見れます。</p>
-                            </div>
-                        </div>
-                        <div class="instruction-row order2">
-                            <div class="element js-fadein">
-                                <img src="{{ asset('images/paris.jpg') }}">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="instruction-row order4">
-                            <div class="element js-fadein">
-                                <img src="{{ asset('images/lille.jpg') }}">
-                            </div>
-                        </div>
-                        <div class="instruction-row order3">
-                            <div class="row-text">
-                                TROUBLE×YOU
-                                <div class="header-sub">旅先のトラブルをシェアできる</div>
-                                <p>あなたの旅行で起こった問題、その解決方法をシェアすることができます。</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="instruction-row order5">
-                            <div class="row-text">Q&A
-                                <div class="header-sub">旅についての質問ができる</div>
-                                <p>旅行する予定の国や都市に関する質問を投稿したり、回答したりすることができます。</p>
-                            </div>
-                        </div>
-                        <div class="instruction-row order6">
-                            <div class="element js-fadein">
-                                <img src="{{ asset('images/hollywood.jpg') }}">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="demo-wrapper">
+    <div class="element js-fadein">
+        <div class="demo-header">TRAVEL×YOU</div>  
+        <p>旅の記録ができる</p>
+    </div>
+</div>
+<div class="top-cards">
+    @foreach ($posts as $post)
+    <div class="travel-card">
+        <p class="card-user"><a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a></p>
+        <p class="card-title">{{ $post->title }}</a></p>
+        <p class="card-date"> {{ $post->date1 }} 〜 {{ $post->date2 }}</p>
+        <div class="travel-img">
+          <a href="{{ route('posts.show', $post->id) }}"><img src="{{ asset('storage/' . $post->image) }}"></a>
+        </div>
+        <div class="card-info">
+          <p class="card-diary"> {{ $post->diary }}</p>
+          <p class="post-date">{{ $post->updated_at }}</p>
         </div>
     </div>
+    @endforeach
+</div>
+<div class="more">
+    <a href="{{ url('posts') }}" id="my_travels_botton">MORE ></a>
+</div>
+<div class="demo-wrapper">
+    <div class="element js-fadein">
+        <div class="demo-header">TROUBLE×YOU</div>  
+        <p>旅先でのトラブルをシェアできる</p>
+    </div>
+</div>
+<div class="top-cards"> 
+    @foreach ($troubles as $trouble)
+    <div class="trouble-card">
+        <p class="card-user"><a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a></p>
+        <p class="card-title-trouble">{{ $trouble->title }}</a></p>
+        <div class="trouble-img">
+            <a href="{{ route('troubles.show', $trouble->id) }}"><img src="{{ asset('storage/' . $trouble->image) }}"></a>
+        </div>
+        <p class="card-diary">{{Str::limit($trouble->content, 90, '…' )}}</p>
+        <div class="trouble-row">
+            <p class="post-date">{{ $trouble->updated_at }}</p>
+            <div class="trouble-more"><a class="btn btn-primary btn-sm" href="{{ route('troubles.show', $trouble->id) }}">MORE</a></div>
+        </div>
+    </div>
+    @endforeach
+</div>
+<div class="more">
+    <a href="{{ url('troubles') }}" id="my_travels_botton">MORE ></a>
+</div>
+<div class="demo-wrapper">
+    <div class="element js-fadein">
+        <div class="demo-header">Q&A</div>  
+        <p>旅についての質問ができる</p>
+    </div>
+</div>
+<div class="top-cards"> 
+    @foreach ($questions as $question)
+    <div class="travel-card">
+      <p class="card-user"><a href="{{ route('users.show', $question->user_id)}}">{{ $question->user_name }}</a></p>
+      <p class="card-title">{{ $question->title }}</a></p>
+      <p class="card-diary">{{ $question->body }}</p>
+      <div class="card-info-question">    
+        <p class="post-date-question">{{ $question->updated_at }}</p>  
+        <div class="answer-btn">
+          <a class="btn btn-primary btn-sm" href="{{ route('questions.show', $question->id) }}">回答する</a>    
+        </div>
+      </div>
+    </div>
+    @endforeach
+</div> 
+<div class="more">
+    <a href="{{ url('questions') }}" id="my_travels_botton">MORE ></a>
 </div>
 <footer id='footer'>
     <div class="container">
