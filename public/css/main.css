@@ -425,7 +425,7 @@ span {
     text-align: center;
 }
 .world-img img {
-    width: 60%;
+    max-width: 1000px;
 }
 #modal {
     background: #fff;
