@@ -54,7 +54,7 @@ html, body {
     padding-left: 50%;
 }
 .click-img img {
-    width: 7%;
+    max-width: 100px;
     position: absolute;
 }
 .intro-text {
@@ -494,9 +494,6 @@ i:hover {
     .world-img img {
         width: 100%;
     }
-    .click-img img {
-        width: 15%;
-    }
     span {
         display: inline-block;
     }
@@ -606,5 +603,8 @@ i:hover {
     }
     .scroll {
         font-size: 16px;
+    }
+    .click-img img {
+        max-width: 50px;
     }
 }
