@@ -45,3 +45,10 @@
        close.click();
     });
 }
+
+// $(() => {
+//     $('open').click(() => {
+//         $('modal').addClass('hidden');
+//     });
+// });
+
