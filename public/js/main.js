@@ -25,30 +25,43 @@
     window.addEventListener('scroll', showElementAnimation);
 }
 
-{
-    const open = document.getElementById('open');
-    const close = document.getElementById('close');
-    const modal = document.getElementById('modal');
-    const mask = document.getElementById('mask');
+// {
+//     const open = document.getElementById('open');
+//     const close = document.getElementById('close');
+//     const modal = document.getElementById('modal');
+//     const mask = document.getElementById('mask');
 
-    open.addEventListener('click', () => {
-        modal.classList.remove('hidden');
-        mask.classList.remove('hidden');
-    });
-
-    close.addEventListener('click', () => {
-        modal.classList.add('hidden');
-        mask.classList.add('hidden');
-    });
-
-    mask.addEventListener('click', () => {
-       close.click();
-    });
-}
-
-// $(() => {
-//     $('open').click(() => {
-//         $('modal').addClass('hidden');
+//     open.addEventListener('click', () => {
+//         modal.classList.remove('hidden');
+//         mask.classList.remove('hidden');
 //     });
-// });
+
+//     close.addEventListener('click', () => {
+//         modal.classList.add('hidden');
+//         mask.classList.add('hidden');
+//     });
+
+//     mask.addEventListener('click', () => {
+//        close.click();
+//     });
+// }
+
+$('#open').click(() => {
+    $('#modal')
+        .removeClass('hidden')
+    $('#mask')
+        .removeClass('hidden');
+});
+
+$('#close').click(() => {
+    $('#modal')
+        .addClass('hidden')
+    $('#mask')
+        .addClass('hidden');
+});
+
+
+
+
+
 

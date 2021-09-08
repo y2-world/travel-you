@@ -18,7 +18,7 @@ class TroubleController extends Controller
     
     public function index()
     {
-        $troubles = Trouble::latest()->get();
+        $troubles = Trouble::latest('updated_at')->get();
         return view('troubles.index', compact('troubles'));
     }
 
