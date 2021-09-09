@@ -528,7 +528,6 @@ ul {
     list-style: none;
 }
 
-
 @media screen and (max-width: 1026px) {
     .logo-wrapper {
         padding:15% 10%;
@@ -664,5 +663,9 @@ ul {
     
     .click-img img {
         max-width: 50px;
+    }
+
+    h2, h4 {
+        text-align: center;
     }
 }
