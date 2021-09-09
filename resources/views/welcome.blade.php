@@ -67,7 +67,10 @@
         <div class="travel-img">
           <a href="{{ route('posts.show', $post->id) }}"><img src="{{ asset('storage/' . $post->image) }}"></a>
         </div>
-        <p class="user-post-date">{{ $post->updated_at }}</p>
+        <div class="card-info">
+            <p class="card-diary"> {{ $post->diary }}</p>
+            <p class="post-date">{{ $post->updated_at }}</p>
+          </div>
     </li>
     @endforeach
 </ul>

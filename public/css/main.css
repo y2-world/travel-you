@@ -270,12 +270,18 @@ footer a:hover {
    padding-left: 15px;
    padding-right: 15px;
    margin: 0;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
 }
 
 .trouble-card p {
    padding-left: 15px;
    padding-right: 15px;
    margin: 0;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
 }
 
 .card-user {
