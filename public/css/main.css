@@ -189,6 +189,8 @@ footer a:hover {
     width: 330px;
     border-radius: 10px;
     margin: 10px;
+
+    display: inline-block;
 }
 
 .travel-card:hover {
@@ -215,19 +217,18 @@ footer a:hover {
 }
 
 .top-cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px 0px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 12px;
 }
 
 .more {
     font-size: 24px;
     font-family: Oswald;
-    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 25px;
     text-align: center;
-    padding: 30px;
 }
 
 .more a {
@@ -292,8 +293,9 @@ footer a:hover {
     padding-top: 10px;
 }
 
-.user-title {
+.no-country {
     font-size: 15px;
+    padding: 10px 0px;
 }
 
 .card-title-trouble {
@@ -384,6 +386,8 @@ footer a:hover {
     width: 330px;
     border-radius: 10px;
     margin: 10px;
+
+    display: inline-block;
 }
 
 .trouble-card:hover {
@@ -452,13 +456,17 @@ span {
 }
 
 .user-cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 0px;
 }
 
 .user-cards a {
+    color: black;
+}
+
+.country-list a {
     color: black;
 }
 
@@ -474,7 +482,7 @@ span {
     font-size: 9px;
 }
 
-.country-list {
+ol {
     padding-top: 10px;
 }
 
@@ -540,6 +548,10 @@ span {
 
 i:hover {
     color: gray;
+}
+
+ul {
+    list-style: none;
 }
 
 

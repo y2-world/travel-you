@@ -16,12 +16,9 @@ class TopController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest('updated_at')
-        ->paginate(4);
-        $troubles = Trouble::latest('updated_at')
-        ->paginate(4);
-        $questions = Question::latest('updated_at')
-        ->paginate(4);
+        $posts = Post::latest('updated_at')->get();
+        $troubles = Trouble::latest('updated_at')->get();
+        $questions = Question::latest('updated_at')->get();
         return view('welcome', compact('posts','troubles','questions'));
     }
 

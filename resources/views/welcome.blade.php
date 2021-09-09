@@ -58,22 +58,19 @@
         <p>旅の記録ができる</p>
     </div>
 </div>
-<div class="top-cards">
+<ul class="top-cards">
     @foreach ($posts as $post)
-    <div class="travel-card">
+    <li class="travel-card">
         <p class="card-user"><a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a></p>
         <p class="card-title">{{ $post->title }}</a></p>
         <p class="card-date"> {{ $post->date1 }} 〜 {{ $post->date2 }}</p>
         <div class="travel-img">
           <a href="{{ route('posts.show', $post->id) }}"><img src="{{ asset('storage/' . $post->image) }}"></a>
         </div>
-        <div class="card-info">
-          <p class="card-diary"> {{ $post->diary }}</p>
-          <p class="post-date">{{ $post->updated_at }}</p>
-        </div>
-    </div>
+        <p class="user-post-date">{{ $post->updated_at }}</p>
+    </li>
     @endforeach
-</div>
+</ul>
 <div class="more">
     <a href="{{ url('posts') }}" id="my_travels_botton">MORE ></a>
 </div>
@@ -83,9 +80,9 @@
         <p>旅先でのトラブルをシェアできる</p>
     </div>
 </div>
-<div class="top-cards"> 
+<ul class="top-cards"> 
     @foreach ($troubles as $trouble)
-    <div class="trouble-card">
+    <li class="trouble-card">
         <p class="card-user"><a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a></p>
         <p class="card-title-trouble">{{ $trouble->title }}</a></p>
         <div class="trouble-img">
@@ -96,9 +93,9 @@
             <p class="post-date">{{ $trouble->updated_at }}</p>
             <div class="trouble-more"><a class="btn btn-primary btn-sm" href="{{ route('troubles.show', $trouble->id) }}">MORE</a></div>
         </div>
-    </div>
+    </li>
     @endforeach
-</div>
+</ul>
 <div class="more">
     <a href="{{ url('troubles') }}" id="my_travels_botton">MORE ></a>
 </div>
@@ -108,9 +105,9 @@
         <p>旅についての質問ができる</p>
     </div>
 </div>
-<div class="top-cards"> 
+<ul class="top-cards"> 
     @foreach ($questions as $question)
-    <div class="travel-card">
+    <li class="travel-card">
       <p class="card-user"><a href="{{ route('users.show', $question->user_id)}}">{{ $question->user_name }}</a></p>
       <p class="card-title">{{ $question->title }}</a></p>
       <p class="card-diary">{{ $question->body }}</p>
@@ -120,9 +117,9 @@
           <a class="btn btn-primary btn-sm" href="{{ route('questions.show', $question->id) }}">回答する</a>    
         </div>
       </div>
-    </div>
+    </li>
     @endforeach
-</div> 
+</ul> 
 <div class="more">
     <a href="{{ url('questions') }}" id="my_travels_botton">MORE ></a>
 </div>

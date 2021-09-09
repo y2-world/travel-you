@@ -7,64 +7,60 @@
             <h2>{{ $user_name }}'s TRAVELS</h2>
         </div>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-8">
                 <div class="user-header">
                     <h4>MY TRAVELS&emsp;<a href="{{ url('posts/create') }}" class="btn btn-primary" id="my_travels_botton">NEW POST</a></h4>
                 </div>
                 @if($post->isEmpty())
                 <p class="user-title">まだ投稿がありません。</p>
                 @endif 
-                @foreach ($post as $rec)
-                <div class="user-cards">
-                    <div class="travel-card">
+                <ul class="user-cards">
+                    @foreach ($post as $rec)
+                    <li class="travel-card">
                         <p class="user-title"><a href="{{ route('posts.show', $rec->id) }}">{{ $rec->title }}</a></p>
                         <p class="card-date">{{ $rec->date1 }} 〜 {{ $rec->date2 }}</p>
                         <div class="travel-img">
                             <a href="{{ route('posts.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}"></a>
                         </div>
                         <p class="user-post-date">{{ $rec->updated_at }}</p>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-            <div class="col-md-3">
+                    </li>
+                    @endforeach
+                </ul>
                 <div class="user-header">
                     <h4>TROUBLE×YOU&emsp;<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">NEW POST</a></h4>
                 </div>
                 @if($trouble->isEmpty())
                 <p class="user-title">まだ投稿がありません。</p>
                 @endif 
-                @foreach ($trouble as $rec)
-                <div class="user-cards">
-                    <div class="trouble-card">
+                <ul class="user-cards">
+                    @foreach ($trouble as $rec)
+                    <li class="trouble-card">
                         <p class="user-title"><a href="{{ route('troubles.show', $rec->id) }}">{{ $rec->title }}</a></p>
                         <p class="card-diary">{{Str::limit($rec->content, 90, '…' )}}</p>
                         <div class="travel-img">
                             <a href="{{ route('troubles.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}"></a>
                         </div>
                         <p class="user-post-date">{{ $rec->updated_at }} </p>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-            <div class="col-md-3">
+                    </li>
+                    @endforeach
+                </ul>
                 <div class="user-header">
                     <h4>MY Q&A&emsp;<a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">NEW POST</a></h4>
                 </div>
                 @if($question->isEmpty())
                 <p class="user-title">まだ投稿がありません。</p>
                 @endif 
-                @foreach ($question as $rec)
-                <div class="user-cards">
-                    <div class="travel-card">
+                <ul class="user-cards">
+                    @foreach ($question as $rec)
+                    <li class="travel-card">
                         <p class="user-title"><a href="{{ route('questions.show', $rec->id) }}">{{ $rec->title }}</a> </p>
                         <p class="card-diary">{{ $rec->body }}</p>
                         <p class="post-date">{{ $rec->updated_at }} </p>
-                    </div>
-                </div>
-                @endforeach
+                    </li>
+                    @endforeach
+                </ul>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="user-header">
                     <h4>MY MAP</h4>
                 </div>
@@ -72,19 +68,19 @@
                 <div class="user-header">
                     <h4>MY COUNTRIES</h4>
                 </div>
-                <div class="user-cards">
+                <div class="my-countries">
                     <div class="travel-card">
                         @if($post->isEmpty())
-                        <p class="user-title">まだ訪れた国が登録されていません。</p>
+                        <p class="no-country">まだ訪れた国が登録されていません。</p>
                         @endif 
                         <ol>
                             @foreach ($post as $rec) 
-                            <li>
-                                <div class="country-list">
-                                    <a href="{{ route('posts.show', $rec->id) }}">{{$rec->country}}</a>
+                            <div class="country-list">
+                                <li>
+                                    <p class="country-name"><a href="{{ route('posts.show', $rec->id) }}">{{$rec->country}}</a></p>
                                     <p class="user-date">({{ $rec->date1 }} 〜 {{ $rec->date2 }})</p>
-                                </div>
-                            </li>
+                                </li>
+                            </div>
                             @endforeach
                         </ol>
                     </div>
