@@ -3,7 +3,7 @@
 <div class="page-wrapper">
   <div class="container-fluid">
       <div class="container">
-        <h2 class="header-title">Q & A　<a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">NEW POST</a></h2>
+        <h2 class="header-title">Q & A　<a href="{{ url('questions/create') }}" class="btn btn-outline-primary" id="my_travels_botton">NEW POST</a></h2>
         @if($questions->isEmpty())
         <p>まだ投稿がありません。</p>
         @endif 

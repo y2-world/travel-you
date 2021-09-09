@@ -4,7 +4,7 @@
 <div class="page-wrapper">
     <div class="container-fruid">
         <div class="container">
-            <h2 class="header-title">TROUBLE×YOU　<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">NEW POST</a></h2>
+            <h2 class="header-title">TROUBLE×YOU　<a href="{{ url('troubles/create') }}" class="btn btn-outline-primary" id="my_travels_botton">NEW POST</a></h2>
             @if($troubles->isEmpty())
             <p>まだ投稿がありません。</p>
             @endif 
