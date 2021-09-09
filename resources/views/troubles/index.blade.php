@@ -11,10 +11,10 @@
         </div>
         <div class="cards">
         @foreach ($troubles as $trouble)
-            <div class="trouble-card">
+            <div class="travel-card">
                 <p class="card-user"><a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a></p>
                 <p class="card-title-trouble">{{ $trouble->title }}</a></p>
-                <div class="trouble-img">
+                <div class="travel-img">
                     <a href="{{ route('troubles.show', $trouble->id) }}"><img src="{{ asset('storage/' . $trouble->image) }}"></a>
                 </div>
                 <p class="card-diary">{{Str::limit($trouble->content, 90, '…' )}}</p>

@@ -34,7 +34,7 @@
                 @endif 
                 <ul class="user-cards">
                     @foreach ($trouble as $rec)
-                    <li class="trouble-card">
+                    <li class="travel-card">
                         <p class="user-title"><a href="{{ route('troubles.show', $rec->id) }}">{{ $rec->title }}</a></p>
                         <p class="card-diary">{{Str::limit($rec->content, 90, '…' )}}</p>
                         <div class="travel-img">

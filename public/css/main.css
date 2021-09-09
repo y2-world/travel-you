@@ -184,17 +184,16 @@ footer a:hover {
 
 .travel-card {
     background-color: white;
-    box-shadow: 0 12px 12px gray;
+    box-shadow: 0 5px 5px gray;
     transition: box-shadow .5s;
     width: 330px;
     border-radius: 10px;
     margin: 10px;
-
     display: inline-block;
 }
 
 .travel-card:hover {
-    box-shadow : 15px 15px 50px gray;
+    box-shadow : 5px 5px 20px gray;
 }
 
 .question-card {
@@ -255,27 +254,11 @@ footer a:hover {
     box-shadow: 0 5px 5px gray;
 }
 
-.trouble-card img {
-    max-width: 100%;
-    display: inline-block;
-    height: 220px;
-    box-shadow: 0 5px 5px gray;
-}
-
-.trouble-img, .travel-img {
+.travel-img {
     text-align: center;
 }
 
 .travel-card p {
-   padding-left: 15px;
-   padding-right: 15px;
-   margin: 0;
-   overflow: hidden;
-   white-space: nowrap;
-   text-overflow: ellipsis;
-}
-
-.trouble-card p {
    padding-left: 15px;
    padding-right: 15px;
    margin: 0;
@@ -383,20 +366,6 @@ footer a:hover {
     display: flex;
     font-size: 12px;
     justify-content: space-between;
-}
-
-.trouble-card {
-    background-color: white;
-    box-shadow: 0 12px 12px gray;
-    transition: box-shadow .5s;
-    width: 330px;
-    border-radius: 10px;
-    margin: 10px;
-    display: inline-block;
-}
-
-.trouble-card:hover {
-    box-shadow : 15px 15px 50px gray;
 }
 
 .trouble-row {
