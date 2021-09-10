@@ -55,7 +55,13 @@
 <div class="demo-wrapper">
     <div class="element js-fadein">
         <div class="demo-header">TRAVEL×YOU</div>  
-        <p>旅の記録ができる</p>
+        <div class="demo-paragraph">旅の記録ができる</div>
+        <p>
+            <span>今まで何ヵ国行ったかな...？ そう思うことはないでしょうか？</span><br>
+            <span>TRAVEL×YOUでは、今までの旅の記録を</span>
+            <span>投稿することでそれが一目で分かります。</span><br>
+            <span>また、あなたのかけがえのない旅の記録をシェアすることができます。</span>
+        </p>
     </div>
 </div>
 <ul class="top-cards">
@@ -70,7 +76,7 @@
         <div class="card-info">
             <p class="card-diary"> {{ $post->diary }}</p>
             <p class="post-date">{{ $post->updated_at }}</p>
-          </div>
+        </div>
     </li>
     @endforeach
 </ul>
@@ -80,7 +86,13 @@
 <div class="demo-wrapper">
     <div class="element js-fadein">
         <div class="demo-header">TROUBLE×YOU</div>  
-        <p>旅先でのトラブルをシェアできる</p>
+        <div class="demo-paragraph">旅先でのトラブルをシェアできる</div>
+        <p>
+            <span>あなたは旅先でトラブルに巻き込まれたことはありますか？</span><br>
+            <span>TROUBLE×YOUでは、事前に知っておくべきことや</span>
+            <span>実際に旅先で起こったトラブルをシェアできます。</span><br>
+            <span>トラブルを未然に防ぎ、これからの旅をより良いものにしましょう！</span>
+        </p>
     </div>
 </div>
 <ul class="top-cards"> 
@@ -105,7 +117,10 @@
 <div class="demo-wrapper">
     <div class="element js-fadein">
         <div class="demo-header">Q&A</div>  
-        <p>旅についての質問ができる</p>
+        <div class="demo-paragraph">旅についての質問ができる</div>
+        <p>旅について不安なことがあったら何でも質問してしまいましょう！<br>
+            旅のベテランが答えてくれます。
+        </p>
     </div>
 </div>
 <ul class="top-cards"> 

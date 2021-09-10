@@ -90,15 +90,23 @@ html, body {
 
 .demo-wrapper p {
     color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+.demo-paragraph {
+    color: white;
     font-size: 16px;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .demo-header {
     font-family: Oswald;
     font-size: 40px;
     text-align: center;
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 5px;
     color: white;
 }
 
@@ -527,6 +535,9 @@ i:hover {
 ul {
     list-style: none;
 }
+span {
+    display: inline-block;
+}
 
 @media screen and (max-width: 1026px) {
     .logo-wrapper {
@@ -561,10 +572,6 @@ ul {
 
     .world-img img {
         width: 100%;
-    }
-
-    span {
-        display: inline-block;
     }
 }
 
@@ -667,5 +674,14 @@ ul {
 
     h2, h4 {
         text-align: center;
+    }
+
+    .demo-wrapper p {
+        color: white;
+        font-size: 10px;
+        text-align: center;
+    }
+    span {
+        display: inline-block;
     }
 }
