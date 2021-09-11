@@ -73,14 +73,14 @@
                         @if($post->isEmpty())
                         <div class="country-number">0</div>
                         @endif 
-                        <div class="country-number">4</div>
+                        <div class="country-number"></div>
                         <p>COUNTRIES</p>
                     </div>
                     <div class="number-box">
                         @if($post->isEmpty())
                         <div class="country-number">0</div>
                         @endif 
-                        <div class="country-number">4</div>
+                        <div class="country-number"></div>
                         <p>TRAVELS</p>
                     </div>
                 </div>
