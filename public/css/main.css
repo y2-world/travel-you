@@ -200,7 +200,7 @@ footer a:hover {
     display: inline-block;
 }
 
-.travel-card:hover {
+.travel-card:hover, .question-card:hover, .number-box:hover, .faq:hover {
     box-shadow : 5px 5px 20px gray;
 }
 
@@ -211,10 +211,6 @@ footer a:hover {
     width: 330px;
     border-radius: 10px;
     margin: 10px;
-}
-
-.question-card:hover {
-    box-shadow : 15px 15px 50px gray;
 }
 
 .cards {
@@ -562,10 +558,6 @@ span {
     font-size: 14px;
     text-align: center;
     font-family: Oswald;
-}
-
-.number-box:hover {
-    box-shadow : 5px 5px 20px gray;
 }
 
 .faq {
