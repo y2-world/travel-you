@@ -568,6 +568,70 @@ span {
     box-shadow : 5px 5px 20px gray;
 }
 
+.faq {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 5px 5px gray;
+    transition: box-shadow .5s;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+dd::before {
+    content: 'A : '
+}
+
+dd {
+    display: none;
+    padding-top: 10px;
+}
+
+dt::after {
+    content: '+';
+    top: 0px;
+    right: 16px;
+    position: absolute;
+    transition: transform .3s;
+}
+
+dt {
+    position: relative;
+    padding-right: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+dt::before {
+    content: 'Q : '
+}
+
+dl > div.appear dd {
+    display: block;
+    animation: .5s fadeIn;
+}
+
+dl > div.appear dt::after {
+    transform: rotate(45deg);
+}
+
+.faq-wrapper {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
 @media screen and (max-width: 1026px) {
     .logo-wrapper {
         padding:15% 10%;
