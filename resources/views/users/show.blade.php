@@ -68,6 +68,22 @@
                 <div class="user-header">
                     <h4>MY COUNTRIES</h4>
                 </div>
+                <div class="number-boxes">
+                    <div class="number-box">
+                        @if($post->isEmpty())
+                        <div class="country-number">0</div>
+                        @endif 
+                        <div class="country-number">4</div>
+                        <p>COUNTRIES</p>
+                    </div>
+                    <div class="number-box">
+                        @if($post->isEmpty())
+                        <div class="country-number">0</div>
+                        @endif 
+                        <div class="country-number">4</div>
+                        <p>TRAVELS</p>
+                    </div>
+                </div>
                 <div class="my-countries">
                     <div class="travel-card">
                         @if($post->isEmpty())
