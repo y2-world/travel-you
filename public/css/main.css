@@ -322,7 +322,7 @@ footer a:hover {
 
 .travel-card-show {
     background-color: white;
-    box-shadow: 0 12px 12px gray;
+    box-shadow: 0 5px 5px gray;
     transition: box-shadow .5s;
     max-width: 1000px;
     border-radius: 10px;
