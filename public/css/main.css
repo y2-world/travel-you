@@ -569,6 +569,8 @@ span {
     margin: 10px;
     display: inline-block;
     width: 100%;
+    margin: 0 auto;
+    margin-bottom:20px;
 }
 
 dd::before {
@@ -611,6 +613,16 @@ dl > div.appear dt::after {
 .faq-wrapper {
     padding-top: 20px;
     padding-bottom: 40px;
+}
+
+.contact-card {
+    background-color: white;
+    box-shadow: 0 5px 5px gray;
+    transition: box-shadow .5s;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
 }
 
 @keyframes fadeIn {
