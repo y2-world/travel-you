@@ -16,9 +16,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e47a10189c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
 </head>
-
-<link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
 
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
