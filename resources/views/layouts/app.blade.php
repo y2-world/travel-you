@@ -89,6 +89,25 @@
         </div>
     </nav>
 </div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <input class="form-control" type="text" placeholder="キーワード検索">
+        </div>
+        <div class="col-md-4">
+            <select class="form-control">
+                <option>国検索</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-control">
+                <option>カテゴリー検索</option>
+            </select>
+            <button type="submit" class="btn btn-primary" value="upload">投稿</button>
+        </div>
+    </div>
+</div>
 @yield('content')
 
 <!-- JS -->
