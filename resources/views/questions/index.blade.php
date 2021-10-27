@@ -9,6 +9,26 @@
         @endif 
       </div>
     </div>
+    <div class="container">
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" class="form-control mb-2" placeholder="キーワード検索">
+          </div>
+          <div class="col-md-6">
+            <select class="form-control mb-2" name="category">
+                <option value="none">カテゴリー検索</option>
+                <option value="宿泊先">宿泊先 (ホテル・Airbnbなど)</option>
+                <option value="レストラン">レストラン</option>
+                <option value="交通機関">交通機関</option>
+                <option value="ショッピング">ショッピング</option>
+                <option value="治安">治安</option>
+                <option value="その他">その他</option>
+            </select>
+        </div>
+        </div>
+      </form>
+    </div>
     <div class="cards">
       @foreach ($questions as $question)
       <div class="travel-card">

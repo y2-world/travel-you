@@ -50,19 +50,19 @@ class UsersController extends Controller
     
     public function show(User $user)
     {   
-        $user = User::find($user->id); //idが、リクエストされた$userのidと一致するuserを取得
-        $posts = Post::where('user_id', $user->id) //$userによる投稿を取得
+        $user = User::find($user->id);
+        $posts = Post::where('user_id', $user->id)
             ->orderBy('date1', 'desc')
-            ->paginate(10); // 投稿作成日が新しい順に並べる
-        $troubles = Trouble::where('user_id', $user->id) //$userによる投稿を取得
-            ->orderBy('updated_at', 'desc') // 投稿作成日が新しい順に並べる
-            ->paginate(10); // ページネーション; 
-        $questions = Question::where('user_id', $user->id) //$userによる投稿を取得
-            ->orderBy('updated_at', 'desc') // 投稿作成日が新しい順に並べる
-            ->paginate(10); // ページネーション; 
+            ->paginate(10);
+        $troubles = Trouble::where('user_id', $user->id)
+            ->orderBy('updated_at', 'desc')
+            ->paginate(10);
+        $questions = Question::where('user_id', $user->id)
+            ->orderBy('updated_at', 'desc')
+            ->paginate(10);
         return view('users.show', [
-            'user_name' => $user->name, // $user名をviewへ渡す
-            'post' => $posts, // $userの書いた記事をviewへ渡す
+            'user_name' => $user->name,
+            'post' => $posts,
             'trouble'=> $troubles,
             'question'=> $questions,
         ]);
