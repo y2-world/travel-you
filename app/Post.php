@@ -21,4 +21,9 @@ class Post extends Model
     public function comments() {
         return $this->hasMany('App\Comment')->orderBy('created_at');
     }
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class, 'country_id');
+    }
 }

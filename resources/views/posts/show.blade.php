@@ -18,7 +18,7 @@
                         <p class="card-user"><a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a></p>   
                         <p class="card-title">{{ $post->title }}</p> 
                         <p class="card-date">{{ $post->date1 }}&nbsp;〜&nbsp;{{ $post->date2 }}</p>
-                        <small>国 : {{ $post->country }}</small><br>
+                        <small>国 : <a href="{{ url('countries', $post->country_id)}}">{{ $post->country->name }}</a></small><br>
                         <small>都市 : {{ $post->city }}</small>
                         <p class="card-diary">{{ $post->diary }}</p>
                         <p class="post-date">投稿日時：{{ $post->created_at }}</p> 

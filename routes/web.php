@@ -28,6 +28,9 @@ Route::get('/faq', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('countries', function () {
+    return view('countries');
+});
 
 Auth::routes();
 
@@ -36,6 +39,7 @@ Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 
 Route::resource('/', 'TopController');
 Route::resource('posts', 'PostController');
+Route::resource('countries', 'CountryController');
 Route::resource('users', 'UsersController');
 Route::resource('comments', 'CommentController');
 Route::resource('troubles', 'TroubleController');

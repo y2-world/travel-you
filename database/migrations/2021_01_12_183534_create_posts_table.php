@@ -21,7 +21,7 @@ class CreatePostsTable extends Migration
             $table->date('date1');
             $table->date('date2');
             $table->string('image');
-            $table->string('country');
+            $table->string('country_id');
             $table->string('city');
             $table->text('diary')->nullable();
             $table->timestamps();

@@ -625,6 +625,19 @@ dl > div.appear dt::after {
     margin: 0 auto;
 }
 
+table {
+    counter-reset: rowCount;
+    font-size: 13px;
+  }
+
+  table > tbody > tr {
+    counter-increment: rowCount;
+  }
+
+  table > tbody > tr > td:first-child::before {
+    content: counter(rowCount);
+  }
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

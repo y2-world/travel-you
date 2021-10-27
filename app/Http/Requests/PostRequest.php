@@ -24,7 +24,7 @@ class PostRequest extends FormRequest
             'date2'  => 'required',
             'image'  => 'required',
             'image' => 'required',
-            'country'  => 'required',
+            'country_id'  => 'required',
             'city'  => 'required',
             'diary'  => 'required',
         ];
@@ -36,7 +36,7 @@ class PostRequest extends FormRequest
             'date1.required'  => '期間1は必須です。',
             'date2.required'  => '期間2は必須です。',
             'image.required'  => 'カバー写真は必須です。',
-            'country.required'  => '国は必須です。',
+            'country_id.required'  => '国は必須です。',
             'city.required'  => '都市は必須です。',
             'diary.required'  => 'Travel Diaryは必須です。',
         ];

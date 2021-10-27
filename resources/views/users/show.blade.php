@@ -93,7 +93,7 @@
                             @foreach ($post as $rec) 
                             <div class="country-list">
                                 <li>
-                                    <p class="country-name"><a href="{{ route('posts.show', $rec->id) }}">{{$rec->country}}</a></p>
+                                    <p class="country-name"><a href="{{ route('posts.show', $rec->id) }}">{{$rec->country->name}}</a></p>
                                     <p class="user-date">({{ $rec->date1 }} 〜 {{ $rec->date2 }})</p>
                                 </li>
                             </div>

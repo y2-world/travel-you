@@ -53,7 +53,7 @@ class PostController extends Controller
         $file_name = $request->file('image')->getClientOriginalName();
         $post -> image = $request->file('image')->store('image','public',$file_name);
     
-        $post -> country     = $request -> country;
+        $post -> country_id     = $request -> country_id;
         $post -> city     = $request -> city;
         $post -> diary     = $request -> diary;
     
@@ -92,7 +92,7 @@ class PostController extends Controller
         $post -> title    = $request -> title; 
         $post -> date1     = $request -> date1;
         $post -> date2     = $request -> date2;
-        $post -> country     = $request -> country;
+        $post -> country_id     = $request -> country_id;
         $post -> city     = $request -> city;
         $post -> diary     = $request -> diary;
         $post -> save();
