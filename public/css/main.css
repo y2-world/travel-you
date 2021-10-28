@@ -642,6 +642,10 @@ small a {
     color: black;
 }
 
+td a {
+    color: black;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

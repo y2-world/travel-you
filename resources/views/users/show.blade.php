@@ -84,22 +84,20 @@
                         <p>TRAVELS</p>
                     </div>
                 </div>
-                <div class="my-countries">
-                    <div class="travel-card">
-                        @if($post->isEmpty())
-                        <p class="no-country">まだ訪れた国が登録されていません。</p>
-                        @endif 
-                        <ol>
-                            @foreach ($post as $rec) 
-                            <div class="country-list">
-                                <li>
-                                    <p class="country-name"><a href="{{ route('posts.show', $rec->id) }}">{{$rec->country->name}}</a></p>
-                                    <p class="user-date">({{ $rec->date1 }} 〜 {{ $rec->date2 }})</p>
-                                </li>
-                            </div>
-                            @endforeach
-                        </ol>
-                    </div>
+                <div class="travel-card">
+                    @if($post->isEmpty())
+                    <p class="no-country">まだ訪れた国が登録されていません。</p>
+                    @endif 
+                    <ol>
+                        @foreach ($post->unique('country_id') as $rec) 
+                        <div class="country-list">
+                            <li>
+                                <p class="country-name"><a href="{{ url('countries', $rec->country_id) }}">{{$rec->country->name}}</a></p>
+                            </li>
+                        </div>
+                        @endforeach
+                    </ol>
+                </div>
                 </div>
             </div>
         </div>

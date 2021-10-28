@@ -2,7 +2,7 @@
 @section('content')
 <div class="page-wrapper">
     <div class="container">
-        <h2>カテゴリー別投稿一覧</h2>
+        <h3>カテゴリー別投稿一覧</h3>
         <table class="table table-striped">
             <thead>
             <tr>
