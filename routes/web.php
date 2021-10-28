@@ -34,6 +34,10 @@ Route::get('countries', function () {
 Route::get('categories', function () {
     return view('categories');
 });
+Route::get('search', function () {
+    return view('search');
+});
+Route::resource('search', 'SearchController');
 
 Auth::routes();
 

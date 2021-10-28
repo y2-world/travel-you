@@ -12,8 +12,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <form>
-            <input type="text" class="form-control mb-2" placeholder="キーワード検索">
+          <form action="{{url('/search')}}" method="GET">
+            <input type="text" class="form-control mb-2" placeholder="キーワード検索" type="search" value="{{request('keyword')}}" name="keyword" required>
           </form>
         </div>
         <div class="col-md-6">
