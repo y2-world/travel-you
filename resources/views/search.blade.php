@@ -15,9 +15,9 @@
                 <div class="col-md-6">
                     <select class="form-control mb-2" onChange="location.href=value;">
                     <option hidden value="none">国検索</option>
-                    {{-- @foreach ($posts->unique('country_id') as $rec)
+                    @foreach ($posts->unique('country_id') as $rec)
                     <option value="{{ url('countries', $rec->country_id)}}">{{ optional($rec->country)->name}}</option>
-                    @endforeach --}}
+                    @endforeach
                     </select>
                     <a href="{{ url('countries') }}" id="my_travels_botton">国別投稿一覧</a>
                 </div>

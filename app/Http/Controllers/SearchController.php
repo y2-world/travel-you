@@ -30,8 +30,10 @@ class SearchController extends Controller
         }
 
         $data = $query->orderBy('updated_at','desc')->paginate(10);
+
+        $posts = Post::latest('updated_at')->get();
  
-        return view('search', compact('data', 'keyword'));
+        return view('search', compact('data', 'keyword', 'posts'));
     }
 
     /**
