@@ -92,7 +92,7 @@
                         @foreach ($post->unique('country_id') as $rec) 
                         <div class="country-list">
                             <li>
-                                <p class="country-name"><a href="{{ url('countries', $rec->country_id) }}">{{$rec->country->name}}</a></p>
+                                <p class="country-name"><a href="{{ url('countries', $rec->country_id) }}">{{ optional($rec->country)->name}}</a></p>
                             </li>
                         </div>
                         @endforeach

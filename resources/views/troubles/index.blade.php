@@ -20,7 +20,7 @@
                 <select class="form-control mb-2" name="country_id" onChange="location.href=value;">
                     <option hidden value="none">国検索</option>
                     @foreach ($troubles->unique('country_id') as $rec1)
-                    <option value="{{ url('countries', $rec1->country_id)}}">{{$rec1->country->name}}</option>
+                    <option value="{{ url('countries', $rec1->country_id)}}">{{ optional($rec1->country)->name}}</option>
                     @endforeach
                 </select>
                 <a href="{{ url('countries') }}" id="my_travels_botton">国別投稿一覧</a>
@@ -29,7 +29,7 @@
                 <select class="form-control mb-2" name="category_id" onChange="location.href=value;">
                     <option hidden value="none">カテゴリー検索</option>
                     @foreach ($troubles->unique('category_id') as $rec2)
-                    <option value="{{ url('categories', $rec2->category_id)}}">{{$rec2->category->name}}</option>
+                    <option value="{{ url('categories', $rec2->category_id)}}">{{ optional($rec2->category)->name}}</option>
                     @endforeach
                 </select>
                 <a href="{{ url('categories') }}" id="my_travels_botton">カテゴリー別投稿一覧</a>

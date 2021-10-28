@@ -18,7 +18,7 @@
                         <p class="card-user"><a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a></p>   
                         <p class="card-title">{{ $post->title }}</p> 
                         <p class="card-date">{{ $post->date1 }}&nbsp;〜&nbsp;{{ $post->date2 }}</p>
-                        <small>国 : <a href="{{ url('countries', $post->country_id)}}">{{ $post->country->name }}</a></small><br>
+                        <small>国 : <a href="{{ url('countries', $post->country_id)}}">{{ optional($post->country)->name }}</a></small><br>
                         <small>都市 : {{ $post->city }}</small>
                         <p class="card-diary">{{ $post->diary }}</p>
                         <p class="post-date">投稿日時：{{ $post->created_at }}</p> 
@@ -32,7 +32,7 @@
                             <div class="form-group">
                                 @foreach ($post->comments as $comment)
                                     <div class="comment-info">
-                                        <div class="comment-user"><a href="{{ route('users.show', $post->user_id)}}">{{ $comment->user->name }}</a>&emsp;&emsp;
+                                        <div class="comment-user"><a href="{{ route('users.show', $post->user_id)}}">{{ optional($comment->user)->name }}</a>&emsp;&emsp;
                                         {{ $comment->body }}</div>
                                         <div class="comment-date">{{ $comment->created_at }}</div>
                                     </div>

@@ -25,6 +25,7 @@ class SearchController extends Controller
         if (!empty($keyword)) {
             $query = Post::query();
             $posts = $query->where('title', 'like', "%{$keyword}%")
+            ->orWhere('city','like','%'.$keyword.'%')
             ->orWhere('diary','like','%'.$keyword.'%');
         }
 
