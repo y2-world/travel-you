@@ -24,7 +24,7 @@
                     <div class="form-group">
                         <label>カテゴリー</label>&nbsp;<span class="badge bg-danger">必須</span>
                         <select class="form-control" select name="category_id">
-                            <option value="{{ $question->category }}">{{ $question->category }} (選択済み)</option>
+                            <option value="{{ $question->category }}">{{ $question->category->name }} (選択済み)</option>
                             <option value="7">基本情報</option>
                             <option value="8">チップ・マナー</option>
                             <option value="1">宿泊先 (ホテル・Airbnbなど)</option>

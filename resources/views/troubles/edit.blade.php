@@ -24,7 +24,7 @@
                     <div class="form-group">
                         <label>国</label>&nbsp;<span class="badge bg-danger">必須</span>
                         <select class="form-control" name="country_id">
-                            <option value="{{ $trouble->country_id }}">{{ $trouble->country_id }} (選択済み)</option>
+                            <option value="{{ $trouble->country_id }}">{{ $trouble->country->name }} (選択済み)</option>
                             <option value="1">アイスランド</option>
                             <option value="2">アイルランド</option>
                             <option value="3">アゼルバイジャン</option>
@@ -230,7 +230,7 @@
                     <div class="form-group">
                         <label>カテゴリー</label>&nbsp;<span class="badge bg-danger">必須</span>
                         <select class="form-control" select name="category_id">
-                            <option value="{{ $trouble->category_id }}">{{ $trouble->category_id }} (選択済み)</option>
+                            <option value="{{ $trouble->category_id }}">{{ $trouble->category->name }} (選択済み)</option>
                             <option value="1">宿泊先 (ホテル・Airbnbなど)</option>
                             <option value="2">レストラン</option>
                             <option value="3">交通機関</option>
