@@ -45,6 +45,9 @@
       </div>
       @endforeach
     </div>
+    <div class="back">
+      <a href="javascript:void(0);" onclick="history.go(-1);" class="btn btn-secondary btn-sm">BACK</a>
+    </div>
   </div>
 </div>
 @endsection

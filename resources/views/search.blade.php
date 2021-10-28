@@ -26,8 +26,8 @@
             @if($data->isEmpty())
             <p>検索結果がありません。</p>
             @endif
-            @foreach ($data as $result)
             <div class="user-cards">
+                @foreach ($data as $result)
                 <div class="travel-card">
                     <p class="card-user"><a href="{{ route('users.show', $result->user_id)}}">{{ $result->user_name }}</a></p>
                     <p class="card-title-trouble">{{ $result->title }}</a></p>
@@ -39,8 +39,8 @@
                         <p class="post-date">{{ $result->updated_at }}</p>
                     </div>
                 </div>
+                @endforeach
             </div>
-            @endforeach
             <div class="back">
                 <a href="{{ url('/posts') }}" class="btn btn-secondary btn-sm">BACK</a>
             </div>
