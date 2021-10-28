@@ -694,10 +694,6 @@ td a {
 }
 
 @media screen and (max-width: 770px) {
-    .btn-edit {
-        display: none;
-    }
-
     .card-info {
         padding-top: 15px;
     }
