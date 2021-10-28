@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Country;
+use App\Category;
 use App\Trouble;
-use App\Post;
+use App\Question;
 
-class CountryController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,9 @@ class CountryController extends Controller
      */
     public function index()
     {
-        $countries = Country::orderBy('id', 'asc')
-        ->paginate(200);
-        return view('countries.index', compact('countries'));
+        $categories = Category::orderBy('id', 'asc')
+        ->paginate(10);
+        return view('categories.index', compact('categories'));
     }
 
     /**
@@ -48,19 +48,19 @@ class CountryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Country $country)
+    public function show(Category $category)
     {
-        $country = Country::find($country->id); 
-        $posts = Post::where('country_id', $country->id)
-            ->orderBy('updated_at', 'desc')
+        $category = Category::find($category->id); 
+        $troubles = Trouble::where('category_id', $category->id)
+            ->orderBy('updated_at', 'desc') 
             ->paginate(10);
-        $troubles = Trouble::where('country_id', $country->id)
-            ->orderBy('updated_at', 'desc')
-            ->paginate(10);
-        return view('countries.show', [
-            'posts' => $posts,
+        $questions = Question::where('category_id', $category->id)
+            ->orderBy('updated_at', 'desc') 
+            ->paginate(10); 
+        return view('categories.show', [
             'troubles' => $troubles,
-            'country' => $country,
+            'questions' => $questions,
+            'category' => $category,
         ]);
     }
 

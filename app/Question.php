@@ -19,4 +19,14 @@ class Question extends Model
     public function answers() {
         return $this->hasMany('App\Answer')->orderBy('created_at');
     }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class, 'country_id');
+    }
 }

@@ -16,15 +16,20 @@
             <input type="text" class="form-control mb-2" placeholder="キーワード検索">
           </div>
           <div class="col-md-6">
-            <select class="form-control mb-2" name="category">
+            <select class="form-control mb-2" name="category_id">
                 <option value="none">カテゴリー検索</option>
-                <option value="宿泊先">宿泊先 (ホテル・Airbnbなど)</option>
-                <option value="レストラン">レストラン</option>
-                <option value="交通機関">交通機関</option>
-                <option value="ショッピング">ショッピング</option>
-                <option value="治安">治安</option>
-                <option value="その他">その他</option>
+                <option value="7">基本情報</option>
+                <option value="8">チップ・マナー</option>
+                <option value="1">宿泊先 (ホテル・Airbnbなど)</option>
+                <option value="9">観光地</option>
+                <option value="2">レストラン</option>
+                <option value="3">交通機関</option>
+                <option value="4">ショッピング</option>
+                <option value="10">お土産</option>
+                <option value="5">治安</option>
+                <option value="6">その他</option>
             </select>
+            <a href="{{ url('/categories') }}" class="btn btn-secondary btn-sm">カテゴリー別投稿一覧</a>
         </div>
         </div>
       </form>

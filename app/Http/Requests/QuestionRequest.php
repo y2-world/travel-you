@@ -25,7 +25,7 @@ class QuestionRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'category' => 'required',
+            'category_id' => 'required',
             'body' => 'required',
         ];
     }
@@ -34,7 +34,7 @@ class QuestionRequest extends FormRequest
 {
     return [
         'title.required' => 'タイトルは必須です。',
-        'category.required'      => 'カテゴリーは必須です。',
+        'category_id.required'      => 'カテゴリーは必須です。',
         'body.required'  => '本文は必須です。',
     ];
 }

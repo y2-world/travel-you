@@ -16,7 +16,7 @@
                   <input type="text" class="form-control mb-2" placeholder="キーワード検索">
                 </div>
                 <div class="col-md-4">
-                    <select class="form-control mb-2" name="country">
+                    <select class="form-control mb-2" name="country_id">
                         <option value="none">国検索</option>
                         <option value="1">アイスランド</option>
                         <option value="2">アイルランド</option>
@@ -219,9 +219,10 @@
                         <option value="199">レバノン</option>
                         <option value="200">ロシア</option>
                     </select>
+                    <a href="{{ url('/countries') }}" class="btn btn-secondary btn-sm">国別投稿一覧</a>
                 </div>
                 <div class="col-md-4">
-                    <select class="form-control mb-2" name="category">
+                    <select class="form-control mb-2" name="category_id">
                         <option value="none">カテゴリー検索</option>
                         <option value="宿泊先">宿泊先 (ホテル・Airbnbなど)</option>
                         <option value="レストラン">レストラン</option>
@@ -230,6 +231,7 @@
                         <option value="治安">治安</option>
                         <option value="その他">その他</option>
                     </select>
+                    <a href="{{ url('/categories') }}" class="btn btn-secondary btn-sm">カテゴリー別投稿一覧</a>
                 </div>
               </div>
             </form>

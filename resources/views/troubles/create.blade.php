@@ -22,7 +22,7 @@
                         </div>  
                         <div class="form-group">
                             <label>国</label>&nbsp;<span class="badge bg-danger">必須</span>
-                            <select class="form-control" name="country">
+                            <select class="form-control" name="country_id">
                                 <option hidden>訪れた国を選択</option>
                                 <option value="1">アイスランド</option>
                                 <option value="2">アイルランド</option>
@@ -228,14 +228,14 @@
                         </div>  
                         <div class="form-group">
                             <label>カテゴリー</label>&nbsp;<span class="badge bg-danger">必須</span>
-                            <select class="form-control"　select name="category">
+                            <select class="form-control"　select name="category_id">
                                 <option hidden>カテゴリーを選択</option>
-                                <option value="宿泊先">宿泊先 (ホテル・Airbnbなど)</option>
-                                <option value="レストラン">レストラン</option>
-                                <option value="交通機関">交通機関</option>
-                                <option value="ショッピング">ショッピング</option>
-                                <option value="治安">治安</option>
-                                <option>その他</option>
+                                <option value="1">宿泊先 (ホテル・Airbnbなど)</option>
+                                <option value="2">レストラン</option>
+                                <option value="3">交通機関</option>
+                                <option value="4">ショッピング</option>
+                                <option value="5">治安</option>
+                                <option value="6">その他</option>
                             </select>
                         </div>   
                         <div class="form-group">

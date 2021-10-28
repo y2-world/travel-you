@@ -14,9 +14,10 @@
           <div class="col-md-6">
             <input type="text" class="form-control mb-2" placeholder="キーワード検索">
           </div>
-          <div class="col-md-6">
-            <select class="form-control mb-2" name="country_id">
-              <option value="none">国検索</option>
+          <form action="">
+            <div class="col-md-6">
+              <select class="form-control mb-2" name="country_id">
+                <option value="none">国検索</option>
                 <option value="1">アイスランド</option>
                 <option value="2">アイルランド</option>
                 <option value="3">アゼルバイジャン</option>
@@ -217,8 +218,10 @@
                 <option value="198">レソト</option>
                 <option value="199">レバノン</option>
                 <option value="200">ロシア</option>
-            </select>
-          </div>
+              </select>
+              <a href="{{ url('/countries') }}" class="btn btn-secondary btn-sm">国別投稿一覧</a>
+            </div>
+          </form>
         </div>
       </form>
     </div>

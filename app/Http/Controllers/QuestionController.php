@@ -44,7 +44,7 @@ class QuestionController extends Controller
         $question -> user_id  = Auth::id(); 
         $question -> user_name  = Auth::user()->name;
         $question -> title    = $request -> title; 
-        $question -> category     = $request -> category;
+        $question -> category_id     = $request -> category_id;
         $question -> body = $request-> body;
         $question -> save(); 
         
@@ -93,7 +93,7 @@ class QuestionController extends Controller
         }
 
         $question -> title    = $request -> title; 
-        $question ->  category   = $request -> category; 
+        $question ->  category_id   = $request -> category_id; 
         $question ->  body   = $request -> body;
         $question -> save();
         return view('questions.show', compact('question'));

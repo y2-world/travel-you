@@ -18,8 +18,8 @@ class CreateTroublesTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('user_name');
             $table->string('title');
-            $table->string('country');
-            $table->string('category')->nullable();
+            $table->string('country_id');
+            $table->string('category_id');
             $table->string('image');
             $table->text('content');
             $table->timestamps();

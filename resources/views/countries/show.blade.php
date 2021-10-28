@@ -1,15 +1,13 @@
 @extends('layouts.app')
 @section('content')
 <div class="page-wrapper">
-  <div class="container-fluid">
-    <div class="container">
-      <h2>{{ $country->name  }}</h2>
-      @if($posts->isEmpty())
-      <p>まだ投稿がありません。</p>
-      @endif 
-      <h4 class="header-title">OUR TRAVELS</h4>
-    </div>
-    <div class="cards">
+  <div class="container">
+    <h3>{{ $country->name  }}</h3>
+    <h4 class="header-title">OUR TRAVELS</h4>
+    @if($posts->isEmpty())
+    <p>まだ投稿がありません。</p>
+    @endif 
+    <div class="user-cards">
       @foreach ($posts as $rec)
       <div class="travel-card">
         <p class="card-user"><a href="{{ route('users.show', $rec->user_id)}}">{{ $rec->user_name }}</a></p>
@@ -21,6 +19,28 @@
         <div class="card-info">
           <p class="card-diary"> {{ $rec->diary }}</p>
           <p class="post-date">{{ $rec->updated_at }}</p>
+        </div>
+      </div>
+      @endforeach
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <h4 class="header-title">TROUBLE × YOU</h4>
+    @if($troubles->isEmpty())
+    <p>まだ投稿がありません。</p>
+    @endif 
+    <div class="user-cards">
+      @foreach ($troubles as $rec)
+      <div class="travel-card">
+        <p class="card-user"><a href="{{ route('users.show', $rec->user_id)}}">{{ $rec->user_name }}</a></p>
+        <p class="card-title-trouble">{{ $rec->title }}</a></p>
+        <div class="travel-img">
+            <a href="{{ route('troubles.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}"></a>
+        </div>
+        <p class="card-diary">{{Str::limit($rec->content, 90, '…' )}}</p>
+        <div class="trouble-row">
+            <p class="post-date">{{ $rec->updated_at }}</p>
         </div>
       </div>
       @endforeach

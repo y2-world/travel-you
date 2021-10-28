@@ -17,8 +17,8 @@
                     <div class="card-info">
                         <p class="card-user"><a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble->user_name }}</a></p>
                         <p class="card-title">{{ $trouble->title }}</p>
-                        <small>国 : {{ $trouble->country }}</small><br>
-                        <small>カテゴリー : {{ $trouble->category }}</small>
+                        <small>国 : <a href="{{ url('countries', $trouble->country_id)}}">{{optional($trouble->country)->name}}</a></small><br>
+                        <small>カテゴリー : <a href="{{ url('categories', $trouble->category_id)}}">{{optional($trouble->category)->name}}</a></small>
                         <p class="card-diary">{{ $trouble->content }}</p>
                         <p class="post-date">投稿日時：{{ $trouble->created_at }}</p> 
                     </div>

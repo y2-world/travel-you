@@ -23,8 +23,8 @@
                     </div>
                     <div class="form-group">
                         <label>国</label>&nbsp;<span class="badge bg-danger">必須</span>
-                        <select class="form-control" name="country">
-                            <option value="{{ $trouble->country }}">{{ $trouble->country }} (選択済み)</option>
+                        <select class="form-control" name="country_id">
+                            <option value="{{ $trouble->country_id }}">{{ $trouble->country_id }} (選択済み)</option>
                             <option value="1">アイスランド</option>
                             <option value="2">アイルランド</option>
                             <option value="3">アゼルバイジャン</option>
@@ -229,14 +229,14 @@
                     </div>     
                     <div class="form-group">
                         <label>カテゴリー</label>&nbsp;<span class="badge bg-danger">必須</span>
-                        <select class="form-control" select name="category">
-                            <option value="{{ $trouble->category }}">{{ $trouble->category }} (選択済み)</option>
-                            <option value="宿泊先">宿泊先 (ホテル・Airbnbなど)</option>
-                            <option value="レストラン">レストラン</option>
-                            <option value="交通機関">交通機関</option>
-                            <option value="ショッピング">ショッピング</option>
-                            <option value="治安">治安</option>
-                            <option value="その他">その他</option>
+                        <select class="form-control" select name="category_id">
+                            <option value="{{ $trouble->category_id }}">{{ $trouble->category_id }} (選択済み)</option>
+                            <option value="1">宿泊先 (ホテル・Airbnbなど)</option>
+                            <option value="2">レストラン</option>
+                            <option value="3">交通機関</option>
+                            <option value="4">ショッピング</option>
+                            <option value="5">治安</option>
+                            <option value="6">その他</option>
                         </select>
                     </div>
                     <div class="form-group">

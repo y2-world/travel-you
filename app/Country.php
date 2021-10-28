@@ -10,4 +10,9 @@ class Country extends Model
     {
         return $this->hasMany('App\Posts'); 
     }
+
+    public function troubles()
+    {
+        return $this->hasMany('App\Troubles'); 
+    }
 }

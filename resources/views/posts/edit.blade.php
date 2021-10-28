@@ -30,7 +30,7 @@
                     <div class="form-group">
                         <label>国</label>&nbsp;<span class="badge bg-danger">必須</span>
                         <select class="form-control" name="country_id">
-                            <option value="{{ $post->country }}">{{ $post->country }} (選択済み)</option>
+                            <option value="{{ $post->country_id }}">{{ $post->country_id }} (選択済み)</option>
                             <option value="1">アイスランド</option>
                             <option value="2">アイルランド</option>
                             <option value="3">アゼルバイジャン</option>

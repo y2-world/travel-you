@@ -25,7 +25,7 @@ class TroubleRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'country' => 'required',
+            'country_id' => 'required',
             'content'  => 'required',
         ];
     }
@@ -33,7 +33,7 @@ class TroubleRequest extends FormRequest
     {
         return [
             'title.required' => 'タイトルは必須です。',
-            'country.required'  => '国は必須です。',
+            'country_id.required'  => '国は必須です。',
             'content.required'  => '本文は必須です。',
         ];
     }

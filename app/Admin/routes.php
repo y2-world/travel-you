@@ -13,6 +13,6 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('countries', CountryController::class);
-    $router->get('/', 'CountryController@index')->name('countries');
+    $router->resource('categories', CategoryController::class);
 
 });

@@ -7,7 +7,7 @@
             <div class="card-info-question">
                 <p class="card-user-question"><a href="{{ route('users.show', $question->user_id)}}">{{ $question->user_name }}</a>
                 <p class="card-title">{{ $question->title }}</a></p>
-                <small>カテゴリー : {{ $question->category }}</small><br>
+                <small>カテゴリー : <a href="{{ url('categories', $question->category_id)}}">{{ optional($question->category)->name }}</a></small><br>
             </div>
             <hr>
             <div class="row">
