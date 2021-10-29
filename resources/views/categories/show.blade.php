@@ -3,6 +3,7 @@
 <div class="page-wrapper">
   <div class="container">
     <h3>カテゴリー : {{ $category->name  }}</h3>
+    <hr>
     <h4 class="header-title">TROUBLE × YOU</h4>
     @if($troubles->isEmpty())
     <p>まだ投稿がありません。</p>
@@ -22,9 +23,7 @@
       </div>
       @endforeach
     </div>
-  </div>
-  <br>
-  <div class="container">
+    <hr>
     <h4 class="header-title">Q & A</h4>
     @if($questions->isEmpty())
     <p>まだ投稿がありません。</p>

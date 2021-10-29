@@ -200,7 +200,7 @@ footer a:hover {
     display: inline-block;
 }
 
-.travel-card:hover, .question-card:hover, .number-box:hover, .faq:hover {
+.travel-card:hover, .question-card:hover, .number-box:hover, .faq:hover, .country-card:hover {
     box-shadow : 5px 5px 20px gray;
 }
 
@@ -287,7 +287,7 @@ footer a:hover {
 }
 
 .no-country {
-    font-size: 15px;
+    font-size: 13px;
     padding: 10px 0px;
 }
 
@@ -646,6 +646,29 @@ td a {
     color: black;
 }
 
+.country-card {
+    background-color: white;
+    box-shadow: 0 5px 5px gray;
+    transition: box-shadow .5s;
+    width: 270px;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.country-card p {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+ }
+
+ .country-name {
+     font-size: 13px;
+ }
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -800,5 +823,10 @@ td a {
     }
     .number-boxes {
         text-align: center;
+    }
+    .country-card {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 5px;
     }
 }

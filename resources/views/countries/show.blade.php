@@ -3,6 +3,7 @@
 <div class="page-wrapper">
   <div class="container">
     <h3>{{ $country->name  }}</h3>
+    <hr>
     <h4 class="header-title">OUR TRAVELS</h4>
     @if($posts->isEmpty())
     <p>まだ投稿がありません。</p>
@@ -23,9 +24,7 @@
       </div>
       @endforeach
     </div>
-  </div>
-  <br>
-  <div class="container">
+    <hr>
     <h4 class="header-title">TROUBLE × YOU</h4>
     @if($troubles->isEmpty())
     <p>まだ投稿がありません。</p>
