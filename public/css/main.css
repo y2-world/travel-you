@@ -656,7 +656,17 @@ td a {
     display: inline-block;
 }
 
-.country-card p {
+ .country-list li {
+    font-size: 13px;
+    padding-right: 15px;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+ }
+
+ .country-card p {
+    font-size: 13px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0;
@@ -665,9 +675,21 @@ td a {
     text-overflow: ellipsis;
  }
 
- .country-name {
-     font-size: 13px;
+ .country-card ul {
+    counter-reset: number 0;
  }
+
+ .country-card li::before {
+    counter-increment: number 1;
+    content: counter(number);
+ }
+
+ .country-list {
+    padding-top: 10px;
+ }
+
+ .pc { display: block !important; }
+.sp { display: none !important; }
 
 @keyframes fadeIn {
     0% {
@@ -716,34 +738,36 @@ td a {
     }
 }
 
-@media screen and (max-width: 770px) {
-    .card-info {
-        padding-top: 15px;
-    }
-}
+@media only screen and (max-width: 750px) {
+    .pc { display: none !important; }
+    .sp { display: block !important; }
 
-@media screen and (max-width: 640px) {
     .logo-wrapper {
-        padding:10% 5%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
     }
 
     .main-logo {
         font-family: Oswald;
         color: black;
-        font-size: 20px;
-        line-height: 20px;
+        font-size:　40px;
+        line-height: 30px;
     }
 
     .catchcopy {
         font-family: Oswald;
         color: white;
-        font-size: 7px;
+        font-size: 10px;
     }
     
     .logo-wrapper button {
-        width: 90px;
+        width: 120px;
         height: 30px;
-        font-size: 7px;
+        font-size: 10px;
     }
 
     .top-header {
@@ -753,6 +777,15 @@ td a {
         padding-top: 40px;
     }
 
+}
+
+@media screen and (max-width: 770px) {
+    .card-info {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width: 640px) {
     .intro {
         font-size: 12px;
         text-align: center;

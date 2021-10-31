@@ -3,7 +3,8 @@
 @section('content')
 <div class="element js-fadein">
     <div class="slider-wrapper">
-        <img src="{{ asset('images/top_slider_img.jpg') }}">
+        <img class="pc" src="{{ asset('images/pc_slider.jpg') }}">
+        <img class="sp" src="{{ asset('images/sp_slider.jpg') }}">
             <div class="logo-wrapper">
                 <div class="main-logo">      
                     TRAVEL×YOU<br>

@@ -92,15 +92,13 @@
                     @if($post->isEmpty())
                     <p class="no-country">まだ訪れた国が登録されていません。</p>
                     @endif 
-                    <ol>
+                    <ul>
                         @foreach ($post->unique('country_id') as $rec) 
                         <div class="country-list">
-                            <li>
-                                <p class="country-name"><a href="{{ url('countries', $rec->country_id) }}">{{ optional($rec->country)->name}}</a></p>
-                            </li>
+                            <li>.　<a href="{{ url('countries', $rec->country_id) }}">{{ optional($rec->country)->name}}</a></li>
                         </div>
                         @endforeach
-                    </ol>
+                    </ul>
                 </div>
             </div>
         </div>
