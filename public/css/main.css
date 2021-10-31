@@ -741,6 +741,7 @@ td a {
 @media only screen and (max-width: 750px) {
     .pc { display: none !important; }
     .sp { display: block !important; }
+    .click-img { display: none !important; }
 
     .logo-wrapper {
         top: 50%;
@@ -777,15 +778,10 @@ td a {
         padding-top: 40px;
     }
 
-}
-
-@media screen and (max-width: 770px) {
-    .card-info {
-        padding-top: 15px;
+    .world-img {
+        padding: 10px;
     }
-}
 
-@media screen and (max-width: 640px) {
     .intro {
         font-size: 12px;
         text-align: center;
@@ -829,9 +825,10 @@ td a {
 
     #modal {
         max-width: 340px;
+        height: 300px;
         top: 25%;
-        font-size: 9px;
-        line-height: 20px;
+        font-size: 13px;
+        line-height: 25px;
     }
 
     .scroll {
@@ -854,12 +851,18 @@ td a {
     span {
         display: inline-block;
     }
+
     .number-boxes {
         text-align: center;
     }
+
     .country-card {
         display: block;
         margin: 0 auto;
         padding-bottom: 5px;
+    }
+
+    .card-info {
+        padding-top: 15px;
     }
 }

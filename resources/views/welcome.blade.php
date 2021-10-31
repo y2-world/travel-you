@@ -23,6 +23,11 @@
                 <div class="click-img">
                     <img src="{{ asset('images/click.png') }}" alt="click">  
                 </div>
+                <div class="sp">
+                    <p class="scroll">
+                        TAP THE MAP
+                    </div>
+                </div>
                 <div class="world-img">
                     <div id="open">
                         <img src="{{ asset('images/world.jpg') }}" class="world-img" alt="map img" id="trigger" title="訪れた国をクリック！"> 
@@ -38,8 +43,8 @@
                     </div>
                     <p>
                     今までのあなたの旅の歴史を記録し、<br>
-                    さらにこれからのあなたの旅をより楽しいものにするツールです。<br>
-                    旅行記を作ったり、旅行先でのトラブルをシェアしたり、<br>
+                    <span>さらにこれからのあなたの旅を</span><span>より楽しいものにするツールです。</span><br>
+                    <span>旅行記を作ったり、<span><span>旅行先でのトラブルをシェアしたり、</span><br>
                     疑問に思ったことを質問したり... <br>
                     楽しみ方は何通りもあります。<br>
                     さぁ、一緒に旅に出かけましょう！
