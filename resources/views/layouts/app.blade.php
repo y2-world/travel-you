@@ -67,9 +67,9 @@
                                 <a class="dropdown-item" href="{{ url('contact') }}">
                                     {{ __('お問い合わせ') }}
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="http://y2-world.com/" target="_blank">
+                                <a class="dropdown-item disabled" href="http://y2-world.com/" target="_blank">
                                     {{ __('YUKI OFFICIAL') }}
-                                <a class="dropdown-item" href="#" target="_blank">
+                                <a class="dropdown-item disabled" href="#" target="_blank">
                                 {{ __('LIVE×YOU') }}
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
