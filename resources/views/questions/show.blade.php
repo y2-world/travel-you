@@ -1,4 +1,4 @@
-@extends('layouts.app')　
+@extends('layouts.app')
 @section('content')
 <div class="page-wrapper">
     <div class="container">
@@ -45,5 +45,6 @@
             <a href="{{ url('/questions') }}" class="btn btn-secondary btn-sm">BACK</a>
         </div>
     </div>
-</div>
+</div> 
+
 @endsection

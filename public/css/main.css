@@ -2,6 +2,11 @@ html, body {
     font-family: helvetica;
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 .navbar-brand {
     color: turquoise;
     font-family: Oswald;
