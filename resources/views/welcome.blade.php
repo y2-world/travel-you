@@ -16,45 +16,41 @@
     </div>
 </div>
 <div class="intro-wrapper">
-    <div class="intro-text">
-        <div class="element js-fadein">
-            <div class="top-header">WHAT'S TRAVEL×YOU?</div>   
-            <div class="intro-img">
-                <div class="click-img">
-                    <img src="{{ asset('images/click.png') }}" alt="click">  
-                </div>
-                <div class="sp">
-                    <p class="scroll">
-                        TAP THE MAP
-                    </div>
-                </div>
-                <div class="world-img">
-                    <div id="open">
-                        <img src="{{ asset('images/world.jpg') }}" class="world-img" alt="map img" id="trigger" title="訪れた国をクリック！"> 
-                    </div> 
-                </div> 
-                <div class="element js-fadein">
-                    <p id="target" class="intro-text">あなたが訪れた国はどこですか？</p>
-                </div>
-                <div id="mask" class="hidden"></div>
-                <section id="modal" class="hidden">
-                    <div id="close">
-                        <i class="fas fa-times fa-lg"></i>
-                    </div>
-                    <p>
-                    今までのあなたの旅の歴史を記録し、<br>
-                    <span>さらにこれからのあなたの旅を</span><span>より楽しいものにするツールです。</span><br>
-                    <span>旅行記を作ったり、<span><span>旅行先でのトラブルをシェアしたり、</span><br>
-                    疑問に思ったことを質問したり... <br>
-                    楽しみ方は何通りもあります。<br>
-                    さぁ、一緒に旅に出かけましょう！
-                    </p>
-                </section>
-                <p class="scroll">
-                    SCROLL<br>
-                    ⌵
-                </div>
+    <div class="element js-fadein">
+        <div class="top-header">WHAT'S TRAVEL×YOU?</div>   
+        <div class="click-img">
+            <img src="{{ asset('images/click.png') }}" alt="click">  
+        </div>
+        <div class="sp">
+            <p class="scroll">
+                TAP THE MAP
             </div>
+        </div>
+        <div class="world-img">
+            <div id="open">
+                <img src="{{ asset('images/world.jpg') }}" class="world-img" alt="map img" id="trigger" title="訪れた国をクリック！"> 
+            </div> 
+        </div> 
+        <div class="element js-fadein">
+            <p id="target" class="intro-text">あなたが訪れた国はどこですか？</p>
+        </div>
+        <div id="mask" class="hidden"></div>
+        <section id="modal" class="hidden">
+            <div id="close">
+                <i class="fas fa-times fa-lg"></i>
+            </div>
+            <p>
+            <span>今までのあなたの旅の歴史を記録し、</span><br>
+            <span>さらにこれからのあなたの旅を</span><span>より楽しいものにするツールです。</span><br>
+            <span>旅行記を作ったり、</span><span>旅行先でのトラブルをシェアしたり、</span><br>
+            <span>疑問に思ったことを質問したり... </span><br>
+            <span>楽しみ方は何通りもあります。</span><br>
+            <span>さぁ、一緒に旅に出かけましょう！</span><br>
+            </p>
+        </section>
+        <p class="scroll">
+            SCROLL<br>
+            ⌵
         </div>
     </div>
 </div>

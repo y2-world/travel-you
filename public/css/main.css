@@ -49,6 +49,7 @@ html, body {
 .intro-wrapper {
     background-color: white;
     position: relative;
+    padding: 40px 0px;
 }
 
 .intro-wrapper p {
@@ -470,6 +471,7 @@ ol {
     font-size: 24px;
     font-family: Oswald;
     text-align: center;
+    margin: 0;
 }
 
 #mask {
@@ -780,13 +782,6 @@ td a {
 
     .world-img {
         padding: 10px;
-    }
-
-    .intro {
-        font-size: 12px;
-        text-align: center;
-        padding-top: 20px;
-        padding-bottom: 40px;
     }
 
     .intro-text {
