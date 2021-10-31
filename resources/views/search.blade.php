@@ -20,6 +20,7 @@
                     @endforeach
                     </select>
                     <a href="{{ url('countries') }}" id="my_travels_botton">国別投稿一覧</a>
+                    <br><br>
                 </div>
             </div>
             <h5>検索結果 : {{$keyword}}</h5>
