@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h4>旅について質問してみましょう　<a href="{{ url('questions') }}" class="btn btn-primary" id="my_travels_botton">投稿一覧</a></h4>
+                <h4>旅について質問してみましょう　<div class="pc"><a href="{{ url('questions') }}" class="btn btn-primary" id="my_travels_botton">投稿一覧</a></div></h4>
                 <form action="{{ route('questions.store') }}" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
                     @if ($errors->any()) 

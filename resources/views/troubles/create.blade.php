@@ -4,7 +4,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h4>あなたのTROUBLEをシェアしましょう　<a href="{{ url('troubles') }}" class="btn btn-primary" id="my_travels_botton">投稿一覧</a></H4>
+                <div class="trouble-header">
+                    <h4>あなたのTROUBLEをシェアしましょう　<div class="pc"><a href="{{ url('troubles') }}" class="btn btn-primary" id="my_travels_botton">投稿一覧</a></div></h4>
+                </div>
                 <form action="{{ route('troubles.store') }}" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
                     @if ($errors->any()) 

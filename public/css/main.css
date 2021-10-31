@@ -665,6 +665,7 @@ td a {
 
  .country-list li {
     font-size: 13px;
+    padding-left: 15px;
     padding-right: 15px;
     margin: 0;
     overflow: hidden;
@@ -695,8 +696,12 @@ td a {
     padding-top: 10px;
  }
 
- .pc { display: block !important; }
+.pc { display: block !important; }
 .sp { display: none !important; }
+
+.comment-block {
+    display: block;
+}
 
 @keyframes fadeIn {
     0% {
@@ -864,5 +869,13 @@ td a {
 
     .card-info {
         padding-top: 15px;
+    }
+
+    .trouble-header h4 {
+        font-size: 18px;
+    }
+
+    .comment-info {
+        flex-direction: column;
     }
 }
