@@ -65,6 +65,10 @@ class UsersController extends Controller
             ->paginate(100);
         $counts = User::where('id', $user->id)
             ->withCount('posts')->get();
+        $counts = User::where('id', $user->id)
+            ->withCount('posts')->get();
+        $country_counts = User::where('id', $user->id)
+            ->withCount('posts')->get();
         return view('users.show', [
             'user_name' => $user->name,
             'post' => $posts,
@@ -72,6 +76,7 @@ class UsersController extends Controller
             'question'=> $questions,
             'country'=> $countries,
             'count' => $counts,
+            'country_count' => $country_counts,
         ]);
     }
 

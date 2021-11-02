@@ -80,7 +80,7 @@
                         <p>COUNTRIES</p>
                     </div>
                     <div class="number-box">
-                        @foreach ($count as $rec)
+                        @foreach ($country_count as $rec)
                         <div class="country-number">{{ $rec->posts_count }}</div>
                         @endforeach
                         <p>TRAVELS</p>
