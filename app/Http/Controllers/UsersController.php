@@ -53,13 +53,13 @@ class UsersController extends Controller
         $user = User::find($user->id);
         $posts = Post::where('user_id', $user->id)
             ->orderBy('date1', 'desc')
-            ->paginate(10);
+            ->paginate(100);
         $troubles = Trouble::where('user_id', $user->id)
             ->orderBy('updated_at', 'desc')
-            ->paginate(10);
+            ->paginate(100);
         $questions = Question::where('user_id', $user->id)
             ->orderBy('updated_at', 'desc')
-            ->paginate(10);
+            ->paginate(100);
         return view('users.show', [
             'user_name' => $user->name,
             'post' => $posts,
