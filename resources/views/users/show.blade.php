@@ -74,7 +74,7 @@
                 </div>
                 <div class="number-boxes">
                     <div class="number-box">
-                        <div class="country-number">{{ \App\Post::distinct()->count(['country']) }}</div>
+                        <div class="country-number">{{ \App\Post::distinct()->count(['country_id']) }}</div>
                         <p>COUNTRIES</p>
                     </div>
                     <div class="number-box">
