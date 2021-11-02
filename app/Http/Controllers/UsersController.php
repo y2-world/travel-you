@@ -7,6 +7,7 @@ use App\Post;
 use App\Trouble;
 use App\User;
 use App\Question;
+use DB;
 
 class UsersController extends Controller
 {
@@ -65,10 +66,10 @@ class UsersController extends Controller
             ->paginate(100);
         $counts = User::where('id', $user->id)
             ->withCount('posts')->get();
-        $counts = User::where('id', $user->id)
-            ->withCount('posts')->get();
         $country_counts = User::where('id', $user->id)
-            ->withCount('posts')->get();
+            ->withCount(['posts' => function($query) {
+                $query->select(DB::raw('count(distinct(country_id))'));
+            }])->get();
         return view('users.show', [
             'user_name' => $user->name,
             'post' => $posts,
