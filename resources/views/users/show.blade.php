@@ -77,13 +77,13 @@
                         @foreach ($count as $rec)
                         <div class="country-number">{{ $rec->posts_count }}</div>
                         @endforeach
-                        <p>COUNTRIES</p>
+                        <p>TRAVELS</p>
                     </div>
                     <div class="number-box">
                         @foreach ($country_count as $rec)
                         <div class="country-number">{{ $rec->posts_count }}</div>
                         @endforeach
-                        <p>TRAVELS</p>
+                        <p>COUNTRIES</p>
                     </div>
                 </div>
                 <div class="country-card">
