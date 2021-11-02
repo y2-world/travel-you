@@ -54,6 +54,9 @@ class UsersController extends Controller
         $posts = Post::where('user_id', $user->id)
             ->orderBy('date1', 'desc')
             ->paginate(100);
+        $countries = Post::where('user_id', $user->id)
+            ->orderBy('date1', 'asc')
+            ->paginate(100);
         $troubles = Trouble::where('user_id', $user->id)
             ->orderBy('updated_at', 'desc')
             ->paginate(100);
@@ -65,6 +68,7 @@ class UsersController extends Controller
             'post' => $posts,
             'trouble'=> $troubles,
             'question'=> $questions,
+            'country'=> $countries,
         ]);
     }
 
