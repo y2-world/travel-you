@@ -4,9 +4,6 @@
   <div class="container-fluid">
     <div class="container">
       <h2 class="header-title">OUR TRAVELS　<a href="{{ url('posts/create') }}" class="btn btn-outline-primary" id="my_travels_botton">NEW POST</a></h2>
-      @if($posts->isEmpty())
-      <p>まだ投稿がありません。</p>
-      @endif 
     </div>
     <div class="container">
       <div class="row">
@@ -25,6 +22,9 @@
           <a href="{{ url('countries') }}" id="my_travels_botton">国別投稿一覧</a>
         </div>
       </div>
+      @if($posts->isEmpty())
+      <p>まだ投稿がありません。</p>
+      @endif 
     </div>
     <div class="cards">
       @foreach ($posts as $post)

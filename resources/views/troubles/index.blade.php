@@ -5,9 +5,6 @@
     <div class="container-fruid">
         <div class="container">
             <h2 class="header-title">TROUBLE×YOU　<a href="{{ url('troubles/create') }}" class="btn btn-outline-primary" id="my_travels_botton">NEW POST</a></h2>
-            @if($troubles->isEmpty())
-            <p>まだ投稿がありません。</p>
-            @endif 
         </div>
         <div class="container">
             <div class="row">
@@ -34,7 +31,10 @@
                 </select>
                 <a href="{{ url('categories') }}" id="my_travels_botton">カテゴリー別投稿一覧</a>
             </div>
-          </div>
+            @if($troubles->isEmpty())
+            <p>まだ投稿がありません。</p>
+            @endif 
+        </div>
         <div class="cards">
         @foreach ($troubles as $trouble)
             <div class="travel-card">

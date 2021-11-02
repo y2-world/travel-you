@@ -4,9 +4,6 @@
   <div class="container-fluid">
       <div class="container">
         <h2 class="header-title">Q & A　<a href="{{ url('questions/create') }}" class="btn btn-outline-primary" id="my_travels_botton">NEW POST</a></h2>
-        @if($questions->isEmpty())
-        <p>まだ投稿がありません。</p>
-        @endif 
       </div>
     </div>
     <div class="container">
@@ -25,6 +22,9 @@
           </select>
           <a href="{{ url('categories') }}" id="my_travels_botton">カテゴリー別投稿一覧</a>
       </div>
+      @if($questions->isEmpty())
+        <p>まだ投稿がありません。</p>
+      @endif 
     </div>
     <div class="cards">
       @foreach ($questions as $question)
