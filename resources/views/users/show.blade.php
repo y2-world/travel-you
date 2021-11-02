@@ -74,11 +74,11 @@
                 </div>
                 <div class="number-boxes">
                     <div class="number-box">
-                        <div class="country-number">{{ \App\Post::count() }}</div>
+                        <div class="country-number">{{ \App\Post::distinct()->count() }}</div>
                         <p>COUNTRIES</p>
                     </div>
                     <div class="number-box">
-                        <div class="country-number">{{ \App\Post::distinct()->count() }}</div>
+                        <div class="country-number">{{ \App\Post::->count() }}</div>
                         <p>TRAVELS</p>
                     </div>
                 </div>
