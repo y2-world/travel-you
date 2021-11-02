@@ -4,7 +4,7 @@
   <div class="container">
     <h3>カテゴリー : {{ $category->name  }}</h3>
     <hr>
-    <h4 class="header-title">TROUBLE × YOU</h4>
+    <h4 class="header-title">TROUBLE×YOU</h4>
     @if($troubles->isEmpty())
     <p>まだ投稿がありません。</p>
     @endif 
