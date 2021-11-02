@@ -63,12 +63,15 @@ class UsersController extends Controller
         $questions = Question::where('user_id', $user->id)
             ->orderBy('updated_at', 'desc')
             ->paginate(100);
+        $counts = User::where('id', $user->id)
+            ->withCount('posts')->get();
         return view('users.show', [
             'user_name' => $user->name,
             'post' => $posts,
             'trouble'=> $troubles,
             'question'=> $questions,
             'country'=> $countries,
+            'count' => $counts,
         ]);
     }
 
@@ -98,5 +101,16 @@ class UsersController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function count()
+    {
+
+        $users = User::withCount('posts')
+            ->get();
+        foreach ($users as $user) {
+            $posts_count = $site->posts_count;
+        }
+        return view('users.show', compact('users'));
     }
 }

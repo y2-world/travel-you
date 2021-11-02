@@ -74,11 +74,15 @@
                 </div>
                 <div class="number-boxes">
                     <div class="number-box">
-                        <div class="country-number">{{ \App\Post::distinct()->count(['country_id']) }}</div>
+                        @foreach ($count as $rec)
+                        <div class="country-number">{{ $rec->posts_count }}</div>
+                        @endforeach
                         <p>COUNTRIES</p>
                     </div>
                     <div class="number-box">
-                        <div class="country-number">{{ \App\Post::count() }}</div>
+                        @foreach ($count as $rec)
+                        <div class="country-number">{{ $rec->posts_count }}</div>
+                        @endforeach
                         <p>TRAVELS</p>
                     </div>
                 </div>
