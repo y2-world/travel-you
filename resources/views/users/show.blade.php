@@ -74,17 +74,11 @@
                 </div>
                 <div class="number-boxes">
                     <div class="number-box">
-                        @if($post->isEmpty())
-                        <div class="country-number">0</div>
-                        @endif 
-                        <div class="country-number"></div>
+                        <div class="country-number">{{ \App\Post::count() }}</div>
                         <p>COUNTRIES</p>
                     </div>
                     <div class="number-box">
-                        @if($post->isEmpty())
-                        <div class="country-number">0</div>
-                        @endif 
-                        <div class="country-number"></div>
+                        <div class="country-number">{{ \App\Post::count() }}</div>
                         <p>TRAVELS</p>
                     </div>
                 </div>
