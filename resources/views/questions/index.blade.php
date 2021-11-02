@@ -13,7 +13,7 @@
       </div>
       <div class="col-md-6">
         <select class="form-control mb-2" name="category_id" onChange="location.href=value;">
-            <option hidden value="none">カテゴリー検索</option>
+            <option hidden value="{{ url('categories') }}">カテゴリー検索</option>
             @foreach ($questions->unique('category_id') as $rec)
               <option value="{{ url('categories', $rec->category_id)}}">{{ optional($rec->category)->name}}</option>
             @endforeach
