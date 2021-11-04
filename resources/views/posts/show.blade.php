@@ -17,7 +17,7 @@
                     <div class="card-info">
                         <p class="card-user"><a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a></p>   
                         <p class="card-title">{{ $post->title }}</p> 
-                        <p class="card-date">{{ $post->date1 }}&nbsp;〜&nbsp;{{ $post->date2 }}</p>
+                        <p class="card-date">{{ $post->date1->format('Y-m-d') }}&nbsp;〜&nbsp;{{ $post->date2 }}</p>
                         <small>国 : <a href="{{ url('countries', $post->country_id)}}">{{ optional($post->country)->name }}</a></small><br>
                         <small>都市 : {{ $post->city }}</small>
                         <p class="card-diary">{{ $post->diary }}</p>

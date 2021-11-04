@@ -29,8 +29,8 @@
     @foreach ($posts as $post)
     <div class="travel-card">
       <p class="card-user"><a href="{{ route('users.show', $post->user_id)}}">{{ $post->user_name }}</a></p>
-      <p class="card-title">{{ $post->title }}</a></p>
-      <p class="card-date"> {{ $post->date1 }} 〜 {{ $post->date2 }}</p>
+      <p class="card-title"><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></p>
+      <p class="card-date"> {{ $post->date1->format('Y-m-d') }} 〜 {{ $post->date2 }}</p>
       <div class="travel-img">
         <a href="{{ route('posts.show', $post->id) }}"><img src="{{ asset('storage/' . $post->image) }}"></a>
       </div>

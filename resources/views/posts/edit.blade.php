@@ -23,7 +23,7 @@
                     </div>
                     <div class="form-group">
                         <label>期間&emsp; </label>&nbsp;<span class="badge bg-danger">必須</span><br>
-                        <input type="date" placeholder="yyyy-mm-dd" name="date1" value="{{ $post->date1 }}"> </textarea>
+                        <input type="date" placeholder="yyyy-mm-dd" name="date1" value="{{ $post->date1->format('Y-m-d') }}"> </textarea>
                         〜
                         <input type="date" placeholder="yyyy-mm-dd" name="date2" value="{{ $post->date2 }}"> </textarea>
                     </div>

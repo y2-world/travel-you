@@ -18,7 +18,7 @@
                     @foreach ($post as $rec)
                     <li class="travel-card">
                         <p class="user-title"><a href="{{ route('posts.show', $rec->id) }}">{{ $rec->title }}</a></p>
-                        <p class="card-date">{{ $rec->date1 }} 〜 {{ $rec->date2 }}</p>
+                        <p class="card-date">{{ $rec->date1->format('Y-m-d') }} 〜 {{ $rec->date2 }}</p>
                         <div class="travel-img">
                             <a href="{{ route('posts.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}"></a>
                         </div>
