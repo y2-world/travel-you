@@ -30,7 +30,7 @@
             @foreach ($data as $result)
             <div class="travel-card">
                 <p class="card-user"><a href="{{ route('users.show', $result->user_id)}}">{{ $result->user_name }}</a></p>
-                <p class="card-title-trouble">{{ $result->title }}</a></p>
+                <p class="card-title-trouble"><a href="{{ route('posts.show', $result->id) }}">{{ $result->title }}</a></p>
                 <div class="travel-img">
                     <a href="{{ route('posts.show', $result->id) }}"><img src="{{ asset('storage/' . $result->image) }}"></a>
                 </div>

@@ -12,7 +12,7 @@
       @foreach ($posts as $rec)
       <div class="travel-card">
         <p class="card-user"><a href="{{ route('users.show', $rec->user_id)}}">{{ $rec->user_name }}</a></p>
-        <p class="card-title">{{ $rec->title }}</a></p>
+        <p class="card-title"><a href="{{ route('posts.show', $post->id) }}">{{ $rec->title }}</a></p>
         <p class="card-date"> {{ $rec->date1->format('Y-m-d') }} 〜 {{ $rec->date2 }}</p>
         <div class="travel-img">
           <a href="{{ route('posts.show', $rec->id) }}"><img src="{{ asset('storage/' . $rec->image) }}"></a>
