@@ -93,7 +93,7 @@
                     <ul>
                         @foreach ($country->unique('country_id') as $rec) 
                         <div class="country-list">
-                            <li>.　<a href="{{ url('countries', $rec->country_id) }}">{{ optional($rec->country)->name}}</a></li>
+                            <li>.　<a href="{{ url('countries', $rec->country_id) }}">{{ optional($rec->country)->name}} ({{$rec->date1->format('Y')}})</a></li>
                         </div>
                         @endforeach
                     </ul>

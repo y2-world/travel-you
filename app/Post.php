@@ -26,4 +26,8 @@ class Post extends Model
     {
         return $this->belongsTo(Country::class, 'country_id');
     }
+
+    protected $dates = [
+        'date1',
+    ];
 }
