@@ -24,7 +24,7 @@
                     @foreach ($question->answers as $answer)
                     <div class="answer-info">
                         <div class="question-text">{{ $answer->body }}</div>
-                        <div class="comment-user"><a href="{{ route('users.show', $question->user_id)}}">{{ optional($answer->user)->name }}</a>&emsp;&emsp;<span class="comment-date">{{ $answer->created_at }}</span></div>
+                        <div class="comment-user"><a href="{{ route('users.show', $answer->user_id)}}">{{ optional($answer->user)->name }}</a>&emsp;&emsp;<span class="comment-date">{{ $answer->created_at }}</span></div>
                     </div>
                     @endforeach
                     <form action="{{ route('answers.store') }}" method="POST">

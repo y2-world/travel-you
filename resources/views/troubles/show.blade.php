@@ -31,7 +31,7 @@
                             <div class="form-group">
                                 @foreach ($trouble->trouble_comments as $trouble_comment)
                                     <div class="comment-info">
-                                        <div class="comment-user"><a href="{{ route('users.show', $trouble->user_id)}}">{{ $trouble_comment->user->name }}</a>&emsp;&emsp;
+                                        <div class="comment-user"><a href="{{ route('users.show', $trouble_comment->user_id)}}">{{ $trouble_comment->user->name }}</a>&emsp;&emsp;
                                         {{ $trouble_comment->body }}</div>
                                         <div class="comment-date">{{ $trouble_comment->created_at }}</div>
                                     </div>

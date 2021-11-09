@@ -32,7 +32,7 @@
                             <div class="form-group">
                                 @foreach ($post->comments as $comment)
                                     <div class="comment-info">
-                                        <div class="comment-user"><a href="{{ route('users.show', $post->user_id)}}">{{ optional($comment->user)->name }}</a>&emsp;&emsp;
+                                        <div class="comment-user"><a href="{{ route('users.show', $comment->user_id)}}">{{ optional($comment->user)->name }}</a>&emsp;&emsp;
                                         {{ $comment->body }}</div>
                                         <div class="comment-date">{{ $comment->created_at }}</div>
                                     </div>
