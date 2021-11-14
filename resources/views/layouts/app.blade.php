@@ -71,7 +71,7 @@
                                     <a class="dropdown-item disabled" href="http://y2-world.com/" target="_blank">
                                         {{ __('YUKI OFFICIAL') }}
                                     <a class="dropdown-item disabled" href="#" target="_blank">
-                                    {{ __('LIVE×YOU') }}
+                                    {{ __('ReaLauges (Coming Soon)') }}
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();

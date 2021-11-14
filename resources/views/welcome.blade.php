@@ -155,7 +155,7 @@
                 <a href="{{ url('/faq') }}"><span>FAQ</span></a>|
                 <a href="{{ url('/contact') }}"><span>お問い合わせ</span></a>|
                 <a href="http://y2-world.com" target="_blank"><span>YUKI OFFICIAL</span></a>|
-                <a href="#" target="_blank"><span>LIVE×YOU</span></a>
+                <a href="#"><span>ReaLanguage</span></a>
             </div>
         </div> 
     </div>
