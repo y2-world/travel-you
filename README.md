@@ -2,7 +2,7 @@
 Webアプリを作りました。
 アプリ名は「TRAVEL×YOU (トラベリュー)」です。
 
-![works_image2.jpg](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1059683/84631cd0-a571-4e59-adcc-5f344b7ee13e.jpeg)
+<img width="1352" alt="スクリーンショット 2021-11-14 22 52 45" src="https://user-images.githubusercontent.com/72340179/141684418-6c281bbb-eca9-4132-9a2e-412f7335ab89.png">
 
 http://18.179.42.2/
 
