@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="user-header">
-                    <h4>MY TRAVELS&emsp;<a href="{{ url('posts/create') }}" class="btn btn-outline-primary" id="my_travels_botton">NEW POST</a></h4>
+                    <h4>MY TRAVELS&emsp;<a href="{{ url('posts/create') }}" class="btn btn-primary" id="my_travels_botton">NEW POST</a></h4>
                 </div>
                 @if($post->isEmpty())
                 <p class="user-title">まだ投稿がありません。</p>
@@ -28,7 +28,7 @@
                 </ul>
                 <hr>
                 <div class="user-header">
-                    <h4>TROUBLE×YOU&emsp;<a href="{{ url('troubles/create') }}" class="btn btn-outline-primary" id="my_travels_botton">NEW POST</a></h4>
+                    <h4>TROUBLE×YOU&emsp;<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">NEW POST</a></h4>
                 </div>
                 @if($trouble->isEmpty())
                 <p class="user-title">まだ投稿がありません。</p>
@@ -47,7 +47,7 @@
                 </ul>
                 <hr>
                 <div class="user-header">
-                    <h4>MY Q&A&emsp;<a href="{{ url('questions/create') }}" class="btn btn-outline-primary" id="my_travels_botton">NEW POST</a></h4>
+                    <h4>MY Q&A&emsp;<a href="{{ url('questions/create') }}" class="btn btn-primary" id="my_travels_botton">NEW POST</a></h4>
                 </div>
                 @if($question->isEmpty())
                 <p class="user-title">まだ投稿がありません。</p>

@@ -198,7 +198,7 @@ footer a:hover {
 
 .travel-card {
     background-color: white;
-    box-shadow: 0 5px 5px gray;
+    box-shadow: 0 3px 3px gray;
     transition: box-shadow .5s;
     width: 330px;
     border-radius: 10px;
@@ -211,12 +211,12 @@ footer a:hover {
 }
 
 .travel-card:hover, .question-card:hover, .number-box:hover, .faq:hover, .country-card:hover {
-    box-shadow : 5px 5px 20px gray;
+    box-shadow : 5px 5px 5px lightgray;
 }
 
 .question-card {
     background-color: white;
-    box-shadow: 0 12px 12px gray;
+    box-shadow: 0 3px 3px gray;
     transition: box-shadow .5s;
     width: 330px;
     border-radius: 10px;
@@ -549,7 +549,7 @@ span {
 
 .number-box {
     background-color: white;
-    box-shadow: 0 5px 5px gray;
+    box-shadow: 0 3px 3px gray;
     transition: box-shadow .5s;
     width: 100px;
     height: 100px;
@@ -574,7 +574,7 @@ span {
 .faq {
     padding: 20px;
     background-color: white;
-    box-shadow: 0 5px 5px gray;
+    box-shadow: 0 3px 3px gray;
     transition: box-shadow .5s;
     border-radius: 10px;
     margin: 10px;
@@ -659,7 +659,7 @@ td a {
 
 .country-card {
     background-color: white;
-    box-shadow: 0 5px 5px gray;
+    box-shadow: 0 3px 3px gray;
     transition: box-shadow .5s;
     width: 270px;
     border-radius: 10px;

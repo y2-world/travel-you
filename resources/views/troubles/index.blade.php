@@ -2,7 +2,7 @@
 @section('content')
 <div class="page-wrapper">
     <div class="container">
-        <h2 class="header-title">TROUBLE×YOU　<a href="{{ url('troubles/create') }}" class="btn btn-outline-primary" id="my_travels_botton">NEW POST</a></h2>
+        <h2 class="header-title">TROUBLE×YOU　<a href="{{ url('troubles/create') }}" class="btn btn-primary" id="my_travels_botton">NEW POST</a></h2>
     </div>
     <div class="container">
         <div class="row">

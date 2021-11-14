@@ -10,7 +10,7 @@
                     TRAVEL×YOU<br>
                     <span class="catchcopy">旅とあなたをつなぐプラットフォーム</span>
                 </div>  
-                <a href="{{ url('/register') }}"><button type="button" class="btn btn-light">今すぐ始める</button></a>
+                <a href="{{ url('/register') }}"><button type="button" class="btn btn-light">今すぐ投稿してみる</button></a>
             </div>
         </div>
     </div>
